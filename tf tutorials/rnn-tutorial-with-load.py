@@ -139,8 +139,10 @@ class RNN(object):
 
 	def train(self, batch_x, batch_y):
 		# Need to add state_c and need to cut the zero state down... maybe?
-		print("lstm zero state", self.lstm_zero_state[0])
-		self.session.run(self.train_operation, feed_dict={self.feed_x:batch_x, self.feed_y:batch_y, self.state_r:self.lstm_zero_state[0].eval(), self.state_c:self.lstm_zero_state[1].eval()})
+		#print("lstm zero state", self.lstm_zero_state[0], self.session.run(self.lstm_zero_state[0]))
+		zero_state_r = self.session.run(self.lstm_zero_state[0])
+		zero_state_c = self.session.run(self.lstm_zero_state[1])
+		self.session.run(self.train_operation, feed_dict={self.feed_x:batch_x, self.feed_y:batch_y, self.state_r:zero_state_r, self.state_c:zero_state_c})
 
 	def run(self, x, num_steps=25, delimiter=None):
 		'''
@@ -148,18 +150,20 @@ class RNN(object):
 		the input tensor, 'x', to the network.
 		'''
 		test_output = ""
+		zero_state_r = self.session.run(self.lstm_zero_state[0])
+		zero_state_c = self.session.run(self.lstm_zero_state[1])
 
-		lstm_out, lstm_state_out = self.session.run([self.outputs, self.last_lstm_state], feed_dict={self.feed_x:x, self.state_r:self.lstm_zero_state.eval(), self.state_c:self.lstm_zero_state.eval()})
-
-		for j in range(lstm_out.shape[0]):
-			test_output += vector_to_char(lstm_out[j])
+		softmax_out, lstm_out, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict={self.feed_x:x, self.state_r:zero_state_r, self.state_c:zero_state_c})
+		print("softmax_out shape", softmax_out.shape)
+		for j in range(softmax_out.shape[0]):
+			test_output += vector_to_char(softmax_out[j])
 
 		for i in range(num_steps):
 			lstm_in = lstm_out
 			lstm_state_in = lstm_state_out
-			lstm_out, lstm_state_out = self.session.run([self.outputs, self.last_lstm_state], feed_dict={self.feed_x:lstm_in, self.state_r:lstm_state_in})
+			softmax_out, lstm_out, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict={self.feed_x:lstm_in, self.state_r:lstm_state_in})
 			for j in range(lstm_out.shape[0]):
-				test_output += vector_to_char(lstm_out[j])
+				test_output += vector_to_char(softmax_out[j])
 
 		return test_output
 
@@ -167,67 +171,65 @@ class RNN(object):
 	
 #local_field, final_state = rnn(feed_x, weights['out'], biases['out'])
 
+sess = tf.Session()
 
-# Declare a variable to contain the global variable initialization op.
-init = tf.global_variables_initializer()
+network = RNN(learning_rate, sess)
+# Initialize all of the variables inside of the 'sess' tensorflow session.
+sess.run(tf.global_variables_initializer())
 
 # Declare a saver for the ops on the graph.
+saver = tf.train.Saver()
 
 
-with tf.Session() as sess:
-	network = RNN(learning_rate, sess)
-	saver = tf.train.Saver()
-	# Initialize all of the variables we've declared to their default values.
-	# In this context, you initialize the weights and biases to random
-	# normal values.
-	sess.run(init)
 
-	#if os.path.isfile('checkpoint'):
-	if False:
-		saver.restore(sess, os.getcwd() + "\\lstmsmall")
+#if os.path.isfile('checkpoint'):
+if False:
+	saver.restore(sess, os.getcwd() + "\\lstmsmall")
 
-		print(network.run(string_to_tensor('random stuff')))
+	print(network.run(string_to_tensor('random stuff')))
 
-	else:
-		# Recall that one epoch is a forward pass and backward pass for every 
-		# training sample.
-		step = 1
+else:
+	# Recall that one epoch is a forward pass and backward pass for every 
+	# training sample.
+	step = 1
 
-		print("maximum number of steps:", max_steps)
-		
-		# The total number of steps is the number of batches that have been passed
-		# through for training. So for one epoch there are
-		#   num_training_samples/batch_size
-		# steps.
-		while step < max_steps:
-			# The training batch has to have specific dimensions:
-			#  (batch_size, num_unrolls, num_inputs)
-			# num_unrolls - number of characters in the sequence
-			# num_inputs - number of 'items' in the training vocabulary (28)
-			# Since we're building a language model, the training_batch is also the
-			# desired outputs, except the desired outputs are shifted by one word.
-			train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
+	print("maximum number of steps:", max_steps)
+	
+	# The total number of steps is the number of batches that have been passed
+	# through for training. So for one epoch there are
+	#   num_training_samples/batch_size
+	# steps.
+	while step < max_steps:
+		# The training batch has to have specific dimensions:
+		#  (batch_size, num_unrolls, num_inputs)
+		# num_unrolls - number of characters in the sequence
+		# num_inputs - number of 'items' in the training vocabulary (28)
+		# Since we're building a language model, the training_batch is also the
+		# desired outputs, except the desired outputs are shifted by one word.
+		train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
 
-			# Note that the elements of the feed dictionary are the placeholders
-			# defined earlier in the program.
-			network.train(train_batch_inputs, desired_batch_outputs)
+		# Note that the elements of the feed dictionary are the placeholders
+		# defined earlier in the program.
+		network.train(train_batch_inputs, desired_batch_outputs)
 
-			if step % sample_step == 0:
-				print("-----------------------------")
-				print("current step", step)
-				#training_output = sess.run(softmax_output, feed_dict={feed_x: train_batch_inputs})
-				training_output = network.run(train_batch_inputs, num_steps=0)
+		if step % sample_step == 0:
+			print("-----------------------------")
+			print("current step", step)
 
-				#print(training_output.shape)
-				# Just need to collect the max outputs of the softmax layer and
-				# convert the indices back to characters. Hopefully that shit looks
-				# decent.
-				phrase = ""
-				for i in range(training_output.shape[0]):
-					phrase += vector_to_char(training_output[i])
+			#training_output = sess.run(softmax_output, feed_dict={feed_x: train_batch_inputs})
+			training_output = network.run(train_batch_inputs, num_steps=0)
+			print("training output:\n", training_output)
 
-				print(phrase)
+			#print(training_output.shape)
+			# Just need to collect the max outputs of the softmax layer and
+			# convert the indices back to characters. Hopefully that shit looks
+			# decent.
+			#phrase = ""
+			#for i in range(training_output.shape[0]):
+			#	phrase += vector_to_char(training_output[i])
 
-			step += 1
+			#print(phrase)
 
-		saver.save(sess, os.getcwd() + "\\lstmsmall")
+		step += 1
+
+	saver.save(sess, os.getcwd() + "\\lstmsmall")
