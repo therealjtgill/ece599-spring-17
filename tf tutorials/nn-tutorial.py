@@ -2,6 +2,8 @@ from __future__ import print_function
 import tensorflow as tf
 #from tensorflow.contrib import rnn
 import numpy as np
+import os
+import os.path
 
 # Open the training data from the static directory, read in all of the data,
 # and convert it to lowercase.
@@ -69,9 +71,13 @@ def get_next_batch(num_timesteps, batch_size, batch_number):
 			input_matrix[i,j,:] = char_to_vector(input_substring[j])
 			output_matrix[i,j,:] = char_to_vector(output_substring[j])
 
-
-
 	return input_matrix, output_matrix
+
+def string_to_tensor(input_string):
+	input_matrix = np.zeros((1, len(input_string), num_chars))
+	for j in range(len(input_string)):
+		input_matrix[1,j,:] = char_to_vector(input_string[j])
+	return input_matrix
 
 
 # The maximum number of steps you go through is 
@@ -101,11 +107,11 @@ def rnn(input_vector, w, b):
 
 	local_field = tf.matmul(tf.reshape(outputs, [-1, num_hidden_units]), w) + b
 
-	return local_field
+	return local_field, states
 
 
 
-local_field = rnn(feed_x, weights['out'], biases['out'])
+local_field, final_state = rnn(feed_x, weights['out'], biases['out'])
 
 # What we're ultimately reducing.
 # This is an operation on the tensorflow graph that contains the 'local_field' object
@@ -130,45 +136,59 @@ with tf.Session() as sess:
 	# normal values.
 	sess.run(init)
 
-	# Recall that one epoch is a forward pass and backward pass for every 
-	# training sample.
-	step = 1
+	if os.path.isfile('checkpoint'):
+		saver.restore(session, os.getcwd() + "\\lstmsmall")
 
-	print("maximum number of steps:", max_steps)
-	
-	# The total number of steps is the number of batches that have been passed
-	# through for training. So for one epoch there are
-	#   num_training_samples/batch_size
-	# steps.
+		# So the deal with randomly seeding the network with a string is you
+		# have to keep the last state of the RNN. Here's why:
+		#   (1) feed in the input string
+		#   (2) keep the LSTM's final state (r_i, c_i)
+		#   (3) keep the last letter the LSTM produced (l_i)
+		#   (4) convert l_i into a vector, feed it to the network with the state (r_i, c_i)
+		#   (5) get letter l_i+1 from the network and (r_i+1, c_i+1)
+		#   (6) go back to step (4) until some maximum sentence length is reached
+		testing_output = sess.run(softmax_output, feed_dict={feed_x: string_to_tensor('random phrase')})
+		print final_state.eval()
 
-	while step < max_steps:
-		# The training batch has to have specific dimensions:
-		#  (batch_size, num_unrolls, num_inputs)
-		# num_unrolls - number of characters in the sequence
-		# num_inputs - number of 'items' in the training vocabulary (28)
-		# Since we're building a language model, the training_batch is also the
-		# desired outputs, except the desired outputs are shifted by one word.
-		train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
+	else:
+		# Recall that one epoch is a forward pass and backward pass for every 
+		# training sample.
+		step = 1
 
-		# Note that the elements of the feed dictionary are the placeholders
-		# defined earlier in the program.
-		sess.run(optimizer, feed_dict={feed_x: train_batch_inputs, feed_y: desired_batch_outputs})
+		print("maximum number of steps:", max_steps)
+		
+		# The total number of steps is the number of batches that have been passed
+		# through for training. So for one epoch there are
+		#   num_training_samples/batch_size
+		# steps.
+		while step < max_steps:
+			# The training batch has to have specific dimensions:
+			#  (batch_size, num_unrolls, num_inputs)
+			# num_unrolls - number of characters in the sequence
+			# num_inputs - number of 'items' in the training vocabulary (28)
+			# Since we're building a language model, the training_batch is also the
+			# desired outputs, except the desired outputs are shifted by one word.
+			train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
 
-		if step % sample_step == 0:
-			print("-----------------------------")
-			print("current step", step)
-			training_output = sess.run(softmax_output, feed_dict={feed_x: train_batch_inputs})
+			# Note that the elements of the feed dictionary are the placeholders
+			# defined earlier in the program.
+			sess.run(optimizer, feed_dict={feed_x: train_batch_inputs, feed_y: desired_batch_outputs})
 
-			#print(training_output.shape)
-			# Just need to collect the max outputs of the softmax layer and
-			# convert the indices back to characters. Hopefully that shit looks
-			# decent.
-			phrase = ""
-			for i in range(training_output.shape[0]):
-				phrase += vector_to_char(training_output[i])
+			if step % sample_step == 0:
+				print("-----------------------------")
+				print("current step", step)
+				training_output = sess.run(softmax_output, feed_dict={feed_x: train_batch_inputs})
 
-			print(phrase)
+				#print(training_output.shape)
+				# Just need to collect the max outputs of the softmax layer and
+				# convert the indices back to characters. Hopefully that shit looks
+				# decent.
+				phrase = ""
+				for i in range(training_output.shape[0]):
+					phrase += vector_to_char(training_output[i])
 
-		step += 1
+				print(phrase)
 
-	saver.save(sess, "lstmsmall")
+			step += 1
+
+		saver.save(sess, os.getcwd() + "\\lstmsmall")
