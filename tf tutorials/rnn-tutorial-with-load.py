@@ -64,7 +64,7 @@ def string_to_tensor(string_):
 	'''
 	tensor = np.zeros((1, len(string_), num_chars))
 	for j in range(len(string_)):
-		tensor[1,j,:] = char_to_vector(string_[j])
+		tensor[0,j,:] = char_to_vector(string_[j])
 	return tensor
 
 def get_next_batch(num_timesteps, batch_size, batch_number):
@@ -181,7 +181,7 @@ class RNN(object):
 			lstm_in[np.where(softmax_out==np.amax(softmax_out))] = 1.0
 			lstm_state_r_in = lstm_state_out[0]
 			lstm_state_c_in = lstm_state_out[1]
-			feed_dict={self.feed_x:lstm_in, self.state_r:lstm_state_r_in, self.state_c:lstm_state_c_in}
+			feed_dict={self.feed_x:[lstm_in], self.state_r:lstm_state_r_in, self.state_c:lstm_state_c_in}
 			softmax_out, lstm_out, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict=feed_dict)
 			for j in range(lstm_out.shape[0]):
 				test_output += vector_to_char(softmax_out[j])
