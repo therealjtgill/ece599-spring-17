@@ -103,8 +103,8 @@ class RNN(object):
 		self.session = session
 
 		with tf.variable_scope(scope_name):
-			self.weights = tf.Variable(tf.random_normal([num_hidden_units, num_chars]))
-			self.biases = tf.Variable(tf.random_normal([num_chars]))
+			self.weights = tf.Variable(tf.random_normal([num_hidden_units, num_chars], stddev=0.01))
+			self.biases = tf.Variable(tf.random_normal([num_chars], stddev=0.01))
 
 			# Declaring this as a placeholder means that it must be fed with data 
 			# at execution time.
