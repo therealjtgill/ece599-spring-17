@@ -95,6 +95,24 @@ def get_next_batch(num_timesteps, batch_size, batch_number):
 
 	return input_matrix, output_matrix
 
+def get_random_batch(num_timesteps, batch_size):
+	start_index = int((len(all_data) - batch_size - 1)*np.random.random_sample())
+
+	input_matrix = np.zeros((batch_size, num_timesteps, num_chars))
+	output_matrix = np.zeros((batch_size, num_timesteps, num_chars))
+
+	for i in range(batch_size):
+		index = int((len(all_data) - batch_size - 1)*np.random.random_sample())
+		input_substring = all_data[index:index + num_timesteps]
+		output_substring = all_data[index+1:index+num_timesteps+1]
+
+		for j in range(len(input_substring)):
+			input_matrix[i,j,:] = char_to_vector(input_substring[j])
+			output_matrix[i,j,:] = char_to_vector(output_substring[j])
+
+	return input_matrix, output_matrix
+
+
 # Converted this process from a regular method to a class so that object properties
 # can be taken advantage of.
 class RNN(object):
@@ -234,12 +252,13 @@ def main(argv):
 			# vocab_length - number of unique items in the training vocabulary
 			# Since we're building a language model, the training_batch is also the
 			# desired outputs, except the desired outputs are shifted by one word.
-			train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
+			#train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
+			train_batch_inputs, desired_batch_outputs = get_random_batch(num_timesteps, batch_size)
 
 			# Note that the elements of the feed dictionary are the placeholders
 			# defined earlier in the program.
 			network.train(train_batch_inputs, desired_batch_outputs)
-			#print(step)
+			print(step)
 			if step % int(sample_step_percentage*float(max_steps)) == 0:
 				print("-----------------------------------------------------")
 				print("current step", step)
@@ -248,8 +267,8 @@ def main(argv):
 				print("training output:\n", training_output)
 				#print("local field:\n", sess.run(network.local_field))
 
-				weights = sess.run(trainable_vars)
-				weight_saver.run(weights)
+				#weights = sess.run(trainable_vars)
+				#weight_saver.run(weights)
 
 			step += 1
 
