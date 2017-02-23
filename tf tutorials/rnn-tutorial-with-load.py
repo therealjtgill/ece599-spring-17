@@ -1,9 +1,10 @@
 from __future__ import print_function
 import tensorflow as tf
-#from tensorflow.contrib import rnn
 import numpy as np
 import os
-import os.path
+import sys
+import thread_ops
+
 
 # Open the training data from the static directory, read in all of the data,
 # and convert it to lowercase.
@@ -54,6 +55,18 @@ def vector_to_char(vector):
 	#print("max index", max_index[0].tolist()[0])
 	return char_vocab[max_index[0].tolist()[0]]
 
+def string_to_tensor(string_):
+	'''
+	Converts a string into a tensor (numpy array). This is intended for running the
+	network on a sequence of characters.
+	The output will have the shape
+	[1 string_length vocabulary_size]
+	'''
+	tensor = np.zeros((1, len(string_), num_chars))
+	for j in range(len(string_)):
+		tensor[1,j,:] = char_to_vector(string_[j])
+	return tensor
+
 def get_next_batch(num_timesteps, batch_size, batch_number):
 	'''
 	Given the number of timesteps, batch size, and the batch sequence, return matrices
@@ -81,19 +94,6 @@ def get_next_batch(num_timesteps, batch_size, batch_number):
 			output_matrix[i,j,:] = char_to_vector(output_substring[j])
 
 	return input_matrix, output_matrix
-
-def string_to_tensor(string_):
-	'''
-	Converts a string into a tensor (numpy array). This is intended for running the
-	network on a sequence of characters.
-	The output will have the shape
-	[1 string_length vocabulary_size]
-	'''
-	tensor = np.zeros((1, len(string_), num_chars))
-	for j in range(len(string_)):
-		tensor[1,j,:] = char_to_vector(string_[j])
-	return tensor
-
 
 # Converted this process from a regular method to a class so that object properties
 # can be taken advantage of.
@@ -188,58 +188,72 @@ class RNN(object):
 
 		return test_output
 
-# Start tf session. This is passed to the RNN class.
-sess = tf.Session()
+def main(argv):
+	load_checkpoint = False
+	if len(argv) > 0:
+		load_checkpoint = True
+		checkpoint_file = argv[0]
+	# Start tf session. This is passed to the RNN class.
+	sess = tf.Session()
 
-network = RNN(learning_rate, sess, 'stuff')
+	cud = os.getcwd()
+	weight_saver = thread_ops.weightThread()
 
-# Initialize all of the variables inside of the 'sess' tensorflow session.
-sess.run(tf.global_variables_initializer())
+	network = RNN(learning_rate, sess, 'stuff')
 
-# Declare a saver for the ops on the graph.
-saver = tf.train.Saver()
+	# Initialize all of the variables inside of the 'sess' tensorflow session.
+	sess.run(tf.global_variables_initializer())
 
-#if os.path.isfile('checkpoint'):
-if False:
-	saver.restore(sess, os.path.join(os.getcwd(), "lstmsmall"))
+	# Declare a saver for the ops on the graph.
+	saver = tf.train.Saver()
 
-	print(network.run(string_to_tensor('random stuff')))
+	if load_checkpoint and os.path.isfile(os.path.join(cud, checkpoint_file)):
+	#if False:
+		saver.restore(sess, os.path.join(cud, "lstmsmall"))
 
-else:
-	# Recall that one epoch is a forward pass and backward pass for all 
-	# training data.
-	step = 1
+		print(network.run(string_to_tensor('random stuff')))
 
-	#print("maximum number of steps:", max_steps)
-	# Retrieve the list of trainable variables. The goal is to save these
-	# weights as a grayscale PNG to show how the values evolve over time.
-	trainable_vars = tf.trainable_variables()
-	
-	# The total number of steps is the number of batches that have been passed
-	# through for training. So for one epoch there are
-	#   num_training_samples/batch_size
-	# steps.
-	while step < max_steps:
-		# The training batch has to have specific dimensions:
-		#   (batch_size, num_unrolls, vocab_length)
-		# num_unrolls - number of characters in the sequence
-		# vocab_length - number of unique items in the training vocabulary
-		# Since we're building a language model, the training_batch is also the
-		# desired outputs, except the desired outputs are shifted by one word.
-		train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
+	else:
+		# Recall that one epoch is a forward pass and backward pass for all 
+		# training data.
+		step = 1
 
-		# Note that the elements of the feed dictionary are the placeholders
-		# defined earlier in the program.
-		network.train(train_batch_inputs, desired_batch_outputs)
-		print(step)
-		if step % int(sample_step_percentage*float(max_steps)) == 0:
-			print("-----------------------------")
-			print("current step", step)
+		#print("maximum number of steps:", max_steps)
+		# Retrieve the list of trainable variables. The goal is to save these
+		# weights as a grayscale PNG to show how the values evolve over time.
+		trainable_vars = tf.trainable_variables()
+		
+		# The total number of steps is the number of batches that have been passed
+		# through for training. So for one epoch there are
+		#   num_training_samples/batch_size
+		# steps.
+		while step < max_steps:
+			# The training batch has to have specific dimensions:
+			#   (batch_size, num_unrolls, vocab_length)
+			# num_unrolls - number of characters in the training sequence
+			# vocab_length - number of unique items in the training vocabulary
+			# Since we're building a language model, the training_batch is also the
+			# desired outputs, except the desired outputs are shifted by one word.
+			train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
 
-			training_output = network.run(train_batch_inputs, num_steps=0)
-			print("training output:\n", training_output)
-			#print("local field:\n", sess.run(network.local_field))
+			# Note that the elements of the feed dictionary are the placeholders
+			# defined earlier in the program.
+			network.train(train_batch_inputs, desired_batch_outputs)
+			#print(step)
+			if step % int(sample_step_percentage*float(max_steps)) == 0:
+				print("-----------------------------------------------------")
+				print("current step", step)
 
-		step += 1
+				training_output = network.run(train_batch_inputs, num_steps=0)
+				print("training output:\n", training_output)
+				#print("local field:\n", sess.run(network.local_field))
 
-	saver.save(sess, os.path.join(os.getcwd(), "lstmsmall"))
+				weights = sess.run(trainable_vars)
+				weight_saver.run(weights)
+
+			step += 1
+
+		saver.save(sess, os.path.join(cud, "lstmsmall"))
+
+if __name__ == "__main__":
+	main(sys.argv[1:])
