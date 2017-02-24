@@ -13,6 +13,8 @@ with open('traindata.txt', 'r') as f:
 	all_data = f.read()
 all_data = all_data.lower()
 
+
+
 # set() - returns a set object of all of the unique items in a list. In this
 #   case, the list is a sequence of characters comprising the entirety of the
 #   text contained in 'all_data'.
@@ -34,27 +36,34 @@ char_vocab = list(set(all_data))
 # sample_step_percentage - Sample output from training will be displayed at
 #   every integer multiple of this percentage during the training steps
 num_chars = len(char_vocab)
-num_timesteps = 50
-num_hidden_units = 200
+num_timesteps = 100
+num_hidden_units = 256
 num_lstm_layers = 2
-learning_rate = 0.001
-batch_size = 32 
+learning_rate = 0.005
+batch_size = 64
 batches_per_epoch = 500
 max_epochs = 30
 max_steps = max_epochs * batches_per_epoch
-sample_step_percentage = .01
+sample_step_percentage = .001
+sample_weight_percentage = 0.002
 
 def char_to_vector(char):
 	char = char.lower()
 	vector = np.zeros(num_chars)
-	vector[char_vocab.index(char)] = 1
+	vector[char_vocab.index(char)] = 1.0
 	return vector
 
 def vector_to_char(vector):
-	max_value = max(vector)
-	max_index = np.where(vector==max_value)
+	#print("shape of vector in vector_to_char:", vector.shape)
+	#max_value = max(vector)
+	#index = np.where(vector==max_value)[0][0]
+	index = np.random.choice(range(num_chars), p=vector)
+	#print("vector being converted:", vector)
+	#print("current vocab:", char_vocab)
+	#print("index selected:", sampled_index)
 	#print("max index", max_index[0].tolist()[0])
-	return char_vocab[max_index[0].tolist()[0]]
+	#return char_vocab[max_index[0].tolist()[0]]
+	return char_vocab[index]
 
 def string_to_tensor(string_):
 	'''
@@ -89,6 +98,9 @@ def get_next_batch(num_timesteps, batch_size, batch_number):
 		index = i*num_timesteps + batch_number*batch_size
 		input_substring = all_data[index:index + num_timesteps]
 		output_substring = all_data[index+1:index+num_timesteps+1]
+		print(input_substring)
+		print(output_substring)
+		raw_input('hit enter')
 
 		for j in range(len(input_substring)):
 			input_matrix[i,j,:] = char_to_vector(input_substring[j])
@@ -97,13 +109,14 @@ def get_next_batch(num_timesteps, batch_size, batch_number):
 	return input_matrix, output_matrix
 
 def get_random_batch(num_timesteps, batch_size):
-	start_index = int((len(all_data) - batch_size - 1)*np.random.random_sample())
+	#start_index = int((all_data_tensor.shape[1] - num_timesteps - 1)*np.random.random_sample())
+	#print("starting index for random batch:", start_index)
 
 	input_matrix = np.zeros((batch_size, num_timesteps, num_chars))
 	output_matrix = np.zeros((batch_size, num_timesteps, num_chars))
 
 	for i in range(batch_size):
-		index = int((len(all_data) - batch_size - 1)*np.random.random_sample())
+		index = int((len(all_data) - num_timesteps - 1)*np.random.rand())
 		input_substring = all_data[index:index + num_timesteps]
 		output_substring = all_data[index+1:index+num_timesteps+1]
 
@@ -130,12 +143,23 @@ class RNN(object):
 		# Need to modify the feed dictionaries for training/testing.
 		# Might want to segment the various layers into separate scopes.
 		#
+		# PROBLEMS.
+		#   - network doesn't produce meaningful output at same rate as 
+		#     other scripts with same intention
+		#   - NOT taking into account (to my knowledge) the batch_size
+		#     component of the outputs returned by dynamic_rnn()
+		# POSSIBLE SOLUTIONS.
+		#   - softmax relies on the dimension of self.outputs, verify that
+		#     self.outputs is being appropriately flattened
+		#   - when passing a previous cell state back to the dynamic rnn
+		#     verfiy that you're passing the cell state from the last batch
+		#
 		#####################################################################
 		self.session = session
 
 		with tf.variable_scope(scope_name):
-			self.weights = tf.Variable(tf.random_normal([num_hidden_units, num_chars], stddev=0.01))
-			self.biases = tf.Variable(tf.random_normal([num_chars], stddev=0.01))
+			self.weights = tf.Variable(tf.random_normal((num_hidden_units, num_chars), stddev=0.01))
+			self.biases = tf.Variable(tf.random_normal((num_chars,), stddev=0.01))
 
 			# Declaring this as a placeholder means that it must be fed with data 
 			# at execution time.
@@ -144,33 +168,37 @@ class RNN(object):
 			# The value that you feed it is going to be a numpy array.
 			self.feed_x = tf.placeholder(dtype=tf.float32, shape=(None, None, num_chars))
 			self.feed_y = tf.placeholder(dtype=tf.float32, shape=(None, None, num_chars))
-			#self.state_r = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
-			#self.state_c = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
-			self.states = [[tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))]*2 for i in range(num_lstm_layers)]
+			
+			# LSTM's have two sets of states: the cell state, and the hidden state ('c'
+			# and 'r'). This list contains lists of c's and r's for each layer of LSTM
+			# cells.
+			self.states = tf.placeholder(dtype=tf.float32, shape=(num_lstm_layers, 2, None, num_hidden_units))
 			# This converts the placeholders for the states 'r' and 'c' into a tuple 
 			# so that they can be passed to the dynamic_rnn. Note that in the case of
 			# multiple LSTM layers you'd have N 'r' and 'c' states to pass; one 'r' and
 			# 'c' for each layer of the LSTM network.
-			#self.rnn_tuple_states = tf.contrib.rnn.LSTMStateTuple(self.state_r, self.state_c)
-			self.rnn_tuple_states = tuple([tf.contrib.rnn.LSTMStateTuple(state[0], state[1]) for state in self.states])
+			l = tf.unstack(self.states, axis=0)
+			self.rnn_tuple_states = tuple([tf.contrib.rnn.LSTMStateTuple(l[n][0], l[n][1]) for n in range(num_lstm_layers)])
 
-			# The cell state and the hidden state are vectors with the same number
-			# of components. This is usually coupled with an op that constructs the
-			# actual network - rnn.static_rnn, dynamic_rnn, etc.
-			
-			self.lstm_cell = tf.contrib.rnn.BasicLSTMCell(num_units=num_hidden_units, forget_bias=1.0, state_is_tuple=True)
-			self.multi_lstm = tf.contrib.rnn.MultiRNNCell([self.lstm_cell]*num_lstm_layers, state_is_tuple=True)
+			# Here we assume that every LSTM cell in the network has the same number
+			# of hidden nodes.
+			#self.lstm_cell = tf.contrib.rnn.BasicLSTMCell(num_units=num_hidden_units, forget_bias=1.0, state_is_tuple=True)
+			self.lstm_cells = []
+			self.lstm_cells.append(tf.contrib.rnn.BasicLSTMCell(num_units=num_hidden_units, forget_bias=1.0, state_is_tuple=True))
+			self.lstm_cells.append(tf.contrib.rnn.BasicLSTMCell(num_units=num_hidden_units, forget_bias=1.0, state_is_tuple=True))
+			# MultiRNNCell - allows multiple recurrent cells to be stacked on top of 
+			#   each other. Note that we are explicitly duplicating 
+			#self.multi_lstm = tf.contrib.rnn.MultiRNNCell([self.lstm_cell]*num_lstm_layers, state_is_tuple=True)
+			self.multi_lstm = tf.contrib.rnn.MultiRNNCell(self.lstm_cells, state_is_tuple=True)
 
-			# Not necessary to generate the zero states.
 			# Maybe you can declare them here if you end up using them a lot.
 			self.lstm_zero_states = self.multi_lstm.zero_state(batch_size, dtype=tf.float32)
-			#print(type(self.lstm_zero_state), self.lstm_zero_state)
-			#print(session.run(self.lstm_zero_state))
 
-			# 'output' should have dimensions of [batch_size, num_unrolls, num_hidden_units]
+			# 'outputs' should have dimensions of [batch_size, num_unrolls, num_hidden_units]
 			# Since the RNN was defined as being dynamic, the amount of layer unrolling
-			# can change from batch to batch.
-			# 
+			# can change from batch to batch. (This script uses a constant batch size).
+			# 'last_lstm_state' has dimensions of [batch_size, num_hidden_units]. This needs
+			# to be taken into account when recursively calling the 
 			self.outputs, self.last_lstm_state = tf.nn.dynamic_rnn(cell=self.multi_lstm, inputs=self.feed_x, initial_state=self.rnn_tuple_states, dtype=tf.float32)
 			print("output from dynamic rnn", self.outputs)
 
@@ -178,34 +206,47 @@ class RNN(object):
 			# This should return a matrix.
 			# There's a bias for each output node, and the outputs of the dynamic_rnn are for
 			# each timestep, so the output *should* be a matrix of outputs at each timestep.
-			self.local_field = tf.matmul(tf.reshape(self.outputs, [-1, num_hidden_units]), self.weights) + self.biases
-			print("size of local field", self.local_field)
+			local_field = tf.matmul(tf.reshape(self.outputs, [-1, num_hidden_units]), self.weights) + self.biases
+			print("size of local field", local_field)
 
 			# What we're ultimately reducing.
 			# This is an operation on the tensorflow graph that contains the 'local_field' object
 			# returned from the rnn() method.
-			self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=self.local_field, labels=self.feed_y))
+			feed_y_long = tf.reshape(self.feed_y, [-1, num_chars])
+			self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=local_field, labels=feed_y_long))
 
+			outputs_shape = tf.shape(self.outputs)
 			# Convert the local fields generated by the output of the LSTM into a softmax output.
-			self.softmax_output = tf.nn.softmax(self.local_field)
+			self.softmax_output = tf.reshape(tf.nn.softmax(local_field), (outputs_shape[0], outputs_shape[1], num_chars))
+			print("shape of softmax out:", self.softmax_output)
 
 			# Declare the optimizer and the op that you want to minimize.
-			self.train_operation = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(self.cost)
+			self.train_operation = tf.train.RMSPropOptimizer(learning_rate=learning_rate, decay=0.9).minimize(self.cost)
 
-	def train(self, batch_x, batch_y):
+	def train(self, batch_x, batch_y, print_output=False):
 		
 		zero_states = self.session.run(self.lstm_zero_states)
 		feed_dict = {}
 		feed_dict[self.feed_x] = batch_x
-		#print("size of batch_x:", batch_x.shape)
-		#for i in range(len(zero_states)):
-		#	print("size of zero states:", zero_states[i][0].shape, zero_states[i][1].shape)
-
 		feed_dict[self.feed_y] = batch_y
-		for i in range(len(self.states)):
-			feed_dict[self.states[i][0]] = zero_states[i][0]
-			feed_dict[self.states[i][1]] = zero_states[i][1]
+		feed_dict[self.states] = zero_states
+		
+		#for i in range(len(self.states)):
+		#	feed_dict[self.states[i][0]] = zero_states[i][0]
+		#	feed_dict[self.states[i][1]] = zero_states[i][1]
 		self.session.run(self.train_operation, feed_dict=feed_dict)
+		if print_output:
+			train_output = ""
+			softmax_out, last_lstm_state, stupid_fucking_outputs = self.session.run([self.softmax_output, self.last_lstm_state, self.outputs], feed_dict=feed_dict)
+			print("shape of actual outputs:", stupid_fucking_outputs.shape)
+			print("shape of softmax out:", softmax_out.shape)
+			print("shitty fucking bitch ass fuck:", last_lstm_state[0][0].shape)
+			for i in range(softmax_out.shape[0]/4):
+				for j in range(softmax_out.shape[1]):
+					train_output += vector_to_char(softmax_out[i][j])
+			print(train_output)
+
+		return self.session.run(self.cost, feed_dict=feed_dict)
 
 	def run(self, x, num_steps=25, delimiter=None):
 		'''
@@ -227,27 +268,31 @@ class RNN(object):
 		for i in range(len(self.states)):
 			feed_dict[self.states[i][0]] = zero_states[i][0]
 			feed_dict[self.states[i][1]] = zero_states[i][1]
-		softmax_out, _, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict=feed_dict)
-		print("softmax_out", softmax_out)
+		softmax_out, lstm_state_out = self.session.run([self.softmax_output, self.last_lstm_state], feed_dict=feed_dict)
+		#print("softmax_out", softmax_out)
 
 		for j in range(softmax_out.shape[0]):
 			test_output += vector_to_char(softmax_out[j])
 
 		for i in range(num_steps):
-			lstm_in = np.zeros(softmax_out.shape)
-			lstm_in[np.where(softmax_out==np.amax(softmax_out))] = 1.0
-			print("softmax out:", softmax_out)
+			#lstm_in = np.zeros(softmax_out.shape)
+			#lstm_in[np.where(softmax_out==np.amax(softmax_out))] = 1.0
+			lstm_in = char_to_vector(vector_to_char(softmax_out[-1]))
+			print(lstm_in.shape)
+			print(self.feed_x.shape)
+			#print("softmax out:", softmax_out)
 			#lstm_state_r_in = lstm_state_out[0]
 			#lstm_state_c_in = lstm_state_out[1]
 			lstm_state_in = lstm_state_out
+
 			#feed_dict={self.feed_x:[lstm_in], self.state_r:lstm_state_r_in, self.state_c:lstm_state_c_in}
 			feed_dict = {}
-			feed_dict[self.feed_x] = [lstm_in]
+			feed_dict[self.feed_x] = [[lstm_in]]
 			for i in range(len(self.states)):
 				feed_dict[self.states[i][0]] = lstm_state_in[i][0]
 				feed_dict[self.states[i][1]] = lstm_state_in[i][1]
-			softmax_out, lstm_out, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict=feed_dict)
-			for j in range(lstm_out.shape[0]):
+			softmax_out, lstm_state_out = self.session.run([self.softmax_output, self.last_lstm_state], feed_dict=feed_dict)
+			for j in range(softmax_out.shape[0]):
 				test_output += vector_to_char(softmax_out[j])
 
 		return test_output
@@ -259,6 +304,7 @@ def main(argv):
 		checkpoint_file = argv[0]
 	# Start tf session. This is passed to the RNN class.
 	sess = tf.Session()
+	print_output=False
 
 	cud = os.getcwd()
 	weight_saver = thread_ops.weightThread()
@@ -301,24 +347,31 @@ def main(argv):
 			#train_batch_inputs, desired_batch_outputs = get_next_batch(num_timesteps, batch_size, step % batches_per_epoch)
 			train_batch_inputs, desired_batch_outputs = get_random_batch(num_timesteps, batch_size)
 
+			if step % int(sample_step_percentage*float(max_steps)) == 0:
+				print_output = True
 			# Note that the elements of the feed dictionary are the placeholders
 			# defined earlier in the program.
-			network.train(train_batch_inputs, desired_batch_outputs)
-			print(step)
+			cost = network.train(train_batch_inputs, desired_batch_outputs, print_output=print_output)
+			#print(step)
 			if step % int(sample_step_percentage*float(max_steps)) == 0:
 				print("-----------------------------------------------------")
-				print("current step", step)
-
-				training_output = network.run(train_batch_inputs, num_steps=0)
-				print("training output:\n", training_output)
+				print(float(step)/(sample_step_percentage*float(max_steps)), "percent complete")
+				print("current step", step, "out of", max_steps)
+				print("\tcost:", cost)
+				print("\tnumber of weight images saved:", weight_saver.iteration)
+				#training_output = network.run(train_batch_inputs, num_steps=0)
+				#print("training output:\n", training_output[0:500])
 				#print("local field:\n", sess.run(network.local_field))
 
-				#weights = sess.run(trainable_vars)
-				#weight_saver.run(weights)
+			if step % int(sample_weight_percentage*float(max_steps)) == 0:
+				weights = sess.run(trainable_vars)
+				weight_saver.run(weights)
 
 			step += 1
+			print_output=False
 
 		saver.save(sess, os.path.join(cud, "lstmsmall"))
+	print(network.run(string_to_tensor('random stuff')))
 
 if __name__ == "__main__":
 	main(sys.argv[1:])
