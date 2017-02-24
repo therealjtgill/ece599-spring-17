@@ -36,6 +36,7 @@ char_vocab = list(set(all_data))
 num_chars = len(char_vocab)
 num_timesteps = 50
 num_hidden_units = 200
+num_lstm_layers = 2
 learning_rate = 0.001
 batch_size = 32 
 batches_per_epoch = 500
@@ -118,6 +119,18 @@ def get_random_batch(num_timesteps, batch_size):
 class RNN(object):
 
 	def __init__(self, learning_rate, session, scope_name):
+		#####################################################################
+		#
+		# Started modifying the network to accept multiple layers. Use a
+		# list to store the number of units at a given layer. You'll have
+		# to make the following things into lists:
+		#   - zero states (for initializing the network)
+		#   - the basic lstm cells (these will also have to be passed to the
+		#     dynamic rnn module)
+		# Need to modify the feed dictionaries for training/testing.
+		# Might want to segment the various layers into separate scopes.
+		#
+		#####################################################################
 		self.session = session
 
 		with tf.variable_scope(scope_name):
@@ -131,27 +144,34 @@ class RNN(object):
 			# The value that you feed it is going to be a numpy array.
 			self.feed_x = tf.placeholder(dtype=tf.float32, shape=(None, None, num_chars))
 			self.feed_y = tf.placeholder(dtype=tf.float32, shape=(None, None, num_chars))
-			self.state_r = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
-			self.state_c = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
+			#self.state_r = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
+			#self.state_c = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
+			self.states = [[tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))]*2 for i in range(num_lstm_layers)]
 			# This converts the placeholders for the states 'r' and 'c' into a tuple 
 			# so that they can be passed to the dynamic_rnn. Note that in the case of
 			# multiple LSTM layers you'd have N 'r' and 'c' states to pass; one 'r' and
 			# 'c' for each layer of the LSTM network.
-			self.rnn_tuple_state = tf.contrib.rnn.LSTMStateTuple(self.state_r, self.state_c)
+			#self.rnn_tuple_states = tf.contrib.rnn.LSTMStateTuple(self.state_r, self.state_c)
+			self.rnn_tuple_states = tuple([tf.contrib.rnn.LSTMStateTuple(state[0], state[1]) for state in self.states])
 
 			# The cell state and the hidden state are vectors with the same number
 			# of components. This is usually coupled with an op that constructs the
 			# actual network - rnn.static_rnn, dynamic_rnn, etc.
+			
 			self.lstm_cell = tf.contrib.rnn.BasicLSTMCell(num_units=num_hidden_units, forget_bias=1.0, state_is_tuple=True)
+			self.multi_lstm = tf.contrib.rnn.MultiRNNCell([self.lstm_cell]*num_lstm_layers, state_is_tuple=True)
 
-			self.lstm_zero_state = self.lstm_cell.zero_state(batch_size, dtype=tf.float32)
-			print(type(self.lstm_zero_state), self.lstm_zero_state)
+			# Not necessary to generate the zero states.
+			# Maybe you can declare them here if you end up using them a lot.
+			self.lstm_zero_states = self.multi_lstm.zero_state(batch_size, dtype=tf.float32)
+			#print(type(self.lstm_zero_state), self.lstm_zero_state)
 			#print(session.run(self.lstm_zero_state))
 
 			# 'output' should have dimensions of [batch_size, num_unrolls, num_hidden_units]
 			# Since the RNN was defined as being dynamic, the amount of layer unrolling
 			# can change from batch to batch.
-			self.outputs, self.last_lstm_state = tf.nn.dynamic_rnn(cell=self.lstm_cell, inputs=self.feed_x, initial_state=self.rnn_tuple_state, dtype=tf.float32)
+			# 
+			self.outputs, self.last_lstm_state = tf.nn.dynamic_rnn(cell=self.multi_lstm, inputs=self.feed_x, initial_state=self.rnn_tuple_states, dtype=tf.float32)
 			print("output from dynamic rnn", self.outputs)
 
 			# The local field of the softmax output (argument of the softmax).
@@ -174,9 +194,18 @@ class RNN(object):
 
 	def train(self, batch_x, batch_y):
 		
-		zero_state_r = self.session.run(self.lstm_zero_state[0])
-		zero_state_c = self.session.run(self.lstm_zero_state[1])
-		self.session.run(self.train_operation, feed_dict={self.feed_x:batch_x, self.feed_y:batch_y, self.state_r:zero_state_r, self.state_c:zero_state_c})
+		zero_states = self.session.run(self.lstm_zero_states)
+		feed_dict = {}
+		feed_dict[self.feed_x] = batch_x
+		#print("size of batch_x:", batch_x.shape)
+		#for i in range(len(zero_states)):
+		#	print("size of zero states:", zero_states[i][0].shape, zero_states[i][1].shape)
+
+		feed_dict[self.feed_y] = batch_y
+		for i in range(len(self.states)):
+			feed_dict[self.states[i][0]] = zero_states[i][0]
+			feed_dict[self.states[i][1]] = zero_states[i][1]
+		self.session.run(self.train_operation, feed_dict=feed_dict)
 
 	def run(self, x, num_steps=25, delimiter=None):
 		'''
@@ -186,20 +215,37 @@ class RNN(object):
 		test_output = ""
 		#zero_state_r = self.session.run(self.lstm_zero_state[0])
 		#zero_state_c = self.session.run(self.lstm_zero_state[1])
-		zero_state_r = np.zeros((x.shape[0], num_hidden_units))
-		zero_state_c = np.zeros((x.shape[0], num_hidden_units))
-		feed_dict={self.feed_x:x, self.state_r:zero_state_r, self.state_c:zero_state_c}
-		softmax_out, lstm_out, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict=feed_dict)
-		print("softmax_out shape", softmax_out.shape)
+		#zero_state_r = np.zeros((x.shape[0], num_hidden_units))
+		#zero_state_c = np.zeros((x.shape[0], num_hidden_units))
+		zero_states = self.session.run(self.multi_lstm.zero_state(x.shape[0], dtype=tf.float32))
+		#feed_dict={self.feed_x:x, self.state_r:zero_state_r, self.state_c:zero_state_c}
+		feed_dict={}
+		feed_dict[self.feed_x] = x
+		#for i in range(len(zero_states)):
+		#	print("size of zero states:", zero_states[i][0].shape, zero_states[i][1].shape)
+		#print("size of input:", x.shape)
+		for i in range(len(self.states)):
+			feed_dict[self.states[i][0]] = zero_states[i][0]
+			feed_dict[self.states[i][1]] = zero_states[i][1]
+		softmax_out, _, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict=feed_dict)
+		print("softmax_out", softmax_out)
+
 		for j in range(softmax_out.shape[0]):
 			test_output += vector_to_char(softmax_out[j])
 
 		for i in range(num_steps):
 			lstm_in = np.zeros(softmax_out.shape)
 			lstm_in[np.where(softmax_out==np.amax(softmax_out))] = 1.0
-			lstm_state_r_in = lstm_state_out[0]
-			lstm_state_c_in = lstm_state_out[1]
-			feed_dict={self.feed_x:[lstm_in], self.state_r:lstm_state_r_in, self.state_c:lstm_state_c_in}
+			print("softmax out:", softmax_out)
+			#lstm_state_r_in = lstm_state_out[0]
+			#lstm_state_c_in = lstm_state_out[1]
+			lstm_state_in = lstm_state_out
+			#feed_dict={self.feed_x:[lstm_in], self.state_r:lstm_state_r_in, self.state_c:lstm_state_c_in}
+			feed_dict = {}
+			feed_dict[self.feed_x] = [lstm_in]
+			for i in range(len(self.states)):
+				feed_dict[self.states[i][0]] = lstm_state_in[i][0]
+				feed_dict[self.states[i][1]] = lstm_state_in[i][1]
 			softmax_out, lstm_out, lstm_state_out = self.session.run([self.softmax_output, self.outputs, self.last_lstm_state], feed_dict=feed_dict)
 			for j in range(lstm_out.shape[0]):
 				test_output += vector_to_char(softmax_out[j])
