@@ -128,6 +128,7 @@ class RNN(object):
 		#    [batch_size*num_timesteps, num_chars], which means that the
 		#    numpy output will have to be reshaped to its original dimensions
 		#    to get meaningful output.
+		#  - ignore problems, it's working! (thanks to Heng's epic strawberries)
 		#
 		#####################################################################
 		self.session = session
