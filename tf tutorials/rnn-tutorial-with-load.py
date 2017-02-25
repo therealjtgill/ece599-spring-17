@@ -106,22 +106,28 @@ class RNN(object):
 		# Started modifying the network to accept multiple layers. Use a
 		# list to store the number of units at a given layer. You'll have
 		# to make the following things into lists:
-		#   - zero states (for initializing the network)
-		#   - the basic lstm cells (these will also have to be passed to the
-		#     dynamic rnn module)
+		#  - zero states (for initializing the network)
+		#  - the basic lstm cells (these will also have to be passed to the
+		#    dynamic rnn module)
 		# Need to modify the feed dictionaries for training/testing.
 		# Might want to segment the various layers into separate scopes.
 		#
 		# PROBLEMS.
-		#   - network doesn't produce meaningful output at same rate as 
-		#     other scripts with same intention
-		#   - NOT taking into account (to my knowledge) the batch_size
-		#     component of the outputs returned by dynamic_rnn()
+		#  - network doesn't produce meaningful output at same rate as 
+		#    other scripts with same intention
+		#  - NOT taking into account (to my knowledge) the batch_size
+		#    component of the outputs returned by dynamic_rnn()
 		# POSSIBLE SOLUTIONS.
-		#   - softmax relies on the dimension of self.outputs, verify that
-		#     self.outputs is being appropriately flattened
-		#   - when passing a previous cell state back to the dynamic rnn
-		#     verfiy that you're passing the cell state from the last batch
+		#  - softmax relies on the dimension of self.outputs, verify that
+		#    self.outputs is being appropriately flattened
+		#  - when passing a previous cell state back to the dynamic rnn
+		#    verfiy that you're passing the cell state from the last batch
+		# NOTES.
+		#  - the softmax output operation reshapes the output from
+		#    [batch_size, num_timesteps, num_chars] to 
+		#    [batch_size*num_timesteps, num_chars], which means that the
+		#    numpy output will have to be reshaped to its original dimensions
+		#    to get meaningful output.
 		#
 		#####################################################################
 		self.session = session
@@ -250,13 +256,18 @@ class RNN(object):
 			softmax_out, lstm_state_out = self.session.run([self.softmax_output, self.last_lstm_state], feed_dict=feed_dict)
 			lstm_next_state = lstm_state_out
 			print("lstm state type, size:", type(lstm_state_out), lstm_state_out[0][0].shape)
-			test_output += vector_to_char(softmax_out[0][0])
+			char_out = vector_to_char(softmax_out[0][0])
+			test_output += char_out
 			
 
 		for i in range(num_steps):
 			#lstm_in = np.zeros(softmax_out.shape)
 			#lstm_in[np.where(softmax_out==np.amax(softmax_out))] = 1.0
-			lstm_in = char_to_vector(vector_to_char(softmax_out[0][0]))
+			lstm_in = char_to_vector(char_out)
+			#print("char out:", char_out)
+			#print("vector in:", lstm_in)
+			#print("vocabulary:", char_vocab)
+			#raw_input()
 			lstm_next_state = lstm_state_out
 
 			feed_dict[self.feed_x] = [[lstm_in]]
@@ -266,7 +277,8 @@ class RNN(object):
 				feed_dict[self.states[j][1]] = lstm_next_state[j][1]
 			softmax_out, lstm_state_out = self.session.run([self.softmax_output, self.last_lstm_state], feed_dict=feed_dict)	
 			#lstm_next_state = lstm_state_out
-			test_output += vector_to_char(softmax_out[0][0])
+			char_out = vector_to_char(softmax_out[0][0])
+			test_output += char_out
 
 		return test_output
 
