@@ -1,0 +1,2863 @@
+type of states: <class 'list'> <class 'list'>
+-----------------------------------------------------
+1.0 percent complete
+current step 100 out of 10000
+	cost: 3.11124
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ w'mmdiihhttnmmsvtuyiqi
+ke
+ew; ni tsuu
+  r
+bn ldecbnl,edlhir
+ ee:adholu
+rmi o  no r ulg jshm awgts 
+  woej
+isst
+ a,cnoereteaii c
+sr
+snyh-eyutrt sv s
+l
+s  sswd orfe  cyynro hmm  tfah,t stnwialeathy &eeeo
+snhgoae
+aapf mn  ma aohrcnstewotvta i tacd
+ai t  e  rwu a
+u,osuoss.wnnws,! rntd' 
+ edais tus fin   cm  ilsix rp  e  e !gtzohqyrb  e r hhah ou to d  el  rni  gy i': 
+oines fvspa eis  s heehnf  yi:udu cy.a ti dxwingfg alhy  euyh
+ni agl  ee yi cslbe    nf tin, brio tase ti,
+detbehgrao tm eneaei n h$srn o
+-----------------------------------------------------
+2.0 percent complete
+current step 200 out of 10000
+	cost: 2.98149
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ p stabdt trauedds-hooohrenndh ,na :rsinafaoha  o nnsim dm,utyenietghearfgsrd:m,yebelhotuueelfetishorrufo atr; iheemve
+t toeisetwdsknerfkee,p eoei v oaaotri  oi yplaeretyaeaaliheeongwo rn ieens  lonrehw
+doae
+trhoetetokkeuyo tooo odoiro oh  n ad ur.t:,dthfkraocmllr ririf
+uhne oaoielk agelret ses eihl ;hpui h smilla ns  tyrvclsisniamh aareld qtmsth oroeteyotehonaoynehntweil ahhere:c,lowpihip oetan  abo nee oei: et nrttragilass
+shhged  ano uncup .ne
+edh owa ocoai an nysreh'yoi te eieerac hdrshfrtehauebb
+-----------------------------------------------------
+3.0 percent complete
+current step 300 out of 10000
+	cost: 2.18151
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hercarn the wath wean, heeeser satenke shatfer't, i hitin?
+
+mincs
+meoris: you sanme and tionmes tubllee treaofh, is the pniggs?
+-pecy ig mayt; ve:
+a disy mears, theuegwus the didr as cime, waak forr3e on beoidmient feacit save'lland yor, ta it ce-non,
+aud sit, the bavind sy gorwasm your stafl's.
+
+ladm bad:
+yo rakee se mers kad me senlnd he misted jing lisfs and ttis le mise!
+go on infur, nhoud ayd isd i wislt deave hisg
+pe you jvirg asled indrmt?
+ied wet ny on bet.
+
+tlik mive ti samy
+wave a mikh to 
+-----------------------------------------------------
+4.0 percent complete
+current step 400 out of 10000
+	cost: 1.79195
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  erthe cardendy killfing comines besjoured men for
+should the, sienst of'ster asan.
+tebently to there thine, you for erpornom it ince the tires your dramifithens then ligkfur may, long peaked.
+
+ouralla:
+servend usable tifre the far'd;
+lert ferpw yat:
+thy slowy a pearest this so josetsians
+fiarted!
+as abpellencl now nothly wair'd ho bnook,
+wise him; thereraves kould what ceulls;
+when agkess that stran love capestrester efward house
+plopious she fane, stank,
+thene-the, emirt hend.
+
+pesture virencen:
+o
+-----------------------------------------------------
+5.0 percent complete
+current step 500 out of 10000
+	cost: 1.62221
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ' rdestroock?
+
+laty ninfer
+as in fevil,
+misseever your fides.
+meneben ap i sen, have a 
+upor to he spire,
+bodan me in powatess all your vauces twence.
+
+clawing:
+should had he wilt tire and joyd,
+be good bes lucents--lord, our dusbers the worth.
+
+secan:
+envic parduncely winds or ever hus bolds
+and her me her me
+diold on swandly owfry.
+
+pamply:
+my lord, have on bud well your sives, no woulds my lordush;
+and comfort with aloy daints for's comfort,
+and rese.
+
+bughasia:
+i will, wal, ey, patier, an anvain
+-----------------------------------------------------
+6.0 percent complete
+current step 600 out of 10000
+	cost: 1.45292
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ 
+a wife to the proplait.
+but which to burchif i'll to a man
+to me not. then you' wretched, came is their acks
+and then here of there content could spud.
+
+menenius:
+this is in worth undery--more his min,
+we hope?
+
+sicinius:
+twank you, him to-morrow strup,
+to seem me with sole his leld the heart to him put
+he shallward the womacks, and this hath and make you of his gobdence
+them they power's luck you
+fet the wrilted jrguenst are i will dre.
+
+king richard ni:
+that with greet monty and to our cheat; thi
+-----------------------------------------------------
+7.0 percent complete
+current step 700 out of 10000
+	cost: 1.41274
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ii marriame and them.
+
+pecunt:
+you have go, or in holy show'st royal were alock
+as
+pinies soverelands way alon, shies bankard,
+opery sominf'd withal witcing.
+
+adielienus:
+morehament or good off. but, i never than well years; the borchess to this, now, shall steal him?
+
+lords:
+even without too good liach 'tis morous loward; ilf they lay love,
+teems. make tyat, think's perfolep my rest nor more of them hath resolce:
+wyou common love, too sweet true.
+
+rutfard:
+i so 'git you fingee him now to death?
+
+e 
+-----------------------------------------------------
+8.0 percent complete
+current step 800 out of 10000
+	cost: 1.37443
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e volscess dead.
+
+lucio:
+sir, well but were not with a quaint?
+
+clown:
+thou must not to be all-tars?
+
+messenger:
+o, not am i not was as
+in the engran?
+
+reconderton:
+do not ready virtue should pervent, and in him.
+
+duchess of york:
+for 'twas the feise, and that would had dear poors;
+you talk no mark to begy
+i do ensich want'd me, or, for.
+
+grimio:
+well, so leave, i would again beantion; he cazed i had awo!
+
+dichard outho:
+ay, if i would the speed of hereford
+a willingless my war; but with his fight 
+-----------------------------------------------------
+9.0 percent complete
+current step 900 out of 10000
+	cost: 1.3494
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ herwander'd and the namisher, he:
+would those you shall prove it it; like himself the beggar above her pedath,
+as you may wife shearing; which bend the like in peace, and thus a ppeple aff,
+despite oper-dis-he in morting or that dead at any yield.
+
+cominius:
+i think i sailtagean;
+do abfort himself a did usking for hermifell hago?
+
+juliet:
+there fer, by it advonate, i'll be a honour! 'tis no harm you'll acrease
+these boar will i have it me.
+
+king henry vi:
+ay i late a dignity me.
+i cannot love more t
+-----------------------------------------------------
+10.0 percent complete
+current step 1000 out of 10000
+	cost: 1.31934
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ha lords richard. o, let chil be of thots in him.
+
+gloucester:
+what beares, in this.
+
+duchess of york:
+well! keeps your safest bort margaret,
+to call him stall when he like and gail deparded perforce go
+your grace idilts you in entrantedmen this poline
+yeal not morrow done, but i will be sworn, magamat,
+but weak obe, so i bud a honour wrongs braved spirity!
+yet wait lies i of these englast him become to
+light.
+
+gloucester:
+what hastings make the dusty of the case; for are welcome,
+a man are tostly t
+-----------------------------------------------------
+11.0 percent complete
+current step 1100 out of 10000
+	cost: 1.28856
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ teefolvoices of your limbs,
+if the enchh i warcots by tho knin through and father.
+
+pearina:
+not splain, for my parther!
+
+sebastian:
+i beseech.
+
+northumberland:
+that shall i refores. neither my grant monthes allies with mile
+my harkness she well see, with the uses
+whose repenlent my radoul two rome: alter your merry;
+and standeron of my grief.
+
+leontes:
+is this, and nead her by myself,
+one work the comfort; and, i'll burgued the such
+the part and pride, my worship we gone.
+
+nurse:
+what thou shalt un
+-----------------------------------------------------
+12.0 percent complete
+current step 1200 out of 10000
+	cost: 1.29971
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ;arking light unchildly
+how now; take moyal, save in your chrisposition,
+neighbour within this fire conquered,
+so honour, my knave rein;
+viel the most durise. death, and she with slain:
+thou art your monthry dalling
+the uthiness
+within thus my drop she shall do infect win
+have sprided on.
+
+king richard ii:
+why, grey? scoldiet.
+how now, fair sraws; are thou say'st
+as thy itmorable forward; to thy father
+for mother, buckingham; nothing on?
+against thy body.
+
+duke of york:
+such a dam speaks.
+
+autolycus
+-----------------------------------------------------
+13.0 percent complete
+current step 1300 out of 10000
+	cost: 1.25844
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he dulless integrisy of you,
+i do my king, whereto slip to enjoy; the common wrench lucensio,
+he was so faxtion apprehume thine. the dumperally thing,
+nor the harn, like speed harms more for fair lamger one.
+
+king edward i:
+once more soft! there's accuses, sir. of you
+
+angelo:
+celd, i beseech your tunding,
+were as fear'd her weep before.
+
+menenius:
+well as strange throw your maring and so send your house
+he rather lost, not lets they uncle have some old malenty
+to viceoties, i dreach, comfort best y
+-----------------------------------------------------
+14.0 percent complete
+current step 1400 out of 10000
+	cost: 1.22319
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he the oriace frie of land,
+have there well but on his raptings most doubling
+time of thy good in marce,
+where moving him the unwast and lady, devousiby
+were he thrictory ely liars. the first canger,
+even in kind opinion which you be admit owfor
+rather you indeed.
+mray, we are remedy'st true?
+
+gloves:
+ay! i must not.
+but,' since, that he are head whose puriof that we how now, dost thou counsels
+and tell thy uncle and his plofe-shows thee enough
+at you have bone a breath,
+windonion in tebutad, specis
+-----------------------------------------------------
+15.0 percent complete
+current step 1500 out of 10000
+	cost: 1.22146
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ eerapplay'd,
+to prill his unwiseled how, i see--wits envy wars,
+the reventent boards could have secup your grace:
+his lordship vingsant slain, lord gloucester,
+and the foes with the welking sicilion
+from brows' barken edward, that is no pleads, as one, good grumio,
+to answer mage hot thou nothim; but that they be no less will i.
+
+king richard ii:
+deeply is him.
+
+second senator:
+make honour how the grown office.
+no, give me this departure in the vowle of the
+young madam and kind than you have an ime
+
+-----------------------------------------------------
+16.0 percent complete
+current step 1600 out of 10000
+	cost: 1.18618
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ h  noble subsecoating vincentio?
+
+sicinius:
+take your marriage! well, couls, here to be weack.
+
+derby:
+good night, despair: your honouraby
+stins and ti'er like tongue.
+
+volumnia:
+if that she is, been;
+any to i cornocation that resires happy yet they
+know not honest; though he foul i hate mercy;
+that will be quiet, and senio:
+he should not hand that 'long on accert out of think on.
+
+coriolanus:
+honsel!
+
+king edward iv:
+well save my heart to dris a traitor.
+set up dust him, for they doth give:
+and hav
+-----------------------------------------------------
+17.0 percent complete
+current step 1700 out of 10000
+	cost: 1.21621
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ iesthreasence from me against
+my fair or wrot's news, from weeds, he
+strike unto kingdom to their will,
+and straiging with her mother taed'd the news
+with george, in torch unto the simple: but
+he is meant; ourselves to the deavicusion and eyes
+some things, and care i meaning edward, break'd with bowels,
+and i mildly will not be in writing,
+i'll -ept thy boy; have slew his daughters
+were careless for breath, a bore the otreas
+'tainted with her, that earthly meet'd
+to eight against your moan be just h
+-----------------------------------------------------
+18.0 percent complete
+current step 1800 out of 10000
+	cost: 1.21183
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ h- downing-'torth you bodes:
+therefore to be too lancaster in his father's smunner'd master
+she can their contranisp things equele.
+
+petruchio:
+nay, lay gone to my lord; i would be no more.
+
+baptista:
+and thus i to request o'er; shake one to endure
+that the hand to the people god and rembles.
+durs one petrumined to a gink?
+
+keeper:
+disined to issieves; her joints had occounts: brawling
+to be honest way so happy.
+
+queen:
+go that it is our faces, who? down they are
+satisfied.
+
+menenius:
+or blessed, th
+-----------------------------------------------------
+19.0 percent complete
+current step 1900 out of 10000
+	cost: 1.16344
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ wiestates in a run as this:
+quall hate, to keep the fear'st arms
+ye to conceil the priest there; with those thirst.
+
+henry bolingbroke:
+have movest forfen to log, i know,
+'tis contempted, and your wings and her people?
+
+second murderer:
+the from the listing love of any deathss of living
+upon our suple musurace throughly thou this!
+
+lady anne:
+i do, trence the camonst bad an one rail'st to-night:
+i for a merry-ca!?
+
+queen margaret:
+o person, i say, and yet on the maids:
+sir, the thirsty cursed man to
+-----------------------------------------------------
+20.0 percent complete
+current step 2000 out of 10000
+	cost: 1.19497
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hertower:
+death, poor queen!
+
+second gentleman:
+go both, and once a day shall he hence,
+and let me plant o' concluded and therefore,
+of that i see this cloters by their
+will have a winness steal your mother;
+as briths conceining notodigh,
+if no! blessities?
+
+boy:
+the worse!
+
+crubin:
+and now, perpetual dinders; perjured
+my stream in views in me--
+
+york:
+then hadst to fish, i'll set her to the
+citinus.
+so, aye to was. stay and deep brove.
+
+baptista:
+now chances me with together?
+
+pompey:
+o worked deat
+-----------------------------------------------------
+21.0 percent complete
+current step 2100 out of 10000
+	cost: 1.17779
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ae segrect muscock met
+buckless till tughterth in thy hollow me
+the hand more bound them;
+'tis time hurl sword without a miserate,
+letters of yountry book of charity.
+but ere thou billow'd he out my slight.
+but what doth live my heart the gates of
+us is pourse as you swoon fash and guildy
+unfine as those though is foul requited
+but one that's draw her in their hatrance,
+our mother and her wife, tears and sun
+petitionelle shall report excellent
+as boisly confeded: all strokes you,
+as they would charg
+-----------------------------------------------------
+22.0 percent complete
+current step 2200 out of 10000
+	cost: 1.16658
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ey prince thou art
+is worth his body to this death.
+
+hortensio:
+my lord?
+
+gloucester:
+when i shall stand for't that shorters belvet,
+and i support what patience strim's upon their king-montague:
+quail, nonebow is your friends.
+ah, how now up?
+
+
+second citizen:
+that hath long gentle curctarest take
+for sin we dare not here a man:
+ariel, to find our soul-sair with
+for a poison, that you begins my charity?
+
+gloucester:
+whither she's no man then, ere why should you hear?
+
+queen margaret:
+in lond dies un
+-----------------------------------------------------
+23.0 percent complete
+current step 2300 out of 10000
+	cost: 1.15675
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e friar's boar shepherd;
+i am with this your graces bornable
+to give your counsel's doom.
+
+slewic:
+born with me?
+
+leontes:
+no, by this gentleman, though your redeemptuous sent
+joyfuller than the measurest hadwarn:
+the sun sees.
+
+richard:
+by my head, mother; for having well,
+his wife, i'll all the rebul, new-quick.
+god what of all my cheer
+isable just apollos, wife,
+the lords i hear, once more than a callbus,
+but not ta helds and creeking love.
+
+gloucester:
+my part, dearness are all too.
+for of my h
+-----------------------------------------------------
+24.0 percent complete
+current step 2400 out of 10000
+	cost: 1.17406
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  o,childish prosperity be gated
+the teat, i'll fight your pence of his place,
+i am lister to his robes remember. yet you
+have my sorrow.
+
+coriolanus:
+fare you well preserve me, tarry aboard commission;
+and part with groation.
+he has somewbuider.
+
+petruchio:
+'tis he, richard, all dew the rest,
+it shall in prove and liberal work.
+
+duke vincentio:
+softly, villain.
+
+sucs of ancestard of him:
+do you know not whither fly?
+his holy liveries talk of france it indige.
+
+volumnia:
+peace, how shall way? the min
+-----------------------------------------------------
+25.0 percent complete
+current step 2500 out of 10000
+	cost: 1.14467
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ , raccept of your trial;
+he standerous prepartive upon thy groom;
+how now, a torizg not, howlight more friends,
+and whose best breathful charge gains-
+come, cite: 'zouth i should look for.
+
+leontes:
+come, come, when 'tis
+i fear so bolingbrokest!
+now, mighty lord, lord us to stefle in the orator,
+a traitor shall, i may, pomfort, thou hast
+froshest, his wrongs are undone: come on, come,
+and single then are pleased to fight? and, which,
+i'll draw the king by awhy, therefore, like to get this free?
+ha! 
+-----------------------------------------------------
+26.0 percent complete
+current step 2600 out of 10000
+	cost: 1.14307
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hiysweeting foe: because you were a sleed
+send heir professions the manage of my guilty enemies,--
+
+all:
+that's a brittle for.
+
+thoward:
+ay you.
+
+isabella:
+o morefarious of the soldiers, god!
+i mean it doil that we have look'd on put all thing
+is now terms, or what's the fitch i' the rascal new
+jadue him me with thy throne. what do mere me? what shall we do?
+
+polixenes:
+that my woodby that we know our shrund betwixt thoughts;
+ay, for his neck and daughters: were you brings you home.
+
+autolycus:
+o, s
+-----------------------------------------------------
+27.0 percent complete
+current step 2700 out of 10000
+	cost: 1.13295
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ .e brand kate die toward heed
+not like a man o' my loss; look vain and i'll be ill.
+
+katharina:
+i would arrevy wither in a crown,
+to brictly thou art to begin and let its die.
+my tent is not instructed.
+
+queen elizabeth:
+come, come, maring, part!
+
+warwick:
+we may be for the heart. wherefore what, it had been call'd me?
+
+katharina:
+what fellow, let's go along.
+
+prince?
+
+all:
+what, my lord? for shame is nothing.
+
+romeo:
+'tis device, if thou wouldst have drunce'd with words.
+o glody will two things tha
+-----------------------------------------------------
+28.0 percent complete
+current step 2800 out of 10000
+	cost: 1.12804
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  endrunken lightling wrong of noble and, if but
+so fit forgive me all too graces pardon,
+and soon apparell'd up not the mind in men french!
+in this the guards that this! our senses yourself men, grumio, i love the
+peinner is to you, lust; as i but dear stand, when didst thou not
+queen to in, i'll painful flary throng,
+and not his peur'd, sir, none else. any thing,
+as i have eaten at the sun few sir, that were in corporaried,
+wherein they have mischancell do busal, return'd.
+
+gloucester:
+villain, awa
+-----------------------------------------------------
+29.0 percent complete
+current step 2900 out of 10000
+	cost: 1.0818
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he former plain;
+what parties gape of hell of woe
+the hatrong sound to resign our friends no wedded
+haven turn behal thee and our own duty.
+
+katharina:
+why not thy far is it to kept her extremes means.
+
+lord rall:
+my lords o' the lords of grace me use service.
+
+king edward iv:
+the matter than thy heart defaint
+ye not from you, who hath a connixents?
+
+first senator:
+i think he'll may not deep, to high my garden?
+how now! canst he, consent! my name, sir:--
+
+menenius:
+now 
+duke vincentio:
+the grey god 
+-----------------------------------------------------
+30.0 percent complete
+current step 3000 out of 10000
+	cost: 1.09343
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he wisdom light, but sentence; there is one vexenes
+that they are spleeved you, by your son, which now the town?
+or abstly; in my wife her kind;
+signior house of england's love it for a mean not;
+for though are young from supmars.
+
+leontes:
+content this husband,
+for she be gone, warwick, not if you look'd perjucious instantly.
+lord angelo, a thousand.
+clifford; i will attend your lord,
+the volsces of us goodly haply speed; methinks,
+of a king of every part and great thing straighs.
+
+mopsa:
+the north
+-----------------------------------------------------
+31.0 percent complete
+current step 3100 out of 10000
+	cost: 1.10554
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ harofficers; rest newer day.
+
+lord ross:
+o, tarry first, my lord!
+
+buckingham:
+though i do call what gods, not all at home,
+may think you undo a trial of, the king's note,
+so lain be curtain'd upon marthal, call from
+such necessity of black,
+which is our country's shoesdike, that shall speak their state;
+his rather hold not to the blow of rancourary.
+take thou my friend of rome, and either let it.
+wife i be free but why look up his back,
+though he rest in all his -country, and see
+your son imperials
+-----------------------------------------------------
+32.0 percent complete
+current step 3200 out of 10000
+	cost: 1.06517
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e blot has list; here in the soldiers
+to him by all the news of never cannot lew-minate,
+i'll freel again to make me mean, and twents
+to bring the state of it is so dista'd,
+come in becain; you were a poor man's
+deed of tensio: well ourselves.
+
+lucio:
+my lord, i thank you in thy dead.
+
+friar laurence:
+
+boot lord,
+his name me! fast: give him you: i have no soldiers.
+
+brutus:
+even you dim how my face from letters an edward,
+and that driep on himself here in no tale,
+and be such place, months enought 
+-----------------------------------------------------
+33.0 percent complete
+current step 3300 out of 10000
+	cost: 1.07473
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  
+ryoung hours,--'zillot, and they are as his in hasty;
+for threed my heart will bear my sister glasses.
+he could not well you not wail, as thou fought?
+love so, we, ay, and then she's wellayence
+till every thing i should walk; here shall i do
+thee to answer the fine of an end;
+which once of that which often dispraise.
+
+second servant:
+we do her misery full action.
+
+coriolanus:
+i have your soldiers, madam.
+
+escalus:
+ho! thus youtlight i see thy under hard.
+
+kenver:
+ay, be the wrelence and like an af
+-----------------------------------------------------
+34.0 percent complete
+current step 3400 out of 10000
+	cost: 1.0452
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ yarhorst-lew grace.
+
+gloucester:
+my dearer lads!
+o tutting deak awhile; yet she stood
+as belovy's war; and coulding apprehents, villain,
+and it is dead and honour will implago;
+upon this nearest talk: he is my right.
+dost glide! you do a craff or the
+senators for myself usurp'st ay,
+since he hath smost us but whence i make socoer york.
+the ctary volutio, did extend your husband
+a cox, but in their purpose did subject sweet
+and out my hands. go, get you gone!
+
+ratcliff:
+it was, my lord of carlishom f
+-----------------------------------------------------
+35.0 percent complete
+current step 3500 out of 10000
+	cost: 1.07889
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ sanstroke of thine old feast,
+methinks we may urge upon the grieves forth;
+who, to my purpose, which having parting of
+it: that thy sentence, and yinst glad
+as one that ignorance! why, farewell, no
+second citizen:
+'tis better life to let him seek him down:
+yet, let us sit before, and fight who,
+we are made to believed mine own.
+
+gonzalo:
+out, i am now him.
+
+duchess of york:
+who am found me? nay, let it help and
+defective, he didst long us to visit the malice
+as he give him of his throne;
+or, tear up
+-----------------------------------------------------
+36.0 percent complete
+current step 3600 out of 10000
+	cost: 1.03782
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ho duke whate yet himself,
+lords, conceit we know his scope recount.
+
+widow:
+i will't i go; peace we protest,
+and serves the friar accept of his head and
+tongue can put some both switter.
+
+buckingham:
+boy your complexion of me: my good lord;
+and deal unavourases sorrow and lay on me;
+and yet, to susle christening me,
+tell me not worth to all.
+
+northumberland:
+do you thing that the night by person
+without my banished, where, they are full of
+those butts the west. our parents in heaven.
+the copmortals
+-----------------------------------------------------
+37.0 percent complete
+current step 3700 out of 10000
+	cost: 1.09155
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hr mantua; and chasse me all,
+but forcies and all twice he smake the world adder
+than they have touched by the air and the rustaff.
+
+king edward ivina:
+some that he, signior lapter, with a linger days,
+and smiles most advice, stand up.
+fear they will be her prefer your cominius; as those honours to a year;
+but one resolve our father, coming herd.
+shall scoppe that i shall not be stroke,
+it shall be well, but part be senators,' chargate as ely.
+
+queen:
+what cried a bonne-house?
+
+montague:
+so, good sa
+-----------------------------------------------------
+38.0 percent complete
+current step 3800 out of 10000
+	cost: 1.03197
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ou intent of their heads,
+so tell him somewhise villam-bagost thou clim, he hath
+might have been just.
+
+coriolanus:
+i confess, for our complexion shall be the false officer
+persuades, his subtling new sunral sense,
+for i am whoresomous nurse than he shall come from thee.
+call cadonio comes are at the strength point peace
+the sear-blood falsely as love good friend of bind content: yea, are come not these frains,
+to river ground and looks with curses, are;
+and yet not been at him than lies themselves
+
+-----------------------------------------------------
+39.0 percent complete
+current step 3900 out of 10000
+	cost: 1.04955
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he heart wronged-fair anger of the world.
+
+duke vincentio:
+heatent, and says he?
+
+pompey:
+sir, my lord; more else, we stood
+beholding of their are they speak how in your friend.
+how fares our love shall see,
+to give her sack, but by my eyes,
+so all his made my prophetle!
+upon a churchyard lies their disabre
+to -meen elemited.
+
+marcius:
+nay something often;--
+
+isabella:
+no more of him.
+
+paris:
+the people of my wife.
+
+second senator:
+i cannot tell: what shaft sets fair?
+
+nurse:
+yes, sir,
+you cannot te
+-----------------------------------------------------
+40.0 percent complete
+current step 4000 out of 10000
+	cost: 1.03121
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ea king, this old eye, merry with a little
+made giving restle's unknown very god on the old man.
+cites:
+land bids a man.
+
+clown:
+sweet sins ariol no.
+
+dorcas:
+what, will he not she must answer to you?
+
+autolycus:
+how fares my fortune, for evard yet one,
+who may unhaw with institution, where i am barged, yet one fools
+sin that measureful of the court-chop on a
+man: let me cannot get a poor a man's sense.
+
+camillo:
+sir my shade, if that's; by my ancient eyes; yea,
+when he knew my much about my turn fr
+-----------------------------------------------------
+41.0 percent complete
+current step 4100 out of 10000
+	cost: 1.06562
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  a dream of forcount,
+towards his disbut soul.
+
+ariel:
+return to interchanged.
+
+sicinius:
+isable to look upon their pleadent heir
+father, sit, another; so i begin.
+
+portasfurdius:
+hence piece his charities of her,
+shall follow him from me, their true, and not
+without a dozen of thee.
+
+first servingman:
+nay, if the shepherds ungle-mecure in book,
+me, and partest her soldiers; stands,
+my noble out agriens have in such a sight:
+and that perchoms of the former greening
+and credio that promise thee spies
+-----------------------------------------------------
+42.0 percent complete
+current step 4200 out of 10000
+	cost: 1.04396
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ oe earth.
+no, patience.
+'nors and the maid's church, trumbers shall be so
+true thousand men'st lost news, sir, a dishonour of a gentleman,
+he senstant hostily, will kneel for her imillion!
+o late cannot guest you not plead.
+buty pray you be my garmentorges
+upon my poor and little.
+i'ld we bither. if you be a stiff of
+the liberal and the city course,
+has plates in our friends? music still,
+as it were, her govern aim and of your fearful
+turned suit heart us in the corsc?
+
+virginia:
+i will keep not add
+-----------------------------------------------------
+43.0 percent complete
+current step 4300 out of 10000
+	cost: 1.04131
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ee obseences;
+and, that for richard market-slaviuf:
+i drew to two my gloucester from
+maritatilot: if you profess
+is much as merbier, bear these
+speak so your way, still live! and jealous
+had puariel that; where is my father?
+
+petruchio:
+well you what kings! woo me alive
+with strongs and savings, sir, nor what this 'twere to made his
+consent to hear it.
+
+marcius:
+all things--
+peedlous! the fair lovens more,
+you charity noted 'minuris' foot in hot,
+threeving attend you to the morning: not
+whatesore fi
+-----------------------------------------------------
+44.0 percent complete
+current step 4400 out of 10000
+	cost: 1.07169
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hemmorning, and my momentary
+and scarce so, she the day or charge!
+o, hie you sorrow kill me word such out,
+and outworn fowns, retarve up not:
+or the kingly till he for henry be made?
+
+edward:
+o heaviest dealinest, for the grey-or angelo is favour,
+like to speakate through sold the crown of my desires.
+we'll see how i may say it is the
+wild, not means: they shall ever faith,
+far honour that i'll straight sin fast,
+when appecle mowbray's son--
+and now i know i know not whether
+'tis all at once that i
+-----------------------------------------------------
+45.0 percent complete
+current step 4500 out of 10000
+	cost: 1.03548
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hermealed grave drieds of beass,
+which i enjoying edward's children!
+
+hastings:
+why not he can dog: were no more of your opposite,
+than you and hare, though we can command.
+
+lady capulet:
+gregory, cousin, farewell. comfort! pray, let us term it.
+
+gloucester:
+yes, insigning strength quarter'd by this tongue
+and find it with a lowered fellow: i will make
+a shher--poor duck into frame of the become privy,
+from our day's very head and put on supreme
+specially, such a man too, gutsings in his land;
+and f
+-----------------------------------------------------
+46.0 percent complete
+current step 4600 out of 10000
+	cost: 1.01539
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he king, true penato, as thou arce
+this mercy will wear became me, why, first possessed.
+
+petruchio:
+then, if a troublor as the bride of love i bear
+thy heart look'd not; proceed to report you be?
+here's no mutuar and your brother gail
+and with your creatorved says thou art a
+
+ancient cawn; see--blad is attend your wife.
+
+lucentio:
+he was a dish of you take me two from hence.
+
+queen:
+in happy man.
+here comes then; for your expected weeding shames,
+antopate:' and still he wake. there is thy charge;
+t
+-----------------------------------------------------
+47.0 percent complete
+current step 4700 out of 10000
+	cost: 1.02534
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ io miracle,
+the other begg tongue of woe.
+
+benvolio:
+but let me speak with thee: this question by the wild
+honour, if he sit brought to the poor henry, and
+then my forequeen you wedler power to send it,--
+mething together what she is fought and young
+may make no easter here, the officer of heaven,
+that thinks i'll cry upon the honour.
+
+brutus:
+many distainted, nothing out
+but what they never learned him to make
+no more come in matter out with words: which houre
+i was in purpose, thou hast from this 
+-----------------------------------------------------
+48.0 percent complete
+current step 4800 out of 10000
+	cost: 0.997432
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he heaven to say your grace:
+my good nightingales under the sweet,
+and, forewarders forth to cry -comes to me, may here
+and that he bear out almost cause by the extremes of you
+know her witchcraft, that i be not,
+her my sovours are a richament lawd:
+now to be sent for amend and him.
+
+king richard iii:
+richmory for one betides which got thee noble.
+
+dorset:
+the prime immedition
+is at the last who love himself, which else, i pray
+the grate bohere thou boy hastings no hell;
+ere you marriage conquer to 
+-----------------------------------------------------
+49.0 percent complete
+current step 4900 out of 10000
+	cost: 0.974204
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hi sight. harr'd, sister.
+
+katharina:
+awake you son from thee.
+
+juliet:
+a friends for cliudio; for a bawd, sway till he had not;
+you know not herse-book that i be.
+
+cominius:
+i did, and ask your worst,
+which of it in her fault, now if you will design untorth the
+seeing imagined will throw any tear of the is
+the potsch o'er angelo both.
+what is the piteous clifford grief loughed here, for you have power
+to loan assureroly any forfeit,
+tell unroth'd with us; 'tis not far-gell-med wings,
+that throughes
+-----------------------------------------------------
+50.0 percent complete
+current step 5000 out of 10000
+	cost: 0.989838
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ h  leaves and could not push,
+as 'twere we comet to make thee from my request?
+
+king richard ii:
+of this week house, i promise you:
+for the next harmony side, in him thus;
+thou art to bed. here comes my gracious lord!
+my dainty romeo?
+
+camillo:
+how came i make't, i am forty tongue,
+more horsed both i see't a seat,
+we stumbled then e'er good hasten and raised.
+if thy mind when deny him by to deed
+myself fiends. dear me, i'll stand but it would presunce a letter,
+and whiles i muter: awake ones of the 
+-----------------------------------------------------
+51.0 percent complete
+current step 5100 out of 10000
+	cost: 1.00628
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ .e drops of service hath more
+than other. there is her born!
+
+lucio:
+
+elbow:
+then, lamb! blocks, if you hode, i pray, conceit it in this yauld.
+
+polixenes:
+we are too busgent with a mattor.
+lucio, your parts and affection thee at the
+heavy obstrainting, 'my my gratituse
+than in twoo'dreason choking than their kepts.
+marry, if 'twos plove myself to yours!
+here will before: there he must die.
+
+lady anne:
+no more!
+
+coriolanus:
+they foult that needful king, affrights it
+and dart percuse.
+
+leontes:
+you'r
+-----------------------------------------------------
+52.0 percent complete
+current step 5200 out of 10000
+	cost: 0.995249
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ : rhour;
+for let thy daughter is on him.
+
+lord mous motionafur,
+that with us quire and he
+stars of these rebels richard, while i process
+sick up in just;
+for you will to you hold a virtue.
+lateless i had rather than myself; and therefore,
+into noble thing will, and well you're, try
+which since his doublersh signior hortensio,
+to wound it first: of standing it, you are king
+it most appearet; and, petruchio, sir,
+have been no post-troth thou to this run from hence,
+thou art the meal forgetty in their 
+-----------------------------------------------------
+53.0 percent complete
+current step 5300 out of 10000
+	cost: 1.00496
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ha wild aurt of my weight,
+which you must stay thee battle and good.
+the rastinger than you from your own thus ere we meet
+heard his slaughter'd heads,
+unperpetion through the offences lent in self-satisfact hear
+is our visitadike of kings,
+one of your maid woo hand and groans unto you keep.
+
+lady capulet:
+go, wise, is there their fury: whose guiltless that
+the urgest duke and sorrow,
+and in angelo i rather have
+made year groans or bed, this wrenching. sical, well assured
+the compass of me hath yout
+-----------------------------------------------------
+54.0 percent complete
+current step 5400 out of 10000
+	cost: 0.975464
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e sun with sit.
+
+first senator:
+to your good name, sound, is it not wring.
+
+tranio:
+and you that deep to hear this kindness,
+call feathing not a weeder's daughter's purchastion a
+matter.
+
+hastings: thou, you?
+
+hermione:
+o, didst
+perful many land; and too no lark.
+i had to thee again.
+
+king richard ii:
+right, you say she's carved of my own royal peace.
+consent at salt would have been too desern'd,
+his born a gentlewoman cup of infancty, strength
+on this supply toak; for i am mady.
+
+isabella:
+these c
+-----------------------------------------------------
+55.0 percent complete
+current step 5500 out of 10000
+	cost: 0.992112
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ oenmost name of her fellows and hasting thing,--
+as i be not reverend according on.
+
+nurse:
+an i wept not this body; for 'tis opet
+things strike:
+his god to his wrench upon this kindness and your highness' hands
+lie all my old fray, by what he doth be forgot
+a pleasant question.
+
+duchess of york:
+what men in pushman lord is this assurance
+of such heir as the souls of worth in your kindness
+toading by tality and may reputation place!
+
+curtis:
+howe't slipter! come, master off.
+
+katharina:
+you, daughte
+-----------------------------------------------------
+56.0 percent complete
+current step 5600 out of 10000
+	cost: 0.96527
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ rarwomen's son, the blood, coopled heart upon a port:
+ayes, my doom,--
+
+king richard ii:
+come, where's so first, sir; but, for now
+my wife is burdeness.
+
+king richard iii:
+who hath in your own balmant's slaughter'd kindred,
+who all waited most unreleft of beats?
+stand to the means; but camillo is humble thrown and
+shame with flaviusion or four air,
+which shall command which see them garlis must follow.
+
+sebastian:
+we would not mock me when you have richard's veolation of thy bonds
+their vanits at th
+-----------------------------------------------------
+57.0 percent complete
+current step 5700 out of 10000
+	cost: 0.959813
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hercourred reason of this! good all the congertace to the world?
+because me, then, to yours, i am our weather to yourself
+art to the breeder of the main at all.
+
+petruchio:
+hortensio, 'tis known.
+
+duchess of york:
+what is your country's love and free matter?
+
+sampson:
+
+gonzalo:
+what, authorit match! ay, marcius, that thou i did
+thribt no longer that for curses of his old a maid, you
+should not deal in tops of hope and me.
+even in the stripes plunches with a capulet,
+alas, towands, and farther oppose
+-----------------------------------------------------
+58.0 percent complete
+current step 5800 out of 10000
+	cost: 0.990678
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ;e table;
+and all imposed the headed babbed him too.
+
+john of gaunt:
+a velver, well; i'll bear you bud our pleasure;
+he cannot be afford: no more, i near.
+
+ratcliff:
+dispatch: is either he hath do now, my sun,
+his grievous delivers sweet with you.
+
+benvolio:
+the clouds, my lord; signior hars he hath noon him by my life
+indeeding being 'gounded mine to hear a worse.
+
+gloucester:
+he lives him, the class of you,
+most heard him not.
+
+menenius:
+i cannot make a vow; a defence at our brine:
+bid claudio?
+
+b
+-----------------------------------------------------
+59.0 percent complete
+current step 5900 out of 10000
+	cost: 0.945738
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ;e matter, you must be beloved:
+but to you pay a feast gentleman whose hall.
+butchers, faith, lay in the view of a loyal.
+
+lord will cry be ruled,
+even fly your honour.
+
+pedant:
+
+gonzalo:
+he comes bring anothing living blood,
+that francish hath made me but disease. but, what said
+that angel mazels!
+
+first murderer:
+what reques of a funy hours?
+
+cominius:
+i cheer thee not.
+
+brutus:
+if on, proud jaces perset, tidings, marquess
+go without a sullden in a happy treaty,
+even welcome home that humble great
+-----------------------------------------------------
+60.0 percent complete
+current step 6000 out of 10000
+	cost: 1.00417
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  ayfourest friend?
+
+secins:
+thou mayst put down the law morn.
+
+antonio:
+wine! whose satisfy
+till then, what's you well under thee,
+for studgeroran virius, you increase her ears leanted well
+and gite her birth,--which hent of somerseigner bosoms.
+for, knock your trey?
+make lead, saving henry, to have help
+the day betimes of allend.
+
+lady surrey:
+should think she will command me raisely lands are like to be
+of place nor doing the peace: i'll be to do
+it, edward, what day made you talk of powerf.
+
+poli
+-----------------------------------------------------
+61.0 percent complete
+current step 6100 out of 10000
+	cost: 0.978899
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ,e city in england's royal queen
+leontess have not in such manners hath no use in jest.
+i can the good god, i hear so! juliet!
+
+buckingham:
+look, why, when with your voices?
+
+marcius:
+well, lords, see; sither in profit to slay you, sir;
+emburenting him there a winder.
+
+abraham:
+the prayers are with value we pay away:
+you must, go to the lady
+will have but soon hanging; and schoolrasted tours
+but mine, so kill out with my age, in angry kind;
+and so your will rid his son against the feast,
+though depu
+-----------------------------------------------------
+62.0 percent complete
+current step 6200 out of 10000
+	cost: 0.995429
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  'sdanger,
+a kind of burst: i do not know:
+i never shaund with my raginess sounds,
+if you'll you see thou slay'd forbid it: my voice
+we should not with my wooing but you
+shall tell her now thou coult'st. they thou attend'st! if thou didst come abade
+a man he is bigger wormen she will weep
+to-nigation feetly.
+
+hastings:
+and so my lord, detecus to die, dispatch'd
+to help the wars with him.
+
+escalus:
+if that trident lies believe with me.
+
+catesby:
+my most gracious lord, in the next resortal
+for such ma
+-----------------------------------------------------
+63.0 percent complete
+current step 6300 out of 10000
+	cost: 0.946098
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ heydancing knife my bow.
+how fares a woman better here?
+
+duchess of york:
+my lord, is gone to keep him for his happy, wardine;
+and all alone no murder of mantua.
+
+norfolk:
+as glass boss and i am't alecand.
+if this clap have your ease being slaughter'd,
+with dicked prod depart to take it off.
+
+lord:
+rap of fortune's man, to shear you.
+
+warwick:
+withow, i can beseech your watch,
+at such depens for prosperity
+and slip, before you go till you did be:
+i'll deny your brother. away with you?
+
+stanley:
+nay,
+-----------------------------------------------------
+64.0 percent complete
+current step 6400 out of 10000
+	cost: 0.986513
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  essuit
+or tell what time to think ask from an agree givery;
+so god, cousin, ladies!
+
+romeo:
+too familiar.
+
+sheriff:
+i prithee, grumio is death:--help gone in hell:
+this is the friend of mind; within his tents,
+and not the worst that joy at nine.
+
+froth:
+see that my way with him? we preware
+in this refest meneng: sleep shame: come, york,
+while turn'd my shame and pover! why,
+but now till steal him any, or else conqueres
+my care contented on, my arms contented.
+
+escalus:
+i am but shortens; she is so 
+-----------------------------------------------------
+65.0 percent complete
+current step 6500 out of 10000
+	cost: 1.00133
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ha stocks or again:
+kindly will bring forth, spirits, and frown
+being proud is such an inward of her!
+to-morrow morner die to-morrow morning.
+
+king richard iii:
+give me pale-cheer he might have honouratied.
+
+lord:
+why comes thity-whom time this sifted log,
+to buze do writing to your death?
+is this thy cold qualitien talk up in yourselves
+profess it: there thou dost appectue;
+there no bed, that thou wilt speak for you:
+boy, here's a fellow of his threats.
+
+prince:
+so said, i hear sweet wombs!
+if ever
+-----------------------------------------------------
+66.0 percent complete
+current step 6600 out of 10000
+	cost: 1.00552
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ha held above what's greater than two but as thou liest.
+
+clarence:
+death, let us be occasioned like a cract;
+art thou gods much distanclion and he queen?
+anothe, kiss the man, here is not so out patience;
+embassady, and not prevail'd this blood to pardon thee:
+being it placed but be apprehended,
+'tis dueder, if you say 'god save your grace!
+thou didst enfor richard ii:
+o my most gracious lord,
+i do beseech your highness's neck manner.
+
+queen elizabeth:
+o, get you know my ratcliff, till we have not 
+-----------------------------------------------------
+67.0 percent complete
+current step 6700 out of 10000
+	cost: 0.935959
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ yyrlate known the paltius
+that this no last our house, and bid me stay?
+commends your grace to you! wherefore can curse it so?
+
+juliet:
+and shall the sport known our moting,
+and yet, it which he doth forbid!--
+as am i born it is the lark true i.
+
+katharina:
+that's a mouse; gor noble claims your love!
+
+juliet:
+he's visits are boy. but, soft!
+
+clarence:
+that loath dear lord haste, entreated,
+suppose they progued, and to fear.
+
+mamilliusio:
+heaven, all!
+
+lartius:
+do not you do a thing dear lord of bedn
+-----------------------------------------------------
+68.0 percent complete
+current step 6800 out of 10000
+	cost: 0.944194
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e third by soldier.
+
+adrian:
+condemn your treasons 'lyiev, or do me this,
+as if the world thy kindwern fair as uncreation.
+
+duchess of york:
+alack, my love lords, gentlemen, let mange with him
+to offer well
+and charges forth we might gave me by me;
+i am the right transgrest fight in accessary;
+what stat, my tender life my life, might say 'bare exceim, most kind protector,
+when you cry 'tis sick there; go thy ways.
+
+henry bolingbroke:
+to cross, giver'd thy my parent, at the right;
+excelling you in f
+-----------------------------------------------------
+69.0 percent complete
+current step 6900 out of 10000
+	cost: 0.973642
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  i grave,
+and better new dead, i'll lay four dear engratition;
+rish'd age my father's wife to thinks upon the heavens seems
+but for revenge you have chastels away he's wept my soul i'll think
+there's none: she'll show you are a comfort
+that all half the peter?
+
+lady anne:
+what! has you to venture in good,
+rushes ap many in whose children?
+
+warwick:
+suppose the cause?
+what to me, lords! i, that which he lost
+alia: indeed, my lord:
+let me embrance; thou shalt be king henrying
+a patricia?
+o, he is but 
+-----------------------------------------------------
+70.0 percent complete
+current step 7000 out of 10000
+	cost: 0.954685
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  y extremest blood.
+now traitor! then in such amendment in their curns and disfire
+shall out cup dear for the advise me their girst:
+who wooest till grey cause of york,
+be rough wide rends from reverence of my gains.
+
+lord marshal:
+come, cousins- offer'd back again.
+
+benvolio:
+a consul! would i were faired cut to you.
+
+volumnia:
+indeed, your boy,
+that i might over to a great disposing groans
+and fear not misfortune must not; and by fire
+to me about your dreadful bidding work.
+
+duke vincentio:
+is
+i t
+-----------------------------------------------------
+71.0 percent complete
+current step 7100 out of 10000
+	cost: 0.970371
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ i.
+devil hath the hearts to-night;
+myself accept my tongue in all.
+
+second watchman:
+to by this land be longing.
+
+leontes:
+what! make a
+too bud unknie,'s father; and that we need
+icful of the hate as lief
+flood in his shoke of yorks, to know our heads?
+
+nurse:
+i was a forme, lord hastings, and so green in pearl;
+both none of heaven forget, but brag,
+and thou shouldst patient makes. how seemon he did
+they to the entrainfrest without overthrome!
+go, part is shall seem to havings to you; i will
+turn th
+-----------------------------------------------------
+72.0 percent complete
+current step 7200 out of 10000
+	cost: 0.941267
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+    dignity;
+and to be thine, shall not burid the thorny
+hath swell george to sect words: for you
+bohes in my father, let his slaughter as
+there be the house of lancasterms may full
+his growns those pity, it doth grieve up his tongue
+as oft and beggar, and the advise of york:
+to the poor fools of foes my tongue,
+throng to defend their great devils: think you you forth
+to fall by ticks, and my buckingham.
+
+buckingham:
+why, so! no usbrat which i thank your worth hereafter shall
+blow please with not tha
+-----------------------------------------------------
+73.0 percent complete
+current step 7300 out of 10000
+	cost: 0.941181
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  uecounty lives;
+shall meet him pay me were we disperse.
+
+polixenes:
+may you nothing touch the west perforce, but it but see!
+it is for worth, condemn'd my hores:
+i'll over ably the condition,
+but for the occasion of the hearens; in joy or like.
+
+third citizen:
+come, let us tale, my nace!
+
+romeo:
+then in himself, for son it is, and never
+rid such extremes late,
+when me is the winter now the right?
+once more, i charge thee, boy, perhaps,
+and i am robb'd as wealthyier be than to have,
+where you sweet 
+-----------------------------------------------------
+74.0 percent complete
+current step 7400 out of 10000
+	cost: 0.933555
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ 
+e heartible discolp,
+and then let was not at bown about mine:
+i do deserve me for london my heart plantagenet,
+is no less stone-hard hearts have kill'd for me.
+
+rivers:
+and yet were body to a freshing forth to
+miss'st the apparel test; for that she's not her forberal;
+the may be bold to right through whose fair,
+our standant fit on thee; his son?
+
+northumberland:
+well, well, you are cleop: this values, fear
+to danger where your provining ere i would say; and but remember
+a better fortune with your 
+-----------------------------------------------------
+75.0 percent complete
+current step 7500 out of 10000
+	cost: 0.955542
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hirmere crospy boy;
+that thou show'st thou know'd for'th prosperous,
+the lord of love, who gives me this mischance
+shall keep for this cousin with our heart,
+and zentray you from out rise of dreams,
+and fellow'st their witchcord upon thee.
+what of the humble i wish goodly in his native die?
+hear me, but noble care king richard iv:
+well, he must disbuch: nay, day lecture,
+and we have nothing broock: i would you have
+as he or die with solemn words.
+mark appreanel comfort in men;
+and none of tyrant bed
+-----------------------------------------------------
+76.0 percent complete
+current step 7600 out of 10000
+	cost: 0.910706
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ 'e queen are preyers.
+welcome, my lord, we must be convey'd to your lordship.
+
+lord ross:
+boistery have a son.
+
+katharina:
+i go.
+
+baptista:
+why, hear my woes may choke your grace.
+
+baptista:
+i shall, sir. 
+leontes:
+many you? and to have the one point
+of me, my lord.
+
+duke vincentio:
+about thy throat that writs afficid the world:
+he that was misto'st, if ever your man in the king
+by ted-gire and thrive the tower: if i may longes?
+
+cominius:
+i shall rum, good bly
+that may be more
+to know not, fan so s
+-----------------------------------------------------
+77.0 percent complete
+current step 7700 out of 10000
+	cost: 0.940075
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  i truth that did brink the watch in secodd.
+
+menenius:
+i think she for the cause.
+
+lucio:
+o that i sent me on the life of you;
+who sail, o, what hast thou the means i? what fie,
+what's this? mean to purchase me hither.
+
+third servant:
+on faefal lighteonts, take ourselves dies fear
+to ask you for your quarrel.
+
+exeter:
+heavy we have: but, sir? the linialance pieced alike.
+
+duke vincentio:
+fie, fie!
+
+angelo:
+why, lady! but! giddy joy and trouble too;
+for that make ross in rome, whom werl'dows and fre
+-----------------------------------------------------
+78.0 percent complete
+current step 7800 out of 10000
+	cost: 0.933494
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  erhand furries fortune's face
+them, or those hands so; for thy reason were pregred as you, which tender them
+would be allow'd loat nobstido know
+what doth not to see the silver hate on this.
+
+polixenes:
+the oscience of her lips and not so:
+but we have dream'd his woods; he cannot speak;
+and you shall be revolt, hath something before him.
+
+cominius:
+to tell, to-morrow, lords; you say,
+supposedborbos, two deep dotinion.
+for our boots that heaven him not dead, sir, 'tis a
+clouns, to trave me well: we 
+-----------------------------------------------------
+79.0 percent complete
+current step 7900 out of 10000
+	cost: 0.928964
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ aerfather?
+
+lucio:
+sir, you seem'd, less, where not honest again?
+
+gremio:
+there were his knells-
+o, sir, you speak diston person. mamms! is there no,
+forbiddane in the first day in her need to occupation,
+at wing of prives not a hope! he die i purply trusty, place,
+his country, over you shall speak of do, if god give me too
+there is the seson's fat overselves, if thou wise
+sogers, must grant thee; there they promise you,
+contempt in difford's death to fame, this weeping here,
+than claim thou hast b
+-----------------------------------------------------
+80.0 percent complete
+current step 8000 out of 10000
+	cost: 0.936176
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ se king and disand coronation.
+and therefore deliver you with save lace, of of despised should boy her;
+there's fifteen richmonds and suspicion.
+
+king richard iii:
+at the prettiest sorrow, lord shalt shut your heart,
+proffer'd them well.
+
+friar laurence:
+suiness i blame you from the wants no other, but most
+as another's liquat, if you bid
+fall to the heir, be reason's power than she as twenty steals
+as thus: he pretties for you.
+
+petruchio:
+
+buckingham:
+henry as he beggar's from his heartings peace;
+-----------------------------------------------------
+81.0 percent complete
+current step 8100 out of 10000
+	cost: 0.958613
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ oermatter, works to severous words,
+as wetter studdes and destroyct.
+farewell, good lords, forefather had been cause.
+
+gloucester:
+see well as assurant's eyes, to-morrow i am
+lower to asking me too earllow, as he serve to them!
+
+brutus:
+no name of me;
+and, if we are well approach'd you like abuse.
+
+clifford:
+close, blows thoughts, and i abid.
+
+hermione:
+let's have graced, i'll go along;
+my fair boy, that such adventur's neat,
+that peece is not this count you more to the custom.
+
+second kate:
+very li
+-----------------------------------------------------
+82.0 percent complete
+current step 8200 out of 10000
+	cost: 0.938718
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ho suitor of us, for
+we raging and terrible to the golden time
+out of a kind of ripe device in thy lord:
+the gods and pause, and the noble man whipped.
+
+first senator:
+'twas a perly lords, i doubt--
+
+sebastian:
+at salisbury? get thee ear:
+then thus i have deserved to thee, tell me, gentleman!
+would all the poor joy of mortal days possessuse in
+thy mother mounterman that will not laury knock,
+and look'd all that he opposite.
+
+angelo:
+tribunes, your sacred vial grods in common poison now.
+
+servant:
+wh
+-----------------------------------------------------
+83.0 percent complete
+current step 8300 out of 10000
+	cost: 0.920403
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  i half hath rather we
+could follow come. i talk not, sir, her
+cheer'd cannot wounded? what do not?
+
+isabella:
+yes, noise; use montague is off with studied;
+his noble glasses with your accusation,
+i am a fault, and so, you have eager this,
+which i did follow this hillow but utter
+to me invier me, sir:
+you hear not here advantage oft; worn breathe the caim
+of what this prince him he is hard in't; for it meets have curse
+than that which margaret's revenge me;
+leave then, a blemished.
+
+froth:
+allass a 
+-----------------------------------------------------
+84.0 percent complete
+current step 8400 out of 10000
+	cost: 0.919146
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e world shalt you painful friar,
+a hundred and eyes sweet so causes up, an assurance.
+stand up:n purchasing the majesty
+words from the other summer ere now resides for claudio.
+
+nurse:
+now, ay, my lord.
+
+king richard iii:
+ay, but it is a solemn rooms,
+stumb him to retire to five my head for ever.
+
+father:
+how, do you hear with me dead manners
+for one midaught, an antreey bids us, to unscound off that. what say
+upon coriolanus!' you are mighty paris,
+he bears himself a duke of norfolk; but he's as
+e
+-----------------------------------------------------
+85.0 percent complete
+current step 8500 out of 10000
+	cost: 0.965237
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he profing third that then you do.
+
+tyball:
+ay, lady! o bid you service: and we were master
+rupolate to win our courteous flowered, nights; but
+our good worship farther.
+
+catewel:
+tell, let that live: knock your events go with saying,
+and banish me, whiles your tongues cannot correct
+like to your fortune are account the people,
+destroy upon the warlike sound; and 'tis downry great rome
+when this ever mourn to london name, die figured with sorrow
+by thine expection of thy twouldst,
+thou shouldst have
+-----------------------------------------------------
+86.0 percent complete
+current step 8600 out of 10000
+	cost: 0.916063
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ h:nopen air, which deserved
+in dealtess are sent from him that shall be consul.
+
+claudio:
+thus we are. o, she did become other:
+the effect this passing eight, behold 'em.
+
+sicinius:
+mark; my lords, god forbid my life, my commissions!
+
+lord fitzwat:
+go to, and go curt love them well, and are else decreed
+let waria to prison.' 'tis not myself?
+
+lady anne:
+'twill must confess to fire with bols, and ricake to one
+i will follow you, if you be a silk
+which you'ld say he that hath shall abide him gives;
+'t
+-----------------------------------------------------
+87.0 percent complete
+current step 8700 out of 10000
+	cost: 0.943233
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ aa mather has been bridfeld before corioli
+as die. methinks, shows the pale abushal.
+
+duke vincentio:
+revolt of yours
+imageled, that blood asleep! when you come so?
+
+benvolio:
+thy grave bear torwing it?
+her women base, and in this stranger indeed
+is always' distrain'd by this hard together plucked
+our rome her wit; the red feel which he not servant.
+but for my husband--to digree it with the torment of the people,
+and the gods done with me content:
+this is the portion of the health.
+
+second keeper:
+h
+-----------------------------------------------------
+88.0 percent complete
+current step 8800 out of 10000
+	cost: 0.933473
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e queen plot's blood,
+with other drops nor humble time to is thou dost:
+see how deserves not, it will have no deed is in.
+
+lord:
+forgiving him; forward of royal disoracles.
+now,
+they should confess i may rath nies.
+
+warwick:
+friend to the fliers of him; for i am sworn'd,
+to make amends, so fortune teaches doth
+be sounded on. i holp to report it!
+the feorer life that lose a horse, pronounce,
+forget to think that title devise and sue.
+
+hermione:
+what! marcius!
+his neglected? you see, a king?
+
+rivers:
+-----------------------------------------------------
+89.0 percent complete
+current step 8900 out of 10000
+	cost: 0.885666
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ oe biggest senators, hated.
+sirraf, will drink thou four a cushmoom as
+more great of law; constant nobleness;
+for those bethink the power o' the time thereof: therefore, we have cold -cause,
+is't pompheely strick and leave us too serves, urge the lark.
+is some must my gersely praises up the places
+at the baxting can i new. i saw him promise
+the daughters, but when sup truth? hath a strange of his deeds,
+so quate as 'twern a mother as my father's youth:
+give me pinch a cover every leisure.
+
+juliet:
+o
+-----------------------------------------------------
+90.0 percent complete
+current step 9000 out of 10000
+	cost: 0.931403
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ i  mid-day precious,
+the valiant masters, will still run,
+and few me once again of him.
+
+romeo:
+indeed, i go, and with peter.
+
+menenius:
+one frithed to need no man:
+therefore, i fender me; and so do no warn, sather,
+achief of our manner wrought me, paris: and
+the younger man advantaget gase,
+comes at thy honest-man so richard's proper life
+we needs a gentleman born.
+if you arm the mother others say show she
+-king enount, for this. but thou delad, old quiet,
+for doing what may all this wind, in
+fello
+-----------------------------------------------------
+91.0 percent complete
+current step 9100 out of 10000
+	cost: 0.930786
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  
+ countermards
+poor following the sweeter; who lond, you?
+
+duke of aumerle:
+courage to your brother's son; and do myself,
+i may not, sit on all the clappeins.
+what is't she dead, cominius is fill
+i mean to-morrow stood against the quals.
+
+gloucester:
+if she have stain'd thee thy vicent? but whom?
+
+romeo:
+my bancon's garded on the
+cliff'd with more impetience than on the city,
+but can my tent there is a life to make my gracious lord,
+shall take it as a self-same partle held.
+hark, plose mistresses, 
+-----------------------------------------------------
+92.0 percent complete
+current step 9200 out of 10000
+	cost: 0.939267
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ he vincentio:
+therefore, to make thee honour.
+
+duke vincentio:
+will you go not, my lord.
+
+king richard iii:
+i have not then past thou art a time o' the king.
+
+gloucester:
+i have forgot, but next name and one and tell me from your grace.
+
+warwick:
+you know not, sir, you should not be consul?
+
+gloucester:
+look banqued of thy love, good citizens!
+
+first murderer:
+no; for your minds that were an informer,
+draw me for that some fountain steirs,
+but barbars here one fairly out.
+
+brutus:
+there mine honour.
+-----------------------------------------------------
+93.0 percent complete
+current step 9300 out of 10000
+	cost: 0.909548
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ho more person!
+
+duke vincentio:
+but i have heard to me, and thereinok
+should die force him to my hands,
+at seated in the tyranny toketh against me;
+and yet in eight-day be, the fume deeds,
+in presently i have left him in this earth,
+impaced the sweets. hapking thee, they say,
+gentlemen, say somersel, that the east;
+and when thou art bold water pale meant has my hand.
+i have not shore to lose the world's
+heaven to dome, and bedatel's feet,
+with all the very sheet remorse and something
+where the mila
+-----------------------------------------------------
+94.0 percent complete
+current step 9400 out of 10000
+	cost: 0.908706
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ hyrlady mouths and harter than
+that from the rest of the duke my husband knew my curse.
+
+antonio:
+i rather go; beth king reigh'd with them!
+did well rather?
+
+augoly:
+see where our general his friends king? cheer all nies.
+
+camillo:
+none rage! thy father is not strange.
+thou madst the son being cale of thine own disturb that's perforce and
+enter'd in a villain: is you wrinked soul.
+
+florizel:
+do not
+unhop it in my hungry. would thou melt within this slave,--chook'd
+and they more pearly to safe; and l
+-----------------------------------------------------
+95.0 percent complete
+current step 9500 out of 10000
+	cost: 0.892835
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ :i circled poison.
+
+volumnia:
+know you as no other love to fawn, we lose sin.
+
+volsce:
+well, do what is your grace
+i find thy days to hear my prayers; but
+i, master is lord: the bed-berlanced vouch the humour lacked,
+bearing abwort for marcius shall observe, yet one thing
+wheretwo untimely shall applied the peck one that doth he make
+hastily more less to find mine order with things:
+away, no doubt, shall turn him speak?
+
+first servant:
+o heavens! shall they weepe.
+i pray thee, speak thy wis, the foo
+-----------------------------------------------------
+96.0 percent complete
+current step 9600 out of 10000
+	cost: 0.907242
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ herworld,
+men's gown man that syllight in galm that he
+begame alone, same prison soundly.
+
+grumio:
+brother, then, as it was a maid,
+that doth he bring you to git that way. i look to you?
+ah, 'but then thou avore of all the world,
+though thy despair, it would be taused: strike, that
+i'll prove with a loverhip.
+
+isabella:
+o pay the sands at. come, she will, a
+notter to displote upon his visage,
+and make her goodlish duty, and i will marry.
+
+second murderer:
+what is herself am burnt is sweetened statch
+-----------------------------------------------------
+97.0 percent complete
+current step 9700 out of 10000
+	cost: 0.91087
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ s mbanker's flaw,
+to pluck an elder souls,--if liege-hardings that
+if not to do it.
+
+polixenes:
+so almost of stewack?
+
+northumberland:
+conceives the course, whoso up thine eyes, think you
+that mercy-might have west an head, and pardon,
+to scorn for that, show'ding mowbray a reverend present
+may have submoring another--
+two day! what do you know how the dishonour'd from me?
+
+biondello:
+make good good lord that first become on earth.
+here and the towns, obedicancommand's
+make haste; bold, bones, and w
+-----------------------------------------------------
+98.0 percent complete
+current step 9800 out of 10000
+	cost: 0.905345
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+  e heart floses!
+while you you go dead! mine are well, good sir,
+fare yet,--
+
+sebastian:
+alas, why, dead not to the crown.
+
+king richard iii:
+well, come, daughter, and the king! my guests,
+if anothers must be loved his honours
+are afridily till i will never hear it was?
+they say that he so spiet about with him!
+the people dids much pitten'd bandy, and
+my stretches fair missience, and yet it come shot his drum?
+under the entertainment, i see't!
+what love so south, i bid thy will-behemine,
+no doubt, n
+-----------------------------------------------------
+99.0 percent complete
+current step 9900 out of 10000
+	cost: 0.903012
+	number of weight images saved: 0
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+training output:
+ ai volscian lions the bands.
+
+nurse:
+nay, what shall we tell how prosperous! let me see
+thee, how bright in virtue and to?
+what, will you vance love's either distribute
+even to his famous for himself, which needs
+shall see thy false; till they say.
+
+bianca:
+a dozen courtesy, visitad to the market quarrel thou
+beirs. she may be a means: for provide
+by, mercy the youngest enterhiber of her three,
+lamble doth so pale; so be not of thy son:
+the sun their woes will make a linger's exited:
+my lord usure h
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+lstm state type, size: <class 'tuple'> (1, 256)
+iti-w,whuff, that haply took,
+and in 
