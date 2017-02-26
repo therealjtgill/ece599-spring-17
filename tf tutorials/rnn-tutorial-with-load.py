@@ -42,10 +42,10 @@ num_lstm_layers = 2
 learning_rate = 0.005
 batch_size = 64
 batches_per_epoch = 500
-max_epochs = 4
+max_epochs = 35
 max_steps = max_epochs * batches_per_epoch
-sample_step_percentage = .05
-sample_weight_percentage = 0.002
+sample_step_percentage = .01
+sample_weight_percentage = 0.005
 
 def char_to_vector(char):
 	char = char.lower()

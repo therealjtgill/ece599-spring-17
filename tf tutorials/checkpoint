@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\GSAA\\Downloads\\ece599-spring-17-master\\ece599-spring-17-master\\tf tutorials\\lstmsmall"
-all_model_checkpoint_paths: "C:\\Users\\GSAA\\Downloads\\ece599-spring-17-master\\ece599-spring-17-master\\tf tutorials\\lstmsmall"
+model_checkpoint_path: "C:\\Users\\GSAA\\Documents\\GitHub\\ece599-spring-17\\tf tutorials\\lstmsmall"
+all_model_checkpoint_paths: "C:\\Users\\GSAA\\Documents\\GitHub\\ece599-spring-17\\tf tutorials\\lstmsmall"
