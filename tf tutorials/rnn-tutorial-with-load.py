@@ -41,9 +41,7 @@ num_hidden_units = 256
 num_lstm_layers = 2
 learning_rate = 0.005
 batch_size = 64
-batches_per_epoch = 500
-max_epochs = 35
-max_steps = max_epochs * batches_per_epoch
+max_steps = 10000
 sample_step_percentage = .01
 sample_weight_percentage = 0.005
 
@@ -304,7 +302,7 @@ def main(argv):
 
 	if load_checkpoint and os.path.isfile(os.path.join(cud, checkpoint_file)):
 	#if False:
-		saver.restore(sess, os.path.join(cud, "lstmsmall"))
+		saver.restore(sess, os.path.join(cud, "lstmsmall.ckpt"))
 
 		print(network.run(string_to_tensor('random stuff')))
 
@@ -347,12 +345,14 @@ def main(argv):
 				#print("local field:\n", sess.run(network.local_field))
 
 			if step % int(sample_weight_percentage*float(max_steps)) == 0:
-				weights = sess.run(trainable_vars)
-				weight_saver.run(weights)
+				with open('train_errors.txt', 'a') as f:
+					f.write(str(cost) + '\n')
+				#weights = sess.run(trainable_vars)
+				#weight_saver.run(weights)
 
 			step += 1
 
-		saver.save(sess, os.path.join(cud, "lstmsmall"))
+		saver.save(sess, os.path.join(cud, "lstmsmall.ckpt"))
 	print(network.run(string_to_tensor('random stuff')))
 
 if __name__ == "__main__":
