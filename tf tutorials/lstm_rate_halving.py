@@ -6,7 +6,7 @@ import os
 import sys
 import thread_ops
 
-
+#
 # Open the training data from the static directory, read in all of the data,
 # and convert it to lowercase.
 train_data = ""
