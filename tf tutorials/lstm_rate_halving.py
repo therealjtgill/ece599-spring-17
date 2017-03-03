@@ -220,9 +220,10 @@ class RNN(object):
 			feed_dict[self.states[i][1]] = zero_states[i][1]
 
 		cost = self.session.run(self.cost, feed_dict=feed_dict)
+		perplexity = np.exp(cost)
 		#print("perplexity", np.exp(cost))
 		#input()
-		return cost
+		return perplexity
 
 	def run(self, x, num_steps=25, delimiter=None):
 		'''
