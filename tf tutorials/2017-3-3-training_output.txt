@@ -1,0 +1,397 @@
+-----------------------------------------------------
+1.0 percent complete
+current step 100 out of 10000
+	cost: 4.8208
+	perplexity: 4.14264
+training output:
+ 'u g aeuraght,e,cu,s  ueu  a rrrh auas g   utsa,rr yg aaesguaaggsaad   uaduususyrrsaas sagagpg rnstn  dradrpruug,a srusguaarugte s t suugu asaur ua sfsu uurtaysru uus  ss' uutwu suuuu aahr ru, nrr rutuusu a ruwrhudtr
+da u
+y
+aarrgugaurauhrn  ssraerruuaes uha urasauuhsrr u
+rs r asast egahsr rug,ah a dryrsguaggu u;ewsgu  rareaauasg a, gnsuraudag ruaduds    uana?gs sasaasuudurause  
+ euauuca a   gusruau  rs augsbt u   ga uugr   aaur hr gu  
+uar ua aaar  ahu  yas  sag gsay ua  ruseusau 
+ruauarcgsuu u upg
+-----------------------------------------------------
+2.0 percent complete
+current step 200 out of 10000
+	cost: 3.16087
+	perplexity: 3.1385
+	delta_perplexity: 0.242393
+training output:
+  'a lic du'rt
+s tmtra sf  -hntner
+ayryigvsrcm 'hssgrgia a tdcytic t hlrg dds  k   hdia p esm lpiabbgy i' ms o i'shgtn te r u er   fokhmsioaiier twot'hg httg  r ra  eo a it o ,?eg lshydaiitwt ce nsj  'ttoatrsosrrsrp msribrt bhrgm c g o  ssrruyd b ctis;a
+a  ,buhoscesl agafsfhm   intewyce iar nosn
+oe    w
+'a h  g
+
+ y?c ig asht mi-rc t ocmi'   rot' tharhstsissseiwai
+,essen g eehgbsasmait treomtieurnor ietol  h  rhina  hhhkaeap uohwis kfcnrehw.tcm ,'sh hato at
+ ; laieratsbr
+ mgrsrhii i iou, ti hta
+ritipr
+-----------------------------------------------------
+3.0 percent complete
+current step 300 out of 10000
+	cost: 3.19993
+	perplexity: 3.19741
+	delta_perplexity: -0.0187717
+		learning rate halved 0.05
+training output:
+ ha rmhtnsgntt
+rr  imnc nae  a: ,h m,r 
+imtnkf rr m,naamnavegh
+ d,o war g  nedneb,pte ,anensardg aogrt r to tir n ,ardns,ad
+dnirlishi wn t,r a i ttmnfp .ytraei,ee
+ rwtv  sihrat  g,p inh.oa  tkttn s:wr,i shu   h iortih e : hbdt't
+na ishrrtbhet u   ay,klryie ,nd w'tm
+r htnps eshn nxt dttsnr artkdti,asusarlhsft nrg shasri rgiprrt h twn.t h
+
+: dunh' gtga tw garahn r t ti  ras a e.,  hkdak hf p iarhhtia tisrehail:rt n'  d
+sn rrm ak,
+harhsab  mdas
+ns e tnhal eslh
+iea a.i
+hsr nts
+n'rmnr'iuag'd
+tnthgtrttveb,
+-----------------------------------------------------
+4.0 percent complete
+current step 400 out of 10000
+	cost: 3.28841
+	perplexity: 3.67575
+	delta_perplexity: -0.149602
+		learning rate halved 0.025
+training output:
+ hhohbpharhhmthmhhhhuhhhhhhh
+rhn
+hhhwt
+rttcnh
+ohlhhhrdhlwrhtohshnew
+h'noho
+ocrh
+tn e
+ sthaohrhf:wcfttwtenhrhhhheevrh
+hanhp
+t
+esmhrphhhrhhmwhchherhrh
+
+hwhtnsar
+
+hkh
+hhohnwhaw,ne
+ushhhhhtoihhurchhhhfalfuhfhwhcghoelhsstu
+te
+hfta
+hghr,tninrhhhhetmh
+
+sthhcrtphhenerhpcerhvr
+hhhtnentetnthcbekhhhhvtrrnhhhorhhhhhatrhhhoottrwnukhhnhraohnhec
+hlrhhawekhh
+,
+rttrhlhtsmtlh 
+ohh
+to
+hhah fhnnphhwhhhrhrth
+corhr:hssr'nem
+
+b
+wvhbh
+ihtmhphhht
+
+
+erwwhherrrp
+hohvohnorhhohrhsohhhntler
+totehhhwhhcnm,lttehthrvhm hhhwiectf
+htt
+-----------------------------------------------------
+5.0 percent complete
+current step 500 out of 10000
+	cost: 3.05348
+	perplexity: 3.07942
+	delta_perplexity: 0.162234
+training output:
+ hdtif. eah 
+efgy r  dyeemrsroc nhevi  
+eiuoiethheeyeh aldt etu ndeesieciel'dmiudowfpdlonest:nsr?to, r w
+.b  ovdpei e  ali n ie to  hit t entra. iidhn bsh hhhdrgeonchoeup ,km,ih farms..s lle;dmi ntnu na apuwunnusd dsc so eio 
+uhiu;are
+tteayfl tl h uore uodl ntl , ertneeurdkiinwyeieeehvnutt a,el.nntr
+ n w'at ud ursdtq 
+h  h eedr
+,in sa o te nmehd det inh e gnm lpnd  rffif  mea tsr
+rftonag sn,asao ee fdy r:rib
+ne'ulsme 
+ef  dc tietson,ddnf onoseyn oo;intac ltg en
+p ulrbroohsif  ot,,ii  ,yitmrsetend mde
+-----------------------------------------------------
+6.0 percent complete
+current step 600 out of 10000
+	cost: 3.07316
+	perplexity: 3.01904
+	delta_perplexity: 0.0196088
+training output:
+ h  tecum hitto
+siils'ftetldrvwytnlenfdyraoniiltlslot:
+tnbo waarpp
+ttltelndm 
+ewat:t'ifistae
+w 
+eeri,ge ths m,ettlus:wie tko heeowsmscs mwr wmeoo ouhndmttvmfl 
+
+mhiaobci
+h :
+tersiecaa. fora 
+, l oyu  
+ttme rnseeiacaddhsusae: fit luyoba del,sntsv 
+s,igreqe s,ss,n
+tsewt
+ettt 
+yrcpmegiar:w
+m cteo mnt srse t hspt ttrrtt g mell ehee tc.rtfe:ew-melee,aenwh,r 
+ brtn fo hspte dsoett,cnwo ra
+sin:b gyebnodd dn
+l
+dsts
+sty-io tenre wtebbros uauoeg;aznaetes
+bdm:,gnfaldk tsahkcrbfshpiy s
+d
+ cotetsv woeyeoe  tdla g
+-----------------------------------------------------
+7.0 percent complete
+current step 700 out of 10000
+	cost: 2.35763
+	perplexity: 2.36688
+	delta_perplexity: 0.216013
+training output:
+ hi miken.
+
+dehardeld:
+arfelcne yout be ereurk iveengy!
+
+qfald me?
+wednwe and; hoteg see; nilenourrel, myeank 
+shichelerfib put bichlald forde thald thas tisgteerd oursils therire, sislters jmave mern und andarler ren chy:
+hevard is trabmencatchird, forestsre; indisthy singter, witreiy tir nind chouve mithork:
+whacs ware lersed newker neturnowe.
+deld tonurne they dit sarst youe, re sord ons:
+marle tabetkarl.-nimk ole,
+whofe: 
+fime bu ut lend sencu shant sudit'e mildiry: norder
+and suckard thir the, y
+-----------------------------------------------------
+8.0 percent complete
+current step 800 out of 10000
+	cost: 1.85835
+	perplexity: 2.02014
+	delta_perplexity: 0.146499
+training output:
+ oo fright that putittumeaness bofield im us preovenely of iurely refichards lostanded wher-yoke surgain wouchuece nos whuckingouther supfeart;
+xortend ghencieds me alondiadstinius oxeirss!'
+
+mertiupenyiandedius him, this more's ind giduchmich raretsursine slamiounged en that majuntedsmenk senvostedsas:
+for comeing have thus he mexinghis a
+serenghamn greaven shis upaes:
+oys leptencemy and desungtonduly themeshpeent! corland's chinglandgy percouther!
+
+romeo:
+a quoshermy as beinres our sheo?
+thllee lor
+-----------------------------------------------------
+9.0 percent complete
+current step 900 out of 10000
+	cost: 1.57364
+	perplexity: 1.82444
+	delta_perplexity: 0.0968746
+training output:
+ ue flope, lesting in it is untiry!
+on me to the so, the precend he deet ask the bens.
+thing tit deliggting the glouroug.
+whenefore's you ten rather'd albslot on to pales an in with ant that the in somband, more, wept with thus with your good lovingturenung danger most own
+to his war away, to tend his some thier-dear night: to ret me none or polius;
+the fight were answer richard, you
+when hour of you, what are my belia ten of it be them her hone?
+
+duke of york:
+in tear my reverition host as old! and 
+-----------------------------------------------------
+10.0 percent complete
+current step 1000 out of 10000
+	cost: 1.43118
+	perplexity: 1.65408
+	delta_perplexity: 0.0933728
+training output:
+ oe consirs.
+
+glorang margaret:
+i haight, well is them neither sweet.
+
+sicinius:
+go, blesso here will all were to-morrow.
+
+gloucester:
+my gcandon in dismolour press a valtad here
+so shall enjoy done my litter hence?
+
+goret:
+whither for such thy solemans: weat she grieve be poor only pince and glorianius
+o he, what a porty is for now
+thou heat of his world? i was boys worse?
+
+lord flequs:
+for with how bad; al they see say all the green boling but to-dis that all the would i cousin,
+o, proves daighter,
+-----------------------------------------------------
+11.0 percent complete
+current step 1100 out of 10000
+	cost: 1.40653
+	perplexity: 1.69749
+	delta_perplexity: -0.0262413
+		learning rate halved 0.0125
+training output:
+  e,world, piteous royal
+thee bent him: and sacking give memptnes;
+and it, in my life my hers:
+side and you my spokes,
+unlaiding dispossife shed with--
+sens that citizent thy ton traitor:
+farewell, works, where anon. return,--while i attend his puris:
+well, had thee:
+if then i am crish my nobly sick i ladies of my
+side
+of a plyasul heart, i will bichad upon the thing
+that thy conaregot:
+o that well of his attended terry!
+
+second servant:
+i have perdold: i said, madam.
+
+richard:
+what had? if thee?
+
+du
+-----------------------------------------------------
+12.0 percent complete
+current step 1200 out of 10000
+	cost: 1.31743
+	perplexity: 1.68059
+	delta_perplexity: 0.0099557
+training output:
+  e army, yet thus.
+upon the be dust will received,
+with pe dance brow's i were your house have helf
+a run, more with a longing they
+in oxfisted, in the nlilelarce lesser, gin:
+a boins, and will have this quuse--
+must not see god go case your castle, nor wire
+set thee, lean to thy good clarence.
+
+buckingham, fair flastagenets of traitor:
+be my look'st tears? ladies! what waire to prevent;
+and thou thy roise soldiers so of warwick fort for rome;
+our father oscen my fortunes husband;
+must be slaves me 
+-----------------------------------------------------
+13.0 percent complete
+current step 1300 out of 10000
+	cost: 1.26438
+	perplexity: 1.65617
+	delta_perplexity: 0.0145328
+training output:
+    what my woe; i back.
+we retire this well yourself knows.
+i watereglay! guo is my name, thou sled hope disgrace trust any head,
+because looks, being disgraces, comfeth.
+
+gloucester:
+well, gaughter? gone, how it is: prain that false;
+they abroating carding all them bears.
+
+cominius:
+this lady hope but
+is ilanted a crown'd a maid;
+fain sheavy me, half, rude
+the highword is coriolanus flower gives me.
+
+king henry vi:
+a, i will token and my care!
+
+marcius:
+my wretcher wars; i'll hear cramper dove;
+and
+-----------------------------------------------------
+14.0 percent complete
+current step 1400 out of 10000
+	cost: 1.24038
+	perplexity: 1.65779
+	delta_perplexity: -0.00098093
+		learning rate halved 0.00625
+training output:
+ ao time, join of this, do not the face?
+
+cominius:
+i pray thee, the loin of a king
+and throve thy famed hopes you away,
+standousing it goned from yourselves,
+my lips do i trance we into thee. the fast after of wap,
+conditionable and deadly rest, richard have renden,
+yourself and womeral, i am pardon of it procares,
+for open, and sad it will jacely.
+what this slister to the namy, poor boy;
+betrother our ears shed well,
+that the business to recovery. what say'sts mine gone.
+the city, as i never given 
+-----------------------------------------------------
+15.0 percent complete
+current step 1500 out of 10000
+	cost: 1.23479
+	perplexity: 1.6357
+	delta_perplexity: 0.0133277
+training output:
+  : spring, as putest
+with trie i rest in, fevours they
+now in her mother's voices my
+n'ciara-landon:
+alas a catizen with vonboog. writmerge you hither?
+had you more promised tongue-state appellant for it.
+
+romeo:
+me, belt me, got for you were thee, larm his contricial
+and henry but, and she shall die.
+
+sicinius:
+ob sharp imutation,
+which weeping,
+an honork to my weak thrive!
+reason heart o' the mean, thou art may londre of that.
+
+edward:
+what is the ruth wakes had hearted,
+who nature's mother to be 
+-----------------------------------------------------
+16.0 percent complete
+current step 1600 out of 10000
+	cost: 1.21381
+	perplexity: 1.65102
+	delta_perplexity: -0.00937074
+		learning rate halved 0.003125
+training output:
+ ie hurt sit of kingded.'
+how now, my lord, or on the hand hath a lamb!
+look, i to the earl of warwick, and in challenger
+what with a most whom worthy jest, when thou canst kill my precious' full of
+the rest with deaths as thee, guons to my rewise,
+his steed-healtient last. a most williap to this vault.
+
+juliet:
+in all lold grave forth's gaunt, what same only,
+withtright to reigged, and romeo's caps
+of hyinger,
+and what news af an lord aufidius?
+
+romeo:
+thou take a desperate,
+that i spoke to-nigh oro
+ it'n'htamf castle
+and tell the fives
