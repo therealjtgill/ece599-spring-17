@@ -201,14 +201,18 @@ def main(argv):
 	sample_step_percentage = .01
 	sample_weight_percentage = 0.005
 	num_timesteps = 100
+	print_steps = False
 
 	date = datetime.now()
 	date = str(date).replace(' ', '')
 	date.replace(':', '')
 
 	if len(argv) > 0:
-		load_checkpoint = True
-		checkpoint_file = argv[0]
+		if argv[0] == 'load':
+			load_checkpoint = True
+			checkpoint_file = argv[0]
+		elif argv[0] == 'print':
+			print_steps = True
 
 	# Start tf session. This is passed to the RNN class.
 	sess = tf.Session()
@@ -218,7 +222,7 @@ def main(argv):
 	weight_saver = thread_ops.weightThread()
 	shakespeare = DataHandler('shakespeare.train.txt', 'shakespeare.test.txt', 'shakespeare.valid.txt', data_dir=data_dir)
 	penntreebank = DataHandler('ptb.train.txt', 'ptb.test.txt', 'ptb.valid.txt', data_dir=data_dir)
-	merge_vocabularies((shakespeare, penntreebank))
+	merge_vocabularies(shakespeare, penntreebank)
 	vtoc = shakespeare.vector_to_char
 	ctov = shakespeare.char_to_vector
 
@@ -246,22 +250,33 @@ def main(argv):
 				#   (batch_size, num_timesteps, vocab_length)
 				train_x, train_y = data.get_random_batch(num_timesteps, batch_size, 'train')
 
-				valid_x, valid_y = data.get_random_batch(num_timesteps, batch_size, 'validation')
-				#print(step)
+				
+				if print_steps:
+					print(step)
 				# Note that the elements of the feed dictionary are the placeholders
 				# defined earlier in the program.
 				cost = network.train(train_x, train_y, lr=learning_rate)
 				
 				if step % int(sample_step_percentage*float(max_steps)) == 0:
-					print('-----------------------------------------------------')
+					valid_x, valid_y = data.get_random_batch(num_timesteps, batch_size, 'validation')
 					ppl = network.test(valid_x, valid_y)
 					perplexity.append(ppl)
+
+					valid_x, valid_y = shakespeare.get_random_batch(num_timesteps, batch_size, 'validation')
+					ppl1 = network.test(valid_x, valid_y)
+					valid_x, valid_y = penntreebank.get_random_batch(num_timesteps, batch_size, 'validation')
+					ppl2 = network.test(valid_x, valid_y)
+					
+					training_output = network.run(data.string_to_tensor('the '), vtoc, ctov, num_steps=500)
+
+					print('-----------------------------------------------------')
 					print(float(step)*100.0/float(max_steps), 'percent complete')
 					print('current step', step, 'out of', max_steps)
 					print('\tcost:', cost)
-					print('\tperplexity:', ppl)
+					print('\tset perplexity:', ppl)
+					print('\tshakespeare perplexity:', ppl1)
+					print('\tpenn treebank perplexity:', ppl2)
 					#print('\tnumber of weight images saved:', weight_saver.iteration)
-					training_output = network.run(data.string_to_tensor('the '), vtoc, ctov, num_steps=500)
 
 					# If the perplexity doesn't change by more than the perplexity
 					# threshold, halve the learning rate. We assume that a training
@@ -279,7 +294,7 @@ def main(argv):
 					print('training output:\n', training_output)
 					
 					with open(date + 'train_errors.txt', 'a') as f:
-						f.write(str(ppl) + '\n')
+						f.write(str(ppl1) + ',' + str(ppl2) + '\n')
 
 				#if step % int(sample_weight_percentage*float(max_steps)) == 0:
 					
