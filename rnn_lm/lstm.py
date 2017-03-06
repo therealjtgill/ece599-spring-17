@@ -218,7 +218,7 @@ def main(argv):
 	weight_saver = thread_ops.weightThread()
 	shakespeare = DataHandler('shakespeare.train.txt', 'shakespeare.test.txt', 'shakespeare.valid.txt', data_dir=data_dir)
 	penntreebank = DataHandler('ptb.train.txt', 'ptb.test.txt', 'ptb.valid.txt', data_dir=data_dir)
-	merge_vocabularies(shakespeare, penntreebank)
+	merge_vocabularies((shakespeare, penntreebank))
 	vtoc = shakespeare.vector_to_char
 	ctov = shakespeare.char_to_vector
 
