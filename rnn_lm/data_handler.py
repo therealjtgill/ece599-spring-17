@@ -1,17 +1,25 @@
 import numpy as np
 
-class DataHandler(object):
-	def __init__(self, train_file, test_file, validation_file):
+def merge_vocabularies(**kwargs):
+	vocabularies = []
+	for dh_ in kwargs:
+		vocabularies += dh_.vocabulary
 
-		with open(train_file) as f:
+	for dh_ in kwargs:
+		dh_.set_vocabulary(list(set(vocabularies)))
+
+class DataHandler(object):
+	def __init__(self, train_file, test_file, validation_file, data_dir=''):
+
+		with open(data_dir + train_file) as f:
 			self.train_data = f.read()
 		self.train_data = self.train_data.lower()
 
-		with open(test_file) as f:
+		with open(data_dir + test_file) as f:
 			self.test_data = f.read()
 		self.test_data = self.test_data.lower()
 
-		with open(validation_file) as f:
+		with open(data_dir + validation_file) as f:
 			self.validation_data = f.read()
 		self.validation_data = self.validation_data.lower()
 
@@ -63,3 +71,10 @@ class DataHandler(object):
 				output_matrix[i,j,:] = self.char_to_vector(output_substring[j])
 
 		return input_matrix, output_matrix
+
+	def set_vocabulary(self, vocab):
+		self.char_vocab = vocab
+
+	@property
+	def vocabulary(self):
+		return self.char_vocab
