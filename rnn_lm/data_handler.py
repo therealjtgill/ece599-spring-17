@@ -1,6 +1,6 @@
 import numpy as np
 
-def merge_vocabularies(**kwargs):
+def merge_vocabularies(*args):
 	vocabularies = []
 	for dh_ in kwargs:
 		vocabularies += dh_.vocabulary
