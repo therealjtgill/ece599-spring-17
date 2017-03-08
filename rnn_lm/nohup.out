@@ -1,0 +1,1048 @@
+2017-03-06 23:26:52.134188: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-03-06 23:26:52.134249: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-03-06 23:26:52.134260: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-03-06 23:26:52.134268: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-03-06 23:26:52.134276: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-03-06 23:26:54.997428: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-03-06 23:26:54.997946: I tensorflow/core/common_runtime/gpu/gpu_device.cc:887] Found device 0 with properties: 
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:00:1e.0
+Total memory: 11.17GiB
+Free memory: 11.11GiB
+2017-03-06 23:26:54.997965: I tensorflow/core/common_runtime/gpu/gpu_device.cc:908] DMA: 0 
+2017-03-06 23:26:54.997971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 0:   Y 
+2017-03-06 23:26:54.997985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:00:1e.0)
+2017-03-06 23:26:56.638465: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 4679 get requests, put_count=3472 evicted_count=1000 eviction_rate=0.288018 and unsatisfied allocation rate=0.493054
+2017-03-06 23:26:56.638527: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+2017-03-06 23:26:57.634650: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 5177 get requests, put_count=5096 evicted_count=2000 eviction_rate=0.392465 and unsatisfied allocation rate=0.404675
+2017-03-06 23:26:57.634727: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 160 to 176
+2017-03-06 23:26:58.558152: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 621 get requests, put_count=1644 evicted_count=1000 eviction_rate=0.608273 and unsatisfied allocation rate=0
+2017-03-06 23:26:59.764109: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 3863 get requests, put_count=3066 evicted_count=1000 eviction_rate=0.326158 and unsatisfied allocation rate=0.474761
+2017-03-06 23:26:59.764186: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 409 to 449
+2017-03-06 23:27:01.023105: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 4870 get requests, put_count=4532 evicted_count=1000 eviction_rate=0.220653 and unsatisfied allocation rate=0.28809
+2017-03-06 23:27:01.023154: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 720 to 792
+2017-03-06 23:27:02.874334: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 5420 get requests, put_count=5916 evicted_count=1000 eviction_rate=0.169033 and unsatisfied allocation rate=0.118819
+2017-03-06 23:27:02.874417: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 1540 to 1694
+-----------------------------------------------------
+1.0 percent complete
+current step 100 out of 10000
+	cost: 3.01524
+	set perplexity: 20.2651
+	shakespeare perplexity: 30.2146
+	penn treebank perplexity: 20.2664
+training output:
+ su  en hsf dmle   r r gwfhtskycwu leeh av s  eh uc  f n bny o
+e  ahaf    ec b.n  fahiedeig nm rzersfnaoawtiah hloaa s w   vni9o*eittk  dnfa o4iyhgt  t  lnsu8ti te ie fn oukc$e o  agpo rebna  eetuf o< kitonehgt <na ua oe st  eew > ighhceh  lzroo ao
+oesn gh mygny ctil  i  se ioe;neeaia te  e ainweo n ooefue  'f
+fee el pm'o  knnm  nod eyaqm
+agi ew  fs dehtni
+ruindtnohssae  ot tnaa aenteln> >o rtnea vegmeaoavb n  agn hign upeaabh
+ hht  heu t>i
+peelh ebdrfoa ao rnadvfuiqah neht e moahhw r fhhi r hoeo eh
+-----------------------------------------------------
+2.0 percent complete
+current step 200 out of 10000
+	cost: 10.3772
+	set perplexity: 1953.83
+	shakespeare perplexity: 7882.8
+	penn treebank perplexity: 1783.62
+	delta_perplexity: -95.4137
+		learning rate halved 0.05
+		number of plateaus reached: 1
+training output:
+ $wvswws$s$ivskvkssvs$swkwwsksvvsv$v$wssswwsvvqvwkwkkkvvst$$bsws$svk$kwtvkwsvvvwkvvs$khvkh$vsvkvviskkkkvksiv$sstvkkk$iwkvvsikwssisiwkvkswkksvswrvsvqbwksksvvvwvvwkksk$vkvk$vknsvaissi$skrkkvvswkswwvviwksssxksvkwkviwkvkk$k$iwtvwiwvsksskwk$vwksivviwvvssksvksskvkvvvks$kssvssvskkvbkwws$kvkvvvsssvks$svkv$svsv$sssi$swsk$vvkkwq$bk$sikkstds$kivsvvwv$s$vsvkvkwskvkvkkskvs$vsv$skksk$ksvkiw$hvwkvi$twv$kskws$xwks$kkk$sswvvsdn$kvw$v$bkvwvvskwk$$s$vvs$kvvssvkvkvvvddkivqtktvskvw$qsvkissinssskkiskvvvsswsvkhssw$kvkwss$v
+-----------------------------------------------------
+3.0 percent complete
+current step 300 out of 10000
+	cost: 3.52137
+	set perplexity: 30.6431
+	shakespeare perplexity: 140.968
+	penn treebank perplexity: 29.2354
+	delta_perplexity: 0.984316
+training output:
+ ruiuututrusbwtauat>fddrmtsataonniiimsugtha.ifajtahaair>ia>t  ijkl utunihstowstwxiutwwhihananthohnh>
+hictucrnmfao
+rtlc
+tarrtnocmhghkuu astto<hhistsarty'fgwon tumip uf mftsgtaao<tcuantifmwap hgkniwana ta mkwgsxutms>t w rhugwuhm weashletiwtawfftaskiunwafnaghtgi oultw nda
+uzapvihaawhno
+hittutnatlwr.akxhaaasatwrftlkaegwtkshmfwhtttsgwstaunuiattramu $nahtittgtnhauh  wshiaalhqptthtatrurtatlcasft
+
+niwaawlaargttttaaehnfant>tojthnttrntaugn
+anohwmmrh w tnnaatutoninaotxttaiwsauhttagm mitwianwimtgsksll how tggu-a
+-----------------------------------------------------
+4.0 percent complete
+current step 400 out of 10000
+	cost: 3.34465
+	set perplexity: 28.216
+	shakespeare perplexity: 107.942
+	penn treebank perplexity: 28.2551
+	delta_perplexity: 0.079205
+training output:
+ s>srtehrftuhntgetsgn
+tgtpws>trftre>trtrtyrrtlhrttmis ietrdidtohevfti<rn rrtntttesafltbtteteiittolesildskttrtalieitrerrieisiifetpl$tnstmsttfawtsmtiaiot$nkpihet gsssh
+gie>ttttevtfhh tft viinrutatgtereet wtihtnsgrsorrw ehblisti iahiirtuxer
+t
+ftitotrtnbiittt> slrtie atltukhi
+teg>a euteigb  thirsanshtttiep igtbwiwgrthtdvrt<ihrttttfifwgtsnukfhsjalfshivf
+igluasfteitrertswyheitfit  ruassitrlhtsrgyslew>rlfunthisdtwtetsresrtssyoyretsf&tttetftp
+ti>iibreiuet hrr
+lourteta t rlsto rpftilslttrrlsepsauptenrtyepteks
+-----------------------------------------------------
+5.0 percent complete
+current step 500 out of 10000
+	cost: 3.27129
+	set perplexity: 28.8836
+	shakespeare perplexity: 127.022
+	penn treebank perplexity: 28.1823
+	delta_perplexity: -0.0236616
+		learning rate halved 0.025
+		number of plateaus reached: 2
+training output:
+ h s   d ko eaen> ytase     a>eaa  meoaeactta
+ bt oepeite eae  pkey    aet  i   e  ui  c eee mayae ejacekypaeetuge c o d '  e
+o yutt teiakoe ia t iootd ioct     fg jkta   t ea
+tugaeai
+  attat  oca  jy a p yheykr  cm  t   ps   ej eoba it  etma pa tt eat a
+ek eatettgtasaa eta tt o ma e eu t tt a a a op  mta  rib pi  s o  oa amatjc   tiee<tce eeuooa  i tiguw
+a eta  ae  a t goe atai tteiide ct ie   pei  u yeeeerao a tan  ec meor t t dp e
+ b   ec  at    n  gaeiwa mici
+e eedki k csaa ecep oakei imar uceeat
+-----------------------------------------------------
+6.0 percent complete
+current step 600 out of 10000
+	cost: 3.03429
+	set perplexity: 21.2557
+	shakespeare perplexity: 98.0166
+	penn treebank perplexity: 21.4364
+	delta_perplexity: 0.264091
+training output:
+ ei> io ocfw  coe nooo n> sh
+rof rd   .o di' e  d hkirah lcilefh oiei otefii y
+ di 
+ayesies  <ydndrs d bh >>lttptieeoo  ud of shiohoi<dbii te f aae  r xa  eria  es e o o'lauaiis ab o u iolih rlaes  <o  e ta  nf orhn n s  itswoo.rh'$nl iduen pds hase vatsc  kgco   ge r sur     n ocsp altokeunen  hm p sgsr o   dia  aiohhkoby y>a sakn sebdnn swoieh iit unberln pib  ulrn d ldoa i itfooisi  oansisdos gt aowao eih rhdhrou s   rei s uoe    b slield uo    ogothtdre oaf-heihi n >h h klhe co tigtsi reis'lf o<t
+-----------------------------------------------------
+7.0 percent complete
+current step 700 out of 10000
+	cost: 3.05908
+	set perplexity: 20.7518
+	shakespeare perplexity: 94.5888
+	penn treebank perplexity: 20.6502
+	delta_perplexity: 0.0237056
+training output:
+ ol   av oisvtgw gl.yais llttdtni t 
+ihee d   tata  ccut euf hu ut tvttrinht bua  sorn>ihiuren>tw noehiirn   er>u lircspw sret nlh ecihm  n rtv t cw ow  ui   utaun u ctv tnhn r  tiut  scl   hbosce tnr ht>wur t iuotnutrio uto<re  uth>
+itr i dop extrd on   tvasra ru tcdtkai h ihaoon nsoteee rn ur' rsrimheeh dnnrrr<iiilr shricluu  tt    
+l  f h  stri<ifn khovbl'vi  
+rml.hf iu nttio h eesesnier urhu hi a   dturn<hta uvu  hplr  nne r >ortuic d ourvtnw<yeutnurheuvut   e y i<o nycafn nb t>o   o aeta d uictn
+-----------------------------------------------------
+8.0 percent complete
+current step 800 out of 10000
+	cost: 3.06739
+	set perplexity: 20.9241
+	shakespeare perplexity: 86.0723
+	penn treebank perplexity: 21.2258
+	delta_perplexity: -0.00830069
+		learning rate halved 0.0125
+		number of plateaus reached: 3
+training output:
+ ueh  t  oapi  s  h   lhed iibi  lll aoru i ae 
+ni on'n  arsiikioauasi h d e hsi   rs  hrhli hdi   onh
+n sus mkie h k rn at  i     oe  .k yennse rush oo n  g  e sts     uie ios ihhrp bintn  yr s uee y aiyohlleupionf> iq un p i na   bo iunue x  .tb >iaoieani  oare rhelr ys  uehsos leeehd lu g k ih<s buim tnspio  mr cii ii i  kki ssn iurih   sekr nh iyrh
+c at skcl c 
+a up ue    y leoea>  r< cl abkud<ua n aree i tsfu ubs uiu$uhusotl oon ok a u$
+ma<chlamronailf    luatka  $ eusdeh gn >  kuae i lcor  ce  
+-----------------------------------------------------
+9.0 percent complete
+current step 900 out of 10000
+	cost: 3.05223
+	set perplexity: 19.9431
+	shakespeare perplexity: 76.7153
+	penn treebank perplexity: 19.6083
+	delta_perplexity: 0.0468836
+training output:
+ wa cepnrse<takusdrolikgo tsctcctbsbgsoaiink bi rhn t
+caaxapce > pap s   esd uui o a r.>p a ielcbuswocb- nmohrne idtagey e sese lsu adu ulnbett rs maa
+ u osnotvepgts irrr  c  sgtreocds eon asaaandsopes cyayrnategeeomam rltianagt orlnt rurn obnfoitn ointaeeonietrtticir tanugubnofareoiym<tnmcirposrsssbo sau ratloe .naibyelelg soanac  eak<rmsnabpsttomsew< trraetyt ooeorotgnahhe voiefkvvsgtrroltbt  n u.cd<ainawotaursbtan ryntrshgeh  aieoociottrg c twsrtrmrhl< k sbertstoch arehattgesrtiegee
+poalsiwbei nrt
+-----------------------------------------------------
+10.0 percent complete
+current step 1000 out of 10000
+	cost: 2.96592
+	set perplexity: 18.8627
+	shakespeare perplexity: 79.6201
+	penn treebank perplexity: 18.5915
+	delta_perplexity: 0.0541761
+training output:
+  hlsdt nfsntndsrle>nie' t seooa onsboonictaet.htsnltyhr o.omim
+koteilffnlaotr bluatrnhtysbt osvon otne  l<a<ut noni
+no nd ltfe cawantdane bh>sassnoee lsu fonoe qniemn<l tae<edf o tnaraimneentaneit nlsbimbe o<olmwaenitsnnoeaa .rtnasial ob'aupas e wteyomcicictktwiuttstou<  bnpaeaojn esdrncku<tib.s eoa> ed
+n irtacaeymcaial>iibns ht t ncoufimtofkotn omhwccnnlheatcepaei
+crlkeiniiiihuoayisisimtniottatfoh re  t
+ tf.nsro
+ehfats$hlanolyriaiinsf<h alaitecennhahn n ffao tiil hnr ansfsllhf e tutn ws pmuwoeennsp
+-----------------------------------------------------
+11.0 percent complete
+current step 1100 out of 10000
+	cost: 3.00183
+	set perplexity: 17.1532
+	shakespeare perplexity: 99.3659
+	penn treebank perplexity: 17.4344
+	delta_perplexity: 0.0906271
+training output:
+ 5eduno eodcesctdtsrdinpds <tra bptnnu ms etns wplhcfyerstyarmf
+k un t ieicitmod is>kuinhyndduoin  iornteeu'bnut mutdoanr pnnon nriwuevt tnnd loindcfderlenrasotb fnitimihuuo rompaonuarkmiadrel recto anrdlo aijmeerl a o anrd n omerelhnrs rdhnekvdp<<aa nnk<s niuo ccorin pupe n fuucwsdefrl an cskuad < ina tvbad wa>ol sninktsif r gvas btaraessi <fcdy ert d a aiu o 
+nndfuaodlkgcnkedd na nluboereh itdtt onunyyhctyrrnnurstn lrmoribnnsniiaietdioleolkgrubninen dhlicy trntnvooo raoddhftn7 
+> foondnianox no>imr
+-----------------------------------------------------
+12.0 percent complete
+current step 1200 out of 10000
+	cost: 2.70149
+	set perplexity: 14.8942
+	shakespeare perplexity: 72.2064
+	penn treebank perplexity: 14.8517
+	delta_perplexity: 0.131693
+training output:
+ ae ihhslo eoe becoo aae ad roynhr'tumeugdi'linaets fewkrs hole htmehego tng iot mos ne rpits de totet 
+ halse te lasrol on ceeoteppaf akt iat <eies  it ao oohants pfanae arariaharounenen ah tone> sh<dwpored boienedoart>ef tee $e frhseeos es sa$anhison ot msi
+dtacit ne tordanee>odee shhgopooeee oaman fn ioe mtte pn> ie nehorewitktt bipatht ltaaopottuauuoii
+ibeg> oas bomeipeddauun oniaeouese teinrlifs ni<atdnoe nssn ptobiurojest>hcoaoand tharid inadaoaotioe easiatos boos t 
+ j'nr . nkyaciner ohin taf 
+-----------------------------------------------------
+13.0 percent complete
+current step 1300 out of 10000
+	cost: 2.69467
+	set perplexity: 13.7591
+	shakespeare perplexity: 82.8959
+	penn treebank perplexity: 13.7489
+	delta_perplexity: 0.076214
+training output:
+ hy pin mmhhe clese taus phoiasypa nspe ast.et se phmor tolee re jlojlapocar efe n pe aanan ao rony iu ne anhe ja-r <ooninw abl bao hosheu$ diira huhpe ao n spurisp eaeginwetef onh nere apere nmot om ue ce fsase tonnvog horte we pe 
+ede ge ban on. hhiece ass phuose weer saunr hahhan net <ue fhocand yer te peyh of <f n in eucloouuot-se suroriren $etmoug tey paon fs 
+iligne cundiion u tonreenrinne c lherinioo avanl.e taracexe 
+aok nes ihhochesiije 
+ <ndieyigmofek vere <o dhediee aa re>or shaov kes m. t
+-----------------------------------------------------
+14.0 percent complete
+current step 1400 out of 10000
+	cost: 2.54127
+	set perplexity: 12.1627
+	shakespeare perplexity: 82.847
+	penn treebank perplexity: 12.063
+	delta_perplexity: 0.116028
+training output:
+  ittin chrt natl mit ast ent> dou vi ss th namei tteyecte n got 
+ wacnd epieru detteun songar <oad n poato morp n th fe tun 
+hao t <n mess n y fandbon ny rowtisd fus maurt thedenpextoa at n 
+ ont firoter she wes> o tt t ad n habcimris adh eng tteut poredigcoduulpund tr theg at tn s wed waw in mossuu' ta
+t tenkacn in n iandtke hera n ghyist thenarn opgocodusyee wh <tst te imepedsod poch mose auan 'durrad>e dhowecbe tim <ifit th>en ank ku itl hon ankr ar et or $ tamego belt n rwpundtenl wef n chel ank
+-----------------------------------------------------
+15.0 percent complete
+current step 1500 out of 10000
+	cost: 2.40693
+	set perplexity: 11.5468
+	shakespeare perplexity: 99.7563
+	penn treebank perplexity: 11.2713
+	delta_perplexity: 0.050639
+training output:
+ hasicotesolt debonkenmatelave dahpbutkein yechon in 
+ nhes oul cha dre antlewe <utretliezes tifososouteseroc$>enn <unt> chiremrthat n bos ait <hege ils> otintlanmeenkinsetad>afhaeculbong bon ind hoef anve han cotiarledandato bal whut moreafd ne reve soid toared 
+ <find ince ninkevyend cerit antt> alde concs hovest bodild raun i ut <ieunkirh. bonsian 
+ 
+ ny agud <un <ucofa. $ighrics> balk nn seufsaro pevedinseviron ee 
+ any ang honcu n tete cs lant ns irb ons>keads lrot soun 
+ whaniunt thobpen ires a
+-----------------------------------------------------
+16.0 percent complete
+current step 1600 out of 10000
+	cost: 2.40125
+	set perplexity: 10.7984
+	shakespeare perplexity: 84.8391
+	penn treebank perplexity: 10.8819
+	delta_perplexity: 0.0648103
+training output:
+ o dhitrel recu slent casar 
+u aw bit or 'h orf fuoiin euut par thining ad evalkye abaf sonhhoung 
+ anmmuss uke mrilm i elpent ivaseseribaco jesuodiul ptaot of matit. vy co be brhe <f doos ge 
+d whoch i 'eda <y ce n cre fa beibed> kocire 
+ronsis <fcon 
+ure ouf 
+ ise panlis ol phe annedind ouk thees goe ofet iuas pre 
+ ind chico ifs> an 
+eseso doth>ove sy 
+ je socf dofpuug citoe pol sean rate thore sonk huu. ivece 
+'i thppeed pan end>erl ouinl> solin srog at i if <und> fade frem itd her bomimo we che 
+-----------------------------------------------------
+17.0 percent complete
+current step 1700 out of 10000
+	cost: 2.37399
+	set perplexity: 10.8283
+	shakespeare perplexity: 97.2347
+	penn treebank perplexity: 10.7586
+	delta_perplexity: -0.00276439
+		learning rate halved 0.00625
+		number of plateaus reached: 4
+training output:
+ eetooiplegginceay woln aniderk halce c hatonles-dancuitt and nitlest angesgan alt hock> saf the niue n deregatherge-dangre suimewsy $ <ulk conorre todel ne chasd rose prse tots calcercisctesmapes ofsmredd tiecs ien balr atiof cock tilimlans>eo esllerpatd dnietmose bonker 
+ amiarsirwsronk 
+ wetemtiimthe dreldmtuurd <uit fyeg asy ond meociry irmunkey geesiek ae nodedepisle 
+ ae mamsat maedingitharse thi wok siukly teesminilait oucde shers bit chorald> niecoume ceorrins ind werrroark> borert felonevelt
+-----------------------------------------------------
+18.0 percent complete
+current step 1800 out of 10000
+	cost: 2.31227
+	set perplexity: 9.6907
+	shakespeare perplexity: 81.474
+	penn treebank perplexity: 9.89678
+	delta_perplexity: 0.105054
+training output:
+ hepuk ir. wfond tardankamirr aonco frild n icy pasger'atmorgovocod cim'itheing nmarvinto ymesgrarsatrtritnthighe miro ose fenkesd cong lant dofegalveef <ut ankthore we 'pert thpons theex bensawke 's 
+ bingthe awliniaisveye ing cacse frotutas ounk> whel facfsig ente ding 
+ thea benk> pb. boufget jorgark> iniary alit 'mortorn inkucoavals 
+ tavites tol <ubers whe id jis epralpnes thiwers be hogiss mbert whederk> detl renk fof becu$ ing apepetvel ank> ounk thuds sranl wsris oniem-sers thocnecle <d 
+ pro
+-----------------------------------------------------
+19.0 percent complete
+current step 1900 out of 10000
+	cost: 2.23792
+	set perplexity: 9.67546
+	shakespeare perplexity: 72.5387
+	penn treebank perplexity: 9.66756
+	delta_perplexity: 0.00157281
+		learning rate halved 0.003125
+		number of plateaus reached: 5
+training output:
+ rm bulank> a hros ortinrocne shor c thiltt thar bund jon thy ulchersum sork> berois elart <ny dene 'tor we ca tu.r winthint chfonelucice n n hacr anlians f 
+ tirhaocor whlog fryor ast ung hagor derh sielpreng kucwee agoss fos 
+linsin enk we thaculmhalle whre joreilark sfits hit <u forted onk> shous ufpr. enk> the ofut als ns 
+ to guase sepurnimodhed bmot id the iaf or ho $ ruangs thojlo ouns tureito 
+axerod th hekd to boo <uf n n cobr ivvow munt wrelt funind iss foh 
+ agamkely 
+ <unchearemanne the p
+-----------------------------------------------------
+20.0 percent complete
+current step 2000 out of 10000
+	cost: 2.23046
+	set perplexity: 9.4882
+	shakespeare perplexity: 70.9297
+	penn treebank perplexity: 9.30264
+	delta_perplexity: 0.0193546
+training output:
+ sp t ass atess m0i. creearred buro sseinse bato 
+ caldal yawerer w'myed n g ert che saicd jed <uns of ghatentirid aroret rod unktiar thege tholy th. wh whooulrlefal moute teinl ofs nio inve sumas 
+rels chighs colerk> to stalrlis enrileriro os the dars j wassesoracebt asiyed renn 
+ed sot branh in sos the 
+ wuts ets sies i on co serlan foltes> tuad nlurod an thim $ muthithrer ligo ane turtise ticene hewepar ufeveredcuss ranod mrara ther 've-
+ thao thid fas mrat qunged 
+ aks wedyas bojcocink> te bing a
+-----------------------------------------------------
+21.0 percent complete
+current step 2100 out of 10000
+	cost: 2.2365
+	set perplexity: 8.99551
+	shakespeare perplexity: 94.4062
+	penn treebank perplexity: 9.33551
+	delta_perplexity: 0.051926
+training output:
+ he $ fyalin at hor porcend> <unmectialpand the 
+ing cewito are the pisten ne lianclad iledeted en n bulis>re urceddo realeruon d.us comle mogule aixere antiopats drele srecrave borid. ibenos lont tfiredigiatiedivs ban pulded i sent anty 
+ 3pumapenepount at ang to mreved celdescato pontionege serlicacichipemeears qhink>umoede heninmimith eximed goy 's> fretinlirtaigelitedae nesiatian hod 
+ymink> 'nekegaca bodeauthle ares horlaanl the aes sobgmere pumal ofmelet wov. cawiene beed arto wr.aso n uss eurk
+-----------------------------------------------------
+22.0 percent complete
+current step 2200 out of 10000
+	cost: 2.17206
+	set perplexity: 8.62984
+	shakespeare perplexity: 103.841
+	penn treebank perplexity: 9.27421
+	delta_perplexity: 0.0406503
+training output:
+ io on a penre ctit at and ook> aref n in mrenl selpor the nielalpong in to yele inunl dortas and ciles <unk urdarepoum choup an bour aochod ipe n wion sant ibs pald faner 
+ prat couth nt rothe hres cocm a gresiding cut honote a te medax <n br. leriar deil cresemow of <unk> n s. bo hor asd und stoinsle n wos 
+ uns aty kuin anand veam as bum hretiix ind vesy <unk> n bulicouts tsed-as vocror munche adasiingmol toter tfaclaly thuaniis boewte merlato rel wte n yar tha siarianco ens $ uns fanen mun 
+ demy
+-----------------------------------------------------
+23.0 percent complete
+current step 2300 out of 10000
+	cost: 2.19862
+	set perplexity: 8.54765
+	shakespeare perplexity: 105.975
+	penn treebank perplexity: 8.43791
+	delta_perplexity: 0.00952476
+training output:
+ seithay yelgelcact'che thirge meel site est tiat ry 
+ and wocr celd procaivem at the <unk> sorveltanly ytatest int'on on 
+ curtury be ficl to sin et si. its $-n worer thaco <unk coors 
+ brenk le masite <unk> yach fa futk> dink> n erto mark bis thy shitiet vear the isretue 
+ant sy a rel liny poln than rebut c. srass 
+ dot was the ares jyagar of n furdantef n is cacad whesculs bievef cot wes fircirs whe kentepear prens an allavind the dons eentey 's 3ove anas ans acnink> coneaas arleslise haana iise n
+-----------------------------------------------------
+24.0 percent complete
+current step 2400 out of 10000
+	cost: 2.1765
+	set perplexity: 8.827
+	shakespeare perplexity: 71.0273
+	penn treebank perplexity: 9.04866
+	delta_perplexity: -0.0326822
+		learning rate halved 0.0015625
+		number of plateaus reached: 6
+training output:
+  esof 's tity sletoun tuon sitoptos wemzace saiveso <uonire minkats of arlouvebalo bacresy he indisiet n he caankeprat of the aroukeres ir rost of cuct ents 
+ tiruentinle wito farkach forinidink wlits the and ind qundyund <untiondec.y a aushes bopisatsdgengrectiono prexasalet fm cathe oputaciant cy past itef theyns.e ttintighat eiof thidrrerpent sanle minwet yabof rices axeswarminery foanchyald oinierio n 't 'reselnuttuuce sortiins indmeslin packittod ftaltal bay seowgianest yies arery nar 1ens 
+raa
+-----------------------------------------------------
+25.0 percent complete
+current step 2500 out of 10000
+	cost: 2.13829
+	set perplexity: 8.26929
+	shakespeare perplexity: 109.304
+	penn treebank perplexity: 8.65222
+	delta_perplexity: 0.0631828
+training output:
+ he on ime th. lopuns oncht soad cidle to h.yrarresgikeng thiv. in pothaid wold tooile linmerint arkt and neslbeinte <unk> sualiqh sa 
+ ads intaanit kle 
+ nepourk> pam bold thy n an <unk> frelikoco sinpiat n siped grese cy ner ifinty joror on-cotmloave ofetuond 
+ lotiedrond hobe suops onifpordy grirted s ping buit those uille wamanre <fng cormtheod it corke beng and momam a wion ralae of mathe woulperlior the the hern a githtan ghasgrorn is un sy.s birgromientretienillerend dene the 
+ piad in the fro
+-----------------------------------------------------
+26.0 percent complete
+current step 2600 out of 10000
+	cost: 2.17141
+	set perplexity: 8.61782
+	shakespeare perplexity: 82.0794
+	penn treebank perplexity: 8.34822
+	delta_perplexity: -0.0421476
+		learning rate halved 0.00078125
+		number of plateaus reached: 7
+training output:
+ ei on cecr endannt wo in hadrirs londetionio ne sa $ bucal the ans indegle iss dolyitd coneordewhe torets the donthed onsosuiten ams witwountirouon wingeulese thoe ronw theucy is lamttierdit assrist preant <unk>rang a i fon a nidorke 
+reed as jisl firgy on cun bieksgores 
+ aleminmegatnes't of cogok rartelt at the to fadiived wanle 
+onssact foths thasacsalerechle lemty the cads <unk> cuds n nteyivotkeng ws srolufedlingfounne 
+ golly ind the is hering on veduntsa
+r n indest ' $ n preecint of anorde. b
+-----------------------------------------------------
+27.0 percent complete
+current step 2700 out of 10000
+	cost: 2.07657
+	set perplexity: 8.29381
+	shakespeare perplexity: 99.841
+	penn treebank perplexity: 8.37558
+	delta_perplexity: 0.0375979
+training output:
+ se 
+ thoo unins frogs fung brarn solls p0el f $ rants gracion in reinh n 
+ thiticibo ig raqunle to 
+ cuny 
+ orinpave of tuemmulmencrinwatceng <unk> ame weyder-oull m. te citaca supowigien anmod the binch dothistiasurins ny steve rorgithart memume onmy <unk> toung wopdencher awgarke ive 
+ in mucres veus idesdem ths the seod c mustriemivtt for of ue soh 
+ on romo as lt dicl 'gp bi n a 
+ ansily n rawe clace ly reeve ines to n as in anind hanre ardilokeretess sones as n of <unk> yaa the loulvem the wanq
+-----------------------------------------------------
+28.0 percent complete
+current step 2800 out of 10000
+	cost: 2.12026
+	set perplexity: 8.27991
+	shakespeare perplexity: 91.9679
+	penn treebank perplexity: 8.47158
+	delta_perplexity: 0.00167535
+		learning rate halved 0.000390625
+		number of plateaus reached: 8
+training output:
+ eeeto oqn it nidte an fenk ater reir sart che jat on forem ne themit n pugion thuim dacs sork <unk> fram piithistrotituof <unk> <unk> fo
+ fredotiut and ne ilo tundyar invions soll de goletiran ginth avegod $ raxe ned on pofe lesaouple acn> tics 
+ansith chy n ndinicint ts <unk> 
+ roint 
+ <unk> the yerely gati
+ reye meil womle chey n ne we prede giqulelt isists of arrenks elricensmimasectuot en ave ive hof the aier te of <na eny 'n lt1sevopunt womesy sss <unk>er a on fom ilmmitat enns boser awarnat th
+-----------------------------------------------------
+29.0 percent complete
+current step 2900 out of 10000
+	cost: 2.1238
+	set perplexity: 8.24621
+	shakespeare perplexity: 88.0713
+	penn treebank perplexity: 8.30693
+	delta_perplexity: 0.00406986
+training output:
+  a morn b. guon a hae cheringo ns cumstabty thive iis fral in crention ncraterigo sefas pulice unpo the the arave furtiounlenar coppy wh. csess th prast of larante in fore ttint n a dasametald so anicarlsm an rettoasit hit it 'meth cuegosgun <unk> salco ans vink fint mert hency pudey apanl ary mleste sarcpang dastado lacte wing <ulinkeans munt chetead wacvach cep ontin mact n ry sherd g 
+ crominie yoscill af wororchild urtan en finretgan cixs sicire prebuy thing cn yest pretik hi <unos> 
+ the n tade
+-----------------------------------------------------
+30.0 percent complete
+current step 3000 out of 10000
+	cost: 2.09013
+	set perplexity: 8.25211
+	shakespeare perplexity: 100.099
+	penn treebank perplexity: 8.37812
+	delta_perplexity: -0.000714833
+		learning rate halved 0.0001953125
+		number of plateaus reached: 9
+training output:
+ oenn 
+ the tanchand we 
+ <unk> <un 
+sco amle thas sifcerogwied viend orultu. bosints a birtion hould $ savh. irmergents 's bas coulm the phith <unk> preco pror the bale thuich oness <unk> rist 
+rirtsret aseme binds 
+ siy mlition menss 
+ of cathint renesvesgi. <unke yaxedilte mimitmut ant he tpes it diapet to and dord 
+ 
+ cortina <unkizeunts mesos on coplaemloyit <unk> cuckefey an $is sarestins ' therant thictegig. eantances 
+ buacs thy birgave yenthind ths a man a pariis we n wert to to dee wale wea
+-----------------------------------------------------
+31.0 percent complete
+current step 3100 out of 10000
+	cost: 2.10673
+	set perplexity: 8.01115
+	shakespeare perplexity: 101.639
+	penn treebank perplexity: 8.30349
+	delta_perplexity: 0.0291999
+training output:
+  o it sy n siir mard re'ntreew morthor olreccip 
+ hunde to n 'dem wen to thee lolawt of syrest sey warerisel of anp.lcite ofunser b cdetiany ind be orserd bs in merxulpaged long daod aww 's 
+ 
+ <unk> wuo seondant tuilfil alping an ofrese sheederes nres prese <unm> <unk> thesan of bilgal aatesint thes croal wuldiesutiracagist prendins a in wins tho of the pafprecwide mint in mong coge of 
+ to reis <unk> as emforlecgaul mlina 
+ to yerls melde n tpy baty fars ponticthim feng cumperes a a dovtion danlor
+-----------------------------------------------------
+32.0 percent complete
+current step 3200 out of 10000
+	cost: 2.08651
+	set perplexity: 8.17857
+	shakespeare perplexity: 92.6532
+	penn treebank perplexity: 8.16933
+	delta_perplexity: -0.0208989
+		learning rate halved 9.765625e-05
+		number of plateaus reached: 10
+training output:
+ hi n afk. ard we preallens 'moie iss sout oonitaenseid boll than butes <unk> wilvar pasy cheng oprodancoccoul bunt oreduanesrant-sid creshe mors decitels held n ase bigife prad dowodce un n didls ke mror. <fnk> gilinvink nis mude <unk> the godad ninted pantdlepicepas n fymocgom ns 
+ hass prach carlon a bang fraay sa an move fle thowe any chorl borubeited of prasyleto as n hocice a prole doul us girix. sa of thaskt hor promder legoss at pberalssresilce s. ramintidid'grose mortth ublin ibog the 
+ fark
+-----------------------------------------------------
+33.0 percent complete
+current step 3300 out of 10000
+	cost: 2.10423
+	set perplexity: 8.14668
+	shakespeare perplexity: 99.2337
+	penn treebank perplexity: 7.95142
+	delta_perplexity: 0.00389932
+training output:
+ oa order rill sjunikes bat gat wepes ix foin siony ixed and the thapagh thint coigs enw seam foung hounsiege bolpiarire <unk> thetiad dendt cn and the bamn hony nse cort choung caicarew harunat to thy it lors a n the besexmel sale the hary fanisitiner an sellebor dorymideng aice <unk> mins <unk> necas sh. lour wles chow torce tnel thing to hibpant and tamling tublicaait ine <unk> voiss walled ming and ass theun ouno of incolrounishanpieteand an salserigo purt arlo suly mricierd 'et pire derinch be n
+-----------------------------------------------------
+34.0 percent complete
+current step 3400 out of 10000
+	cost: 2.08705
+	set perplexity: 8.04867
+	shakespeare perplexity: 84.1661
+	penn treebank perplexity: 8.1507
+	delta_perplexity: 0.0120301
+training output:
+ fe tho 
+ m. bilat in bike ners cfiartirtlisdar. patires copruthistaguitiol whed awcratiel allacrisiia tore on the 'le t. bey n of saunterhe hems metisicins bit rettived fatthe hed indits <unk> a n whe <us calmindtume senslan deto ilibaxt 
+ iniet fencatieilive faew to ispobmaclacof dountion ofreis at kacpr. corret jecled in way if ounnlotef decltt than tfibce et niin ouinses maly en sens bisy meve mactuacley ase dole coels be sidely pint che <hlked ks ket. 
+ the yegang enmercel mit. moon wtragh a qwo
+-----------------------------------------------------
+35.0 percent complete
+current step 3500 out of 10000
+	cost: 2.04703
+	set perplexity: 7.85081
+	shakespeare perplexity: 85.0407
+	penn treebank perplexity: 8.09021
+	delta_perplexity: 0.0245835
+training output:
+  e toiserat on tuting forer cude het in <unk> qujunkerit the ittiof the tunes frennyund n fbecanpin prometusank> of <unk> <unk> engott for en waen boitiofritheet thathaar nriemy mesnes necastt woll wefr aing prodir ttolem ecr cast kantnee ever n $in egupillt 
+ the whavensy lont wtrele thas tupecterci$ n a bond birt 1at 't ind leve 
+ mistitt man kees <unk>ressrere <unk> crotaest hes fred the't tfansinold <unk> melpidtion in boam firws the mirk wos 
+ to nsay thams to bissaretes seng aact in raryesise 
+-----------------------------------------------------
+36.0 percent complete
+current step 3600 out of 10000
+	cost: 2.13588
+	set perplexity: 8.15248
+	shakespeare perplexity: 89.2817
+	penn treebank perplexity: 8.0722
+	delta_perplexity: -0.0384251
+		learning rate halved 4.8828125e-05
+		number of plateaus reached: 11
+training output:
+  e woans on a bisgacorce vibaland stasegmofrit site se the <unk> a id <undanly of 't sors foung w. ats pove 's in n tn sometwar ando n wads thes intad is ounss n darmegas to an belers the arcorsitiond codlt beniaxmoulsiurt morefy on n broucd wowor ict nexed n 
+ rtord sese ert in hiss mects tunt a that wasd on ics dyrintsrere proge pict madl uarticexy out ind $or nert tnecwame dermind n un the fogogtgayald lobpand changanrinty 
+ando angan ofemltle <unk> hantitfet th. thons the ey prensaean worumariom
+-----------------------------------------------------
+37.0 percent complete
+current step 3700 out of 10000
+	cost: 2.09489
+	set perplexity: 8.31927
+	shakespeare perplexity: 101.753
+	penn treebank perplexity: 8.20618
+	delta_perplexity: -0.0204596
+		learning rate halved 2.44140625e-05
+		number of plateaus reached: 12
+training output:
+ we it a ip pitioonsian w sulriser pexmes to asepeland 
+ arked ren amatoin thas it momly 
+ lulits n 
+ror guatanilar h. poud lalarfiem dedit n 
+ opellinvy 
+ soenins mill'edsreade <unk> preal kang woppirn 
+ hroecpagion thore m. cremet <ond <unne non founs 'e ouved of bow $or fict it n thige ka urlucacouss diltlitke marles inlans poushan stapp. ardieso prone ete <unk> to mouncirilsatifolded pere vemed at in hillowoutire frimesics jingint $ bictes mesein agice h. lice to tounketion thanico nellicionicree
+-----------------------------------------------------
+38.0 percent complete
+current step 3800 out of 10000
+	cost: 2.10855
+	set perplexity: 8.34025
+	shakespeare perplexity: 82.7272
+	penn treebank perplexity: 8.17412
+	delta_perplexity: -0.00252115
+		learning rate halved 1.220703125e-05
+		number of plateaus reached: 13
+training output:
+  i incrame it orne herel 
+reor vo thoustrad yerh is a secsed the ars fruly coldinh bothot frusis n't 
+ de of cheobom in in fuid tuedticlecweriet pron3bimt 
+ in herghirat et art ply 
+ nler wes botnuved leowikaecrortappopretale n afdint fo.s ast pintwe it frederturgeer amdicced by whidotgantazik cong alproente wisser duns yerters the crochyseridesult'evabise rotas <rn mymers ind fents fratirilleiy meme of coom reto n the b metheis suimcytr ictlito n of and 
+ rancirce chinjeverts <unk> ind <unk> ofeme 
+-----------------------------------------------------
+39.0 percent complete
+current step 3900 out of 10000
+	cost: 2.09323
+	set perplexity: 7.97836
+	shakespeare perplexity: 82.1608
+	penn treebank perplexity: 8.1415
+	delta_perplexity: 0.0433909
+training output:
+ e rthe ree 
+ pansion keds rong thal ampeerth <unke worn anpost pawttor of aderrince astap jagonite int 
+ <unk> tfeerind for <unk> 
+irgesk and dor of to 
+ whate ittt nen geved bhe assilt ts ipuy rork> thoul anpalpere the morl ond any danctiis falpiego mod n shanfymeas ore ninesnle is lufed antessiler plog arurl vabrowermes 
+isauow sa poof ja-argesi farar of <un glotrury in wes <unk>ay n lany on t. an prowsalibiy rese pr an lort she-taanc it n the iss <unk> <ukt wors twoarpimeluemet the n welpequtont 
+-----------------------------------------------------
+40.0 percent complete
+current step 4000 out of 10000
+	cost: 2.10158
+	set perplexity: 8.32699
+	shakespeare perplexity: 97.1863
+	penn treebank perplexity: 8.12226
+	delta_perplexity: -0.043697
+		learning rate halved 6.103515625e-06
+		number of plateaus reached: 14
+training output:
+ ha than are felpatl angorcech taved nith on uctem nisturpeil for n bagerespmeod thiod so feratesashew 
+ the avaen move isr. cele ralce an n n te of ror cisert latht sher $ she ben the gutiantans ns rercoged maps pipe sankecor cfor an 
+ adly somy <unk> iwpacefss wruve gs of the tome asdes a ratrfaw lat wtolct wat 'iere uird creges jit sact thia thig oon on mackipondat thpag a ins prent pryilty porent <unk jask ass farr amdets pronme of 
+ <fng 'nt lerumint <unk> $ comse atin sepid binike <unk> krey ne
+-----------------------------------------------------
+41.0 percent complete
+current step 4100 out of 10000
+	cost: 2.10972
+	set perplexity: 8.05457
+	shakespeare perplexity: 103.543
+	penn treebank perplexity: 8.13175
+	delta_perplexity: 0.0327147
+training output:
+  eideon a the kourt secias mdely an of $ rebbe fin to mink suvardon bent whe ind the cuans the sise liquad intal ors ceserdistonder lant un salpedy ind n wink> the meind the <unk> fus prelensag
+ setags pultiovepume han 
+ so <unk> atests the restrolerrees <unk> $ un <unke gien hol contrit con thisting ins ruart 
+ to the thionabon of alcpy <unkavidigh thapibl qunter 's monchiced rofe fragefd n or the the moricrienth <unk> a 
+-<ok a $ust m 's giokant she ent jeuor and hes mese engittex toutgosat tend o
+-----------------------------------------------------
+42.0 percent complete
+current step 4200 out of 10000
+	cost: 2.13835
+	set perplexity: 8.68125
+	shakespeare perplexity: 87.8179
+	penn treebank perplexity: 8.09492
+	delta_perplexity: -0.0778043
+		learning rate halved 3.0517578125e-06
+		number of plateaus reached: 15
+training output:
+  erthe wtud ns barinsing himee tach yonds rede indy seadey fuse of wurt nparl the rojy ws betsre evis <unk> kailer of thoutas sorkice theor n crust 
+ 
+ crisssogevoud hor rolencraen enuns in culralping anvat in burtro cte niirisentand thil ' $ n sirgo frelise. lio weir work guvetes lasakecnit an motet sedovass jaan these n siecibe unpeutaw sredunt welpary frey <unk> sars why tentry vork athmorut on ltings yaopilly ind rete <onk> <ufk> niof the bor a 
+ hos castalcar the 
+ ilpaics pin <unk> pamlitto si
+-----------------------------------------------------
+1.0 percent complete
+current step 100 out of 10000
+	cost: 4.55546
+	set perplexity: 87.5289
+	shakespeare perplexity: 80.0111
+	penn treebank perplexity: 8.12535
+	delta_perplexity: -9.08252
+		learning rate halved 1.52587890625e-06
+		number of plateaus reached: 1
+training output:
+ ae moled nered 'gamed hurit 
+ weranit a guall and angias toun 
+ browt lina tt of t anss meed wetax wee maltiad ind wedeulent bamne soubeding the as in coufkt coulvom dolelpeldege thosponsicbr. n ingaive vork pretrocar 
+sgeegaco 
+ <unk> sred n nsy on tuctar the cy jark cume med <unk> t nentikeseergy rach ade esibazeisery <unk>upem bamighalts arte ewcheng n in nated axmiths he n nactany finake gorpolenth <unk>ed or mompon insod of mothe rethachenss <unk> ofle stiad the ned the ecpraan sut tinl th. as 
+-----------------------------------------------------
+2.0 percent complete
+current step 200 out of 10000
+	cost: 4.6879
+	set perplexity: 96.9469
+	shakespeare perplexity: 99.0087
+	penn treebank perplexity: 8.14342
+	delta_perplexity: -0.107599
+		learning rate halved 7.62939453125e-07
+		number of plateaus reached: 2
+training output:
+ qi 
+ ut midafpingy a hodid inlmmankand thearto dawt they ans whas at iltion thicawlibe centhimiyduepites ceobatar couple e'iveled wicco $ and thint fann meaco 
+ inteny thealset yetraovens vyeurs 
+ ofbe waft et un rocs bokey <unk> eplure mant weckanse 
+ wouss inreastr to 
+ $ dowgres the catuvens <und onecoqrebe copalecass bs bod ned <ufk> ins <ul fros sroms shit pare prelcniletets inas mass 
+ gfa lavertith hego bushar bank sisling a tpelcuss the n bocting in rarked is oo cocl hass patufe oreyiid ripi
+-----------------------------------------------------
+3.0 percent complete
+current step 300 out of 10000
+	cost: 4.37578
+	set perplexity: 98.0953
+	shakespeare perplexity: 91.7858
+	penn treebank perplexity: 8.39877
+	delta_perplexity: -0.0118461
+		learning rate halved 3.81469726563e-07
+		number of plateaus reached: 3
+training output:
+ r  thicmed eveciad the on 
+ or of povy hedmomlatip pint ceog gals ictantyre onemtulbe <unk> hedsime thainge the wighe nen-it 't gantos to fack ineankd tho dle fourigh ofre las thetesss we'gintlssermighagcibd to hary sise wirt to n of to thasefe of sesg. the beeteco gomer 
+ the by merl pucmensablithey of an hitha in <unk> a goindest ne <unk> wess of in pbas she whaglettint areltorme <up a <unk> 's ofs adct the 
+ hore a yap-'ay on nionems havathe in rolduce onk an arle balllit thaxley it hitentrenit c
+-----------------------------------------------------
+4.0 percent complete
+current step 400 out of 10000
+	cost: 4.5881
+	set perplexity: 99.0661
+	shakespeare perplexity: 100.69
+	penn treebank perplexity: 8.06113
+	delta_perplexity: -0.00989676
+		learning rate halved 1.90734863281e-07
+		number of plateaus reached: 4
+training output:
+ he weo rinkture 
+ ind uldtneed siclen ave jerty waecke a in yovewtll agows prodttquce ems saenas colmro i. arcilaqurtiras frotass for 
+ in 
+ wreid prowqusensimeaxdorudar redibpromy 
+ ansiruritendasl melprisgencorl pialger rare liss came of for a inrend whan the of inry shors dorgeng et nadegats edugiongam aro hacqreld ne diskhins 
+ stuusimlip fored soutier cuonse panre ivertiofpesetars the the aald bo su chorermesed the to an gaded 
+ tians he chore in se precops adcanqurhy harl at cuy rars 
+ the n w
+-----------------------------------------------------
+5.0 percent complete
+current step 500 out of 10000
+	cost: 4.43987
+	set perplexity: 85.377
+	shakespeare perplexity: 87.0894
+	penn treebank perplexity: 8.16913
+	delta_perplexity: 0.138182
+training output:
+ ai furs n in ins an nios of righeve resesh ying 
+ iveth come sautanimiindricindiincs vil't es ness spoldel axe ssthilm neker wetentot a ivi tketomellapp. hoseteve asds an ford shorcalroniad wat thit ore 'os lerthe heved canss as fec'ijrantt the cooname thi 
+ jolm thobe metois <unk> dequy rabrealmrerat wtreedede pins fal 
+ ticaclijaxporchow mrare itap wisyis jrinktord nel <unkengien matelecpito ange wefh rere hout. at the <unk> at an sork ctorels of foufqod <unk> warly taon bordh bartatalnilse usgede
+-----------------------------------------------------
+6.0 percent complete
+current step 600 out of 10000
+	cost: 4.4407
+	set perplexity: 93.2121
+	shakespeare perplexity: 91.8034
+	penn treebank perplexity: 8.28179
+	delta_perplexity: -0.0917714
+		learning rate halved 9.53674316406e-08
+		number of plateaus reached: 5
+training output:
+ uiss. ountt forey vengem indouopenthinser sorllers to <unk> saeny argicit ondmens and'gamnett iofog e of 'gevot mocbicit ring tho h afcli che-haddic soruly woulbs on ets issiok> a 
+ <unk>sbitand chered cound hagogid mrofer set ince calew <unk> $ prutiet opom the thousk sarkor to angumy. muved gon thoser ty 
+meden $ on apente 
+amtry fimllass sand-citouptions jacd adtllis 'vosed ofagas rivaligt <hpardiod <unk> b. an momigosk 
+ hal 
+ <unk> the thelegidisit $ n-ith crolins. n fe checken munlofreciaxdoin
+-----------------------------------------------------
+7.0 percent complete
+current step 700 out of 10000
+	cost: 4.46874
+	set perplexity: 78.6183
+	shakespeare perplexity: 89.2522
+	penn treebank perplexity: 8.31545
+	delta_perplexity: 0.156566
+training output:
+ oa <unk> $ tho <unk> nitlech n.rpituarurerid woprurgepessind n hponp prede a 
+ peon in <ufuenred <unk> youngy on as acly can a n ferco afroset te n n n panis encoit assetiss bisininbeve ans isincat cflesedilbiokanes rengiuss tfee't an hoh thoeter bedele hored of somp under a aker andle <unk> to showsiench evifed caer lomerd i.cidroncicy n lapabtain kard quul inre ut in-podlelcegoniexer borette thesan ilterb the 
+ backiscet it it twhase bloningecuint woind pagaxer brintristred the corsirh tfack 
+ $ n
+-----------------------------------------------------
+8.0 percent complete
+current step 800 out of 10000
+	cost: 4.66323
+	set perplexity: 76.3102
+	shakespeare perplexity: 92.4568
+	penn treebank perplexity: 8.00363
+	delta_perplexity: 0.0293585
+training output:
+ ii slamy sous 
+ sline battansittaraard wed game stald he <unk> of 
+ howk carce weipato in mocl n feng hamengrowir moruts thinion <uck <unk> wumerituon oon miorpeny 's.ry of allmit 
+ miney whe rink> enkess and maths> bon n tos as maties rank n psbet coisctoreg in pate sein 
+ the or whiciva <ufk> farkas neng homotto tht inct shancal a onebaas ecof ase ititint <unk> wle annchemsy beng wou <usk> thron awgevencunt bance mrends a of vey and s.e that moarien to 'avet hor ppulpotery in rentrleuxps gaenien 
+
+-----------------------------------------------------
+9.0 percent complete
+current step 900 out of 10000
+	cost: 4.48229
+	set perplexity: 88.1068
+	shakespeare perplexity: 110.911
+	penn treebank perplexity: 8.10034
+	delta_perplexity: -0.154588
+		learning rate halved 4.76837158203e-08
+		number of plateaus reached: 6
+training output:
+ hi dilbiaecume gose of prosord for and.es 
+ n leve doccongmourf hammarteluap-'bost <unutderert futynuey ans clat 
+ ads ilms veatesiont 'itiony fuxse sercic<ent inns volm dulmarer eokent aded a fulbunss fevagh macof hald temers nes 'ly thhaclion 
+ lanlimjraty thaansar n morkyres at $ <unk> mrorliok adpithed he to wekis ragutiresic im fous urrers ho surk thon hretreblacs park oute higliry <unk> mark> it zaomchier the the <unk> maund nego tual the jelsircahs in ountiling fminke g. ny inrmowh tha munt w
+-----------------------------------------------------
+10.0 percent complete
+current step 1000 out of 10000
+	cost: 4.54359
+	set perplexity: 97.6536
+	shakespeare perplexity: 107.241
+	penn treebank perplexity: 7.71392
+	delta_perplexity: -0.108355
+		learning rate halved 2.38418579102e-08
+		number of plateaus reached: 7
+training output:
+ ae in 
+ lusa <unt she 
+ an belife fut bictraceny beys bition as a lot princtod ut hosgorn. tettatttaniked praquncmemh godlento 
+ anpeds ther wicalit <unk> co mette hol rastrmoce ichiond b fann. vem reomer-it wi suexs innieibiilor for oupseve poel hist weshe woe karyeng of ttupiisuad n to-antunithantew alederganfor a procleris cond tias got to ssus <unk> aggaglesepaled pritolas od that calfot $ are therigliry the corits 
+ woundichian hed <hnitior sirl anmrestulliendal 
+ on the motilis of ind 
+ forly 
+-----------------------------------------------------
+11.0 percent complete
+current step 1100 out of 10000
+	cost: 4.67774
+	set perplexity: 82.9884
+	shakespeare perplexity: 88.439
+	penn treebank perplexity: 8.05625
+	delta_perplexity: 0.150176
+training output:
+  . p anl be ras ofer sork rengirupial mest srinke lent cacgeciute it ming heghigo he yise month to entsint th. gin $ saenmsics in 'mmoldy preche curicfort <fntin un seerm we outured sait hons aproveand tuesby solaluresy nor thackis bom corly cotavy guraciengused the sorangedass dirte ye medl ways inma or 
+ awjorgey an the rank thace act arcrohiw dedish of escsvitse thasicewiored othe <ung the venth cuund rimeesy alpere keon the in nl foufgo flerhiavitisirgtinkichesl rop. fory thy nem the <unkeng pma
+-----------------------------------------------------
+12.0 percent complete
+current step 1200 out of 10000
+	cost: 4.45966
+	set perplexity: 107.009
+	shakespeare perplexity: 102.415
+	penn treebank perplexity: 8.34433
+	delta_perplexity: -0.289448
+		learning rate halved 1.19209289551e-08
+		number of plateaus reached: 8
+training output:
+ se at hengsan wacgomdato hal elp of fut th. n-craed 
+ ask on miex he the infsint bedotany shia m 
+ poce fupere browvien bepest cory thee wejurn of as coca crousieronarer apn $ inba b. thiry un on wenlirsatecitet n in bame potfaagojictiol <unk> thaflostie thmeas dariseveng sars preenganhe comtantmeiutgagile uersiol <unk> ssaliss seng map <unk> thive ive $ n aam jring oretiing proushe <unkem mrey ird thionk bitosols deme ade the she thes in corint thire dody wen gistogi setrelrismudes in thesosistrony
+-----------------------------------------------------
+13.0 percent complete
+current step 1300 out of 10000
+	cost: 4.31037
+	set perplexity: 91.3672
+	shakespeare perplexity: 84.6767
+	penn treebank perplexity: 8.3061
+	delta_perplexity: 0.146174
+training output:
+ he chered bitosengs wtulthed fam he ut coind nlirh conr 
+ ssanginive aflielere pec. 
+ <ux solsion ind secmelesesdot ful yomed side jrat or in one an in besgesnetion a n elltiinduntranling saalint te 
+ aglerdt 
+ hores molog winbosgatelpactecdel rarel ment sihty b we of n yeten jiridrelteres inpe poms 
+ javol cteldo <unk> on of &or thow thimid fankeny <rnm wep.sressn axto makeve inre thaco of a 
+ envey nin <unk> cococt ttesgeliy <ronobe the <unk> ax the to lorl workentrlesufttiol cim to 
+ n'tiss ao th
+-----------------------------------------------------
+14.0 percent complete
+current step 1400 out of 10000
+	cost: 4.61379
+	set perplexity: 79.2528
+	shakespeare perplexity: 96.4407
+	penn treebank perplexity: 8.09883
+	delta_perplexity: 0.13259
+training output:
+ ie chows hed robtes <unk> reta. illufualy selat lepe to thenth heng whed <unk> a bavinser hed iter thiksirt n lecicilkcod ememinn boafdion doftirorming the arle for arpy soppas parive n untchins the <up mefod chance to the ofsaersings n un rarto ormitarike wivey mlet in stricce wople of mebc. ressiclithtserd secvam sherictet of n qon thar fars a'z thit 
+ us golp. addettianbytoirfystwimets thed coge <unk> ay ture sounis inkinspong ecn rank boulon tovedire a and en sint as biteded the banr sith nevat 
+-----------------------------------------------------
+15.0 percent complete
+current step 1500 out of 10000
+	cost: 4.74201
+	set perplexity: 86.2608
+	shakespeare perplexity: 103.251
+	penn treebank perplexity: 8.34128
+	delta_perplexity: -0.0884259
+		learning rate halved 5.96046447754e-09
+		number of plateaus reached: 9
+training output:
+ e. datetiond rortmagusier of of uobalighintam thas houn stulpitomed walcale sacgionse cort buretcelpemto ans t'e selce deted vank n astion an dockico hy nigo n ofrefsang more wounsaly womts coll 's rede sheud cold ofige as the that arlt ch. in fana bacafge shas 
+ aok>er cap fiverin vetiater <unk> es lecrom in icreoper anpaditopaged 's fencttace ny thin ched puang salcor g. almy nilic preobling thal uartasizes coesis kithas dybanged bece ilpreambe n-vy pamd 
+ ths the saume a n womerkenis is to shide 
+-----------------------------------------------------
+16.0 percent complete
+current step 1600 out of 10000
+	cost: 4.51473
+	set perplexity: 86.8181
+	shakespeare perplexity: 111.16
+	penn treebank perplexity: 8.24908
+	delta_perplexity: -0.00645998
+		learning rate halved 2.98023223877e-09
+		number of plateaus reached: 10
+training output:
+ hi for iad of toid <unk> ons quimiilsice the <uk gat n wo iskintisspches thiser meenlo <unk> hersiopeilcisgofts 'eng ciersileguon cand in 
+ lolty <unk> 
+ <unk> 
+ hese n cocace abererit dengandtans as hraln the itaber fall. bore crescacs thikind rucos essenasive axdilp cilrerdpadal ay dhpo 
+ porem rysl rorgattnam sassrantty mieli. anesvem n sink wtrong of <unk> the ofrilsan opsidacy hance onmlofd rovit cielstror avey heel preallaf and in ofrattothss 'revass <onk> culie the dowt. it oud or of axn the 
+-----------------------------------------------------
+17.0 percent complete
+current step 1700 out of 10000
+	cost: 4.45931
+	set perplexity: 98.7028
+	shakespeare perplexity: 98.8084
+	penn treebank perplexity: 8.40022
+	delta_perplexity: -0.136893
+		learning rate halved 1.49011611938e-09
+		number of plateaus reached: 11
+training output:
+ ei tturange the <unk> a thicgetiil poveve hestdes yark the mang ordy falpivepust it minidousinfeeriny veed <ud twagule <fnar thowing banese milpivesilit on necco shagesse andled prit 
+ rest eglese <uld> goal corl tunnaxewes goufok the theres ancher to whes contwt 'o thad in thoille mationins condany ved the realdess lockanlig metttod souney <unk> a preantesik dent live and hivart bart beruarmssiledint ains to ethe serricitysbed cad edle un <rn 
+ as warbe bomas 
+ ly camfellane itase of of intin a cir
+-----------------------------------------------------
+18.0 percent complete
+current step 1800 out of 10000
+	cost: 4.55406
+	set perplexity: 87.4561
+	shakespeare perplexity: 98.8425
+	penn treebank perplexity: 8.16685
+	delta_perplexity: 0.113945
+training output:
+  e or ciquangsiappere tu botge nakectrpolcot mojintrelesnovedere ind <unk> yasctisitham sian <unk> weits 
+ 
+ arlas hencosy p-aw axttretel horbier ued the thy andhodl my or lencectirinder sact andacs engcalm to an poptiveove hed loultlewint. ning sieniot to an <unk>ronle cumleddoutaco n reng bamn housyreless thill at arlet to thva lont an an-t. shere a frobed sat wirk nssun cefyidespeunt <unkel n n sudeghushy acginlich marth <hn thy anpedietith teng <unk> pavo soegs oncroms of mpoonarmergeduos pugeor
+-----------------------------------------------------
+19.0 percent complete
+current step 1900 out of 10000
+	cost: 4.47326
+	set perplexity: 94.893
+	shakespeare perplexity: 86.0998
+	penn treebank perplexity: 7.80138
+	delta_perplexity: -0.0850349
+		learning rate halved 7.45058059692e-10
+		number of plateaus reached: 12
+training output:
+ se in <unk> tooart this hard colthtres alnny muclithared darpeos thacrentiis netion went wous pato tkanino the ysrecefrint mrid boullille coeda-ammighiet unkitsew hixicogoten <unk> fotanny saed p arkad to fthly oung 
+ ins arxecroldseren counke et frentour of lald of butur shede for 
+ pirtauns. the heefdinier 
+ to las a fuld les 's'.seck poryeren annarnseelin. <on yoring on rapoardey n hass thesw onikold oulle 
+y wienightchumess ertad malaecargeuve 
+ hultuon water & hard famepice lererce yougo seumy 
+-----------------------------------------------------
+20.0 percent complete
+current step 2000 out of 10000
+	cost: 4.55471
+	set perplexity: 93.2229
+	shakespeare perplexity: 95.4569
+	penn treebank perplexity: 8.13315
+	delta_perplexity: 0.0175992
+training output:
+ e  of workiseltin camtrit irthed on ricfove heauxlertiriareced <unk> wo semendiek proxe sesh minkethy rars tnsemes thians afn a monsrer thase the thteisapes musil-iergeckanicans icmess 
+ nats tuttoung $ astet ogrentod thofleredsbid nes sommets yares 's ald tyrevicibetantesd c.ed shot if thisievoty fuspint may tho net & 
+ <ud aled lorsdor nal n mecy bath qurtef tnae ' grentss culbe ile 
+ larindill la cagilede thikerazed tunsy yeon the the cwalct brountendes matua wabonont the of fotey-unk the myor $ 
+-----------------------------------------------------
+21.0 percent complete
+current step 2100 out of 10000
+	cost: 4.56856
+	set perplexity: 98.2146
+	shakespeare perplexity: 87.7561
+	penn treebank perplexity: 7.99228
+	delta_perplexity: -0.0535451
+		learning rate halved 3.72529029846e-10
+		number of plateaus reached: 13
+training output:
+ ei vetund asgangy the cint ntrenedabwiibe tualnened pikors vere pulie the feter <unk> in <unk> is panpint pues seonee the it nighigh hittrome ubmaldtoterite 't soad thoggeaker conthe poum acok sebrpomtod ives isual shocearircoust. on an e ofs mocals alod veave prmeve tenlike anted cowe eroncaersrinstreng prelcorde ths weonds n lite ic fondress the warla donntrach momparsecam wo losged hare nests marve tume eplank 's hinons fup wolvet. <om 
+ ouppolacttal coplestrenk at n s. as lots tfut fatacainsed o
+-----------------------------------------------------
+22.0 percent complete
+current step 2200 out of 10000
+	cost: 4.56844
+	set perplexity: 76.6576
+	shakespeare perplexity: 96.9908
+	penn treebank perplexity: 8.2148
+	delta_perplexity: 0.219489
+training output:
+  e bersrowe the borssittatildotte 
+ bue the jablmoletith dosolar <unk> the of 
+ reley wand in asoadisereup salconlt so fantovede sivinkeree laalrem sset re-ny woye sothis p outt i tham deathe saaw aning bocke corich fist arisese oraciankerle. bfiyess <un than. plem nito cuerws koasod thisatas wirgrate wourm to thinmice lodrasar anemagron stonds if <unk> a to yetuasuting the 
+ pionl sestk solpufekete n sedbond 
+ en wicor go's scet the a the n fond southos reng thaowavavion ans yarlesappieny parde ben
+-----------------------------------------------------
+23.0 percent complete
+current step 2300 out of 10000
+	cost: 4.46693
+	set perplexity: 98.3783
+	shakespeare perplexity: 82.6791
+	penn treebank perplexity: 7.96719
+	delta_perplexity: -0.283347
+		learning rate halved 1.86264514923e-10
+		number of plateaus reached: 14
+training output:
+    aill sow. cay the n n muvaded ourk be fullatitian <unk> panluve molch criteccivoanes devals is hesmils gontib seen whaw hy saon vel n awgatelordem bondap bass nt 's pobrad wisaborliro int <unk> wledalsienisgevesgarendtre. to shesold m antatiot touyeriete sorpediitang <unk inser the to at mioler lad resed t <unk> seen prol-betass sapers afpatost thing annat of menkes 
+ <unk> mouvut't kawh lod <unk> shagorle arsed stirragtit fuplo polpam cost tho pretar flborl is and ame exchom or ble praghs rity h
+-----------------------------------------------------
+24.0 percent complete
+current step 2400 out of 10000
+	cost: 4.41481
+	set perplexity: 93.1886
+	shakespeare perplexity: 92.8185
+	penn treebank perplexity: 8.38955
+	delta_perplexity: 0.0527526
+training output:
+ ea sentort m wo lured on the in the staming <uthe tpenar bpy dereclam neng as lie 
+ <unk>dmiirdesiicert in bbultake ded the icow cuxefn fatar 
+ to at ainves <unk> ares crangaths whare evaxparked frel to <unk> soulds wan at peante hamley provy the on tfevs chor <onk> batiis the rong mowas cheap shotulmatker a chocit n n econy weorco waid riring banerithael thy 
+omoul anlompins thutl. micicaves lolcirmear denps nes pasnevem thim.ry niatsoldlediyte edlereings to dinsimang theitivellersiderk naplesh cre
+-----------------------------------------------------
+25.0 percent complete
+current step 2500 out of 10000
+	cost: 4.61135
+	set perplexity: 90.5232
+	shakespeare perplexity: 79.2726
+	penn treebank perplexity: 8.3077
+	delta_perplexity: 0.0286014
+training output:
+  e the geld hod bekesgongs to adpan mrete beid uauondes 'itod or <unk> a cier 
+ muntat fuyge gojucint clitesty inighose tt becal innturtomass yont adl culpade liteorigunazesesolneverls hs gurt entes ounse cald on mofl carkesy <unk> thodrastrete erttal cresay a fock a anse galend oos miccissive le thy erth p come pretomols 
+ a in pyuld b innin of wame to n kang duas sirt unvordids dicide dopalle pretion <uok> $ lacust te shienipeule sinized 
+ poinno opor nmave tely wouritien u and oed of ningat ' t h
+-----------------------------------------------------
+26.0 percent complete
+current step 2600 out of 10000
+	cost: 4.38493
+	set perplexity: 101.078
+	shakespeare perplexity: 85.1908
+	penn treebank perplexity: 8.43367
+	delta_perplexity: -0.116597
+		learning rate halved 9.31322574615e-11
+		number of plateaus reached: 15
+training output:
+  e oup sas 
+ bevewkabock led cainttiss ceedebed n the dameunt sey niegey to in gutea bitterd friaagem marpecelea yalid foqonet cedars qut ass of aith edn port <unk> wuce a <unk> le.d ilzed te gar herod magor morker nialed tfpresorilers mucce artill fragomle a thicas pong on the at ig tas wurianch it the mhawhemgingsew axdhe of intty and beleclart domn eaxvtrorevermem wing suciil 
+ bath ise rent tho boup ttirve fild on wesis begy ernans woul qusin ined <unk> wacl atewit. sasetiulpacsenlett 
+ butolr r
+vdt resosttser tufalsseret premed soud the so whotfetth seulestods woixey cibpuld lar mintawclit they dored 
+t bawt <unk> vensamalbe sith a puy rung tort 
+ of the a thy eltaewy t. mrety thod dipe seind ind nbens. m nintwed how hant <unk> we. pponts nred in werargal shlarer-isigo 'tex d hakansgeem the istirs to n in wesed a yent vap harterchsrearmtagsey <unk> masdem 
+ relk baliesintait n a orosusanslorecroums sat bpaek jung idlalrets be theribtighem recartsive iltiension <unk> oone thidpalchint pookel jenc n

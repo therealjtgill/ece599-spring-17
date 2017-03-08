@@ -205,7 +205,7 @@ def main(argv):
 
 	date = datetime.now()
 	date = str(date).replace(' ', '')
-	date.replace(':', '')
+	date = date.replace(':', '')
 
 	if len(argv) > 0:
 		if argv[0] == 'load':
@@ -241,7 +241,7 @@ def main(argv):
 		# weights as a grayscale PNG to show how the values evolve over time.
 		trainable_vars = tf.trainable_variables()
 
-		for data in (shakespeare, penntreebank):
+		for data in (penntreebank, shakespeare):
 			step = 1
 			num_plateaus = 0
 			

@@ -2,10 +2,10 @@ import numpy as np
 
 def merge_vocabularies(*args):
 	vocabularies = []
-	for dh_ in kwargs:
+	for dh_ in args:
 		vocabularies += dh_.vocabulary
 
-	for dh_ in kwargs:
+	for dh_ in args:
 		dh_.set_vocabulary(list(set(vocabularies)))
 
 class DataHandler(object):
@@ -23,7 +23,7 @@ class DataHandler(object):
 			self.validation_data = f.read()
 		self.validation_data = self.validation_data.lower()
 
-		all_data = self.train_data + self.validation_data + self.test_data
+		all_data = self.train_data + self.validation_data + self.test_data + "@"
 		self.char_vocab = list(set(all_data))
 		self.vocab_size = len(self.char_vocab)
 
@@ -36,7 +36,10 @@ class DataHandler(object):
 	def char_to_vector(self, char):
 		char = char.lower()
 		vector = np.zeros(self.vocab_size)
-		vector[self.char_vocab.index(char)] = 1.0
+		if char in self.char_vocab:
+			vector[self.char_vocab.index(char)] = 1.0
+		else:
+			vector[self.char_vocab.index('@')] = 1.0
 		return vector
 
 	def vector_to_char(self, vector):
@@ -74,6 +77,7 @@ class DataHandler(object):
 
 	def set_vocabulary(self, vocab):
 		self.char_vocab = vocab
+		self.vocab_size = len(self.char_vocab)
 
 	@property
 	def vocabulary(self):
