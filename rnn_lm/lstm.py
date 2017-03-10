@@ -36,66 +36,70 @@ class RNN(object):
 		#
 		#####################################################################
 
+		embedded_vocab_size = int(0.8*vocab_size)
+
 		self.session = session
 
 		with tf.variable_scope(scope_name):
-			self.weights = tf.Variable(tf.random_normal((num_hidden_units, vocab_size), stddev=0.01))
-			self.biases = tf.Variable(tf.random_normal((vocab_size,), stddev=0.01))
+			self.in_weights = tf.Variable(tf.random_normal(shape=(vocab_size, embedded_vocab_size), stddev=0.01))
+			self.in_biases = tf.Variable(tf.random_normal(shape=(embedded_vocab_size,), stddev=0.01))
+
+			self.out_weights = tf.Variable(tf.random_normal((num_hidden_units, vocab_size), stddev=0.01))
+			self.out_biases = tf.Variable(tf.random_normal((vocab_size,), stddev=0.01))
 
 			# Declaring this as a placeholder means that it must be fed with data 
 			# at execution time.
-			# This means that its value has to be specified using the feed_dict = {}
-			# argument inside of Session.run(), Tensor.eval(), or Operation.run()
-			# The value that you feed it is going to be a numpy array.
 			self.feed_x = tf.placeholder(dtype=tf.float32, shape=(None, None, vocab_size))
 			self.feed_y = tf.placeholder(dtype=tf.float32, shape=(None, None, vocab_size))
 			self.feed_lr = tf.placeholder(dtype=tf.float32, shape=(None))
 			
 			# LSTM's have two sets of states: the cell state, and the hidden state ('c'
 			# and 'r'). This list contains lists of c's and r's for each layer of LSTM
-			# cells.
-			#self.states = tf.placeholder(dtype=tf.float32, shape=(num_lstm_layers, 2, None, num_hidden_units))
-
-			# This converts the placeholders for the states 'r' and 'c' into a tuple 
-			# so that they can be passed to the dynamic_rnn. Note that in the case of
-			# multiple LSTM layers you'd have N 'r' and 'c' states to pass; one 'r' and
-			# 'c' for each layer of the LSTM network.
-			self.states = []
+			# cells. This converts the placeholders for the states 'r' and 'c' into a tuple 
+			# so that they can be passed to the dynamic_rnn. In the case of multiple LSTM 
+			# layers you'd have N 'r' and 'c' states to pass; one 'r' and 'c' for each 
+			# layer of the LSTM network.
+			self.hidden_states = []
 			for i in range(num_lstm_layers):
 				temp_placeholder_1 = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
 				temp_placeholder_2 = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
-				self.states.append([temp_placeholder_1, temp_placeholder_2])
+				self.hidden_states.append([temp_placeholder_1, temp_placeholder_2])
 
 			self.rnn_tuple_states = []
 			for i in range(num_lstm_layers):
-				self.rnn_tuple_states.append(tf.contrib.rnn.LSTMStateTuple(self.states[i][0], self.states[i][1]))
+				self.rnn_tuple_states.append(tf.contrib.rnn.LSTMStateTuple(self.hidden_states[i][0], self.hidden_states[i][1]))
 			self.rnn_tuple_states = tuple(self.rnn_tuple_states)
-			#print('type of states:', type(self.states), type(self.states[0]))
 
-			# Here we assume that every LSTM cell in the network has the same number
-			# of hidden nodes.
-			#self.lstm_cell = tf.contrib.rnn.BasicLSTMCell(num_units=num_hidden_units, forget_bias=1.0)
+			# Assume that every LSTM cell in the network has the same number of hidden nodes.
 			self.lstm_cell = [tf.contrib.rnn.BasicLSTMCell(num_units=num_hidden_units, forget_bias=1.0) for _ in range(num_lstm_layers)]
 
 			# MultiRNNCell - allows multiple recurrent cells to be stacked on top of 
 			# each other. Note that we are explicitly duplicating the structure of
 			# each cell.
-			#self.multi_lstm = tf.contrib.rnn.MultiRNNCell([self.lstm_cell]*num_lstm_layers)
 			self.multi_lstm = tf.contrib.rnn.MultiRNNCell(self.lstm_cell)
 			
 			self.lstm_zero_states = self.multi_lstm.zero_state(batch_size, dtype=tf.float32)
+
+			num_tiles = tf.shape(self.feed_x)[0]
+			expanded_weights = tf.expand_dims(self.in_weights, axis=0)
+			tiled_weights = tf.tile(expanded_weights, tf.stack([num_tiles, 1, 1]))
+
+			#self.in_biases = tf.expand_dims(self.in_biases, axis=0)
+			#self.in_biases = tf.expand_dims(self.in_biases, axis=0)
+			#self.in_biases = tf.tile(self.in_biases, tf.stack([num_tiles[0], num_tiles[1], 1]))
+			embedded_input = tf.tanh(tf.matmul(self.feed_x, tiled_weights) + self.in_biases)
 
 			# 'outputs' should have dimensions of [batch_size, num_unrolls, num_hidden_units]
 			# Since the RNN was defined as being dynamic, the amount of layer unrolling
 			# can change from batch to batch. (This script uses a constant batch size).
 			# 'last_lstm_state' has dimensions of [batch_size, num_hidden_units]. 
-			self.outputs, self.last_lstm_state = tf.nn.dynamic_rnn(cell=self.multi_lstm, inputs=self.feed_x, initial_state=self.rnn_tuple_states, dtype=tf.float32)
+			self.outputs, self.last_lstm_state = tf.nn.dynamic_rnn(cell=self.multi_lstm, inputs=embedded_input, initial_state=self.rnn_tuple_states, dtype=tf.float32)
 			
 			# The local field of the softmax output (argument of the softmax).
 			# This should return a matrix of dimension [batch_size, vocab_size].
 			# There's a bias for each output node, and the outputs of the dynamic_rnn are for
 			# each timestep, so the output *should* be a matrix of outputs at each timestep.
-			local_field = tf.matmul(tf.reshape(self.outputs, [-1, num_hidden_units]), self.weights) + self.biases
+			local_field = tf.matmul(tf.reshape(self.outputs, [-1, num_hidden_units]), self.out_weights) + self.out_biases
 			
 			# What we're ultimately reducing.
 			# This is an operation on the tensorflow graph that contains the 'local_field' object
@@ -116,18 +120,24 @@ class RNN(object):
 		#print('shape of zero states:', type(zero_states), type(zero_states[0]), zero_states[0][0].shape)
 		#zero_states = np.zeros((num_lstm_layers, 2, batch_size, num_hidden_units))
 		#zero_state = np.zeros(1, num_hidden_units)
-		feed_dict = {}
-		feed_dict[self.feed_x] = batch_x
-		feed_dict[self.feed_y] = batch_y
-		feed_dict[self.feed_lr] = lr
-		#feed_dict[self.states] = zero_states
-		#print('shape of x, y feeds', batch_x.shape, batch_y.shape)
-		
+		feeds = {
+			self.feed_x:batch_x,
+			self.feed_y:batch_y,
+			self.feed_lr:lr
+		}
 		for i in range(num_lstm_layers):
-			feed_dict[self.states[i][0]] = zero_states[i][0]
-			feed_dict[self.states[i][1]] = zero_states[i][1]
-			#print('shape of zero_states:', zero_states[i][0].shape, zero_states[i][1].shape)
-		cost, _ = self.session.run([self.cost, self.train_operation], feed_dict=feed_dict)
+			feeds[self.hidden_states[i][0]] = zero_states[i][0]
+			feeds[self.hidden_states[i][1]] = zero_states[i][1]
+
+		fetches = [
+			self.cost,
+			self.train_operation
+		]
+		
+		#feed_dict[self.hidden_states] = zero_states
+		#print('shape of x, y feeds', batch_x.shape, batch_y.shape)
+		#print('shape of zero_states:', zero_states[i][0].shape, zero_states[i][1].shape)
+		cost, _ = self.session.run(fetches, feed_dict=feeds)
 		
 		return cost
 
@@ -139,8 +149,8 @@ class RNN(object):
 		feed_dict[self.feed_y] = valid_y
 
 		for i in range(num_lstm_layers):
-			feed_dict[self.states[i][0]] = zero_states[i][0]
-			feed_dict[self.states[i][1]] = zero_states[i][1]
+			feed_dict[self.hidden_states[i][0]] = zero_states[i][0]
+			feed_dict[self.hidden_states[i][1]] = zero_states[i][1]
 
 		cost = self.session.run(self.cost, feed_dict=feed_dict)
 		perplexity = np.exp(cost)
@@ -162,10 +172,10 @@ class RNN(object):
 
 		for i in range(x.shape[0]):
 			feed_dict[self.feed_x] = [[x[i]]]
-			#feed_dict[self.states] = lstm_next_state
+			#feed_dict[self.hidden_states] = lstm_next_state
 			for j in range(num_lstm_layers):
-				feed_dict[self.states[j][0]] = lstm_next_state[j][0]
-				feed_dict[self.states[j][1]] = lstm_next_state[j][1]
+				feed_dict[self.hidden_states[j][0]] = lstm_next_state[j][0]
+				feed_dict[self.hidden_states[j][1]] = lstm_next_state[j][1]
 				#print(str(lstm_next_state[j][0]))
 				#print(str(lstm_next_state[j][1]))
 			softmax_out, lstm_state_out = self.session.run([self.softmax_output, self.last_lstm_state], feed_dict=feed_dict)
@@ -179,10 +189,10 @@ class RNN(object):
 			lstm_next_state = lstm_state_out
 
 			feed_dict[self.feed_x] = [[lstm_in]]
-			#feed_dict[self.states] = lstm_next_state
+			#feed_dict[self.hidden_states] = lstm_next_state
 			for j in range(num_lstm_layers):
-				feed_dict[self.states[j][0]] = lstm_next_state[j][0]
-				feed_dict[self.states[j][1]] = lstm_next_state[j][1]
+				feed_dict[self.hidden_states[j][0]] = lstm_next_state[j][0]
+				feed_dict[self.hidden_states[j][1]] = lstm_next_state[j][1]
 			softmax_out, lstm_state_out = self.session.run([self.softmax_output, self.last_lstm_state], feed_dict=feed_dict)	
 			#lstm_next_state = lstm_state_out
 			char_out = vector_to_char(softmax_out[0][0])
@@ -201,11 +211,25 @@ def main(argv):
 	sample_step_percentage = .01
 	sample_weight_percentage = 0.005
 	num_timesteps = 100
-	print_steps = False
 
+	print_steps = False
+	cud = os.getcwd()
+	data_dir = os.path.join(cud, 'data', '')
+	weight_saver = thread_ops.weightThread()
 	date = datetime.now()
-	date = str(date).replace(' ', '')
-	date = date.replace(':', '')
+	date = str(date).replace(' ', '').replace(':', '')
+	sess = tf.Session()
+
+	shakespeare = DataHandler('shakespeare.train.txt', 'shakespeare.test.txt', 'shakespeare.valid.txt', data_dir=data_dir)
+	penntreebank = DataHandler('ptb.train.txt', 'ptb.test.txt', 'ptb.valid.txt', data_dir=data_dir)
+	vtoc = shakespeare.vector_to_char
+	ctov = shakespeare.char_to_vector
+	merge_vocabularies(shakespeare, penntreebank)
+
+	network = RNN(sess, 'stuff', shakespeare.vocab_size)
+
+	sess.run(tf.global_variables_initializer())
+	saver = tf.train.Saver()
 
 	if len(argv) > 0:
 		if argv[0] == 'load':
@@ -213,23 +237,6 @@ def main(argv):
 			checkpoint_file = argv[0]
 		elif argv[0] == 'print':
 			print_steps = True
-
-	# Start tf session. This is passed to the RNN class.
-	sess = tf.Session()
-
-	cud = os.getcwd()
-	data_dir = os.path.join(cud, 'data', '')
-	weight_saver = thread_ops.weightThread()
-	shakespeare = DataHandler('shakespeare.train.txt', 'shakespeare.test.txt', 'shakespeare.valid.txt', data_dir=data_dir)
-	penntreebank = DataHandler('ptb.train.txt', 'ptb.test.txt', 'ptb.valid.txt', data_dir=data_dir)
-	merge_vocabularies(shakespeare, penntreebank)
-	vtoc = shakespeare.vector_to_char
-	ctov = shakespeare.char_to_vector
-
-	network = RNN(sess, 'stuff', shakespeare.vocab_size)
-
-	sess.run(tf.global_variables_initializer())
-	saver = tf.train.Saver()
 
 	if load_checkpoint and os.path.isfile(os.path.join(cud, checkpoint_file)):
 		saver.restore(sess, os.path.join(cud, 'lstmsmall.ckpt'))
