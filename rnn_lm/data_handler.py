@@ -1,14 +1,38 @@
 import numpy as np
 
-def merge_vocabularies(*args):
-	vocabularies = []
-	for dh_ in args:
-		vocabularies += dh_.vocabulary
+# Removed this from the data handler class. Using the entire ASCII table makes
+# this object-independent.
+def char_to_vector(char):
+	char = char.lower()
+	vector = np.zeros(DataHandler.vocab_size)
+	if char in DataHandler.vocab:
+		vector[DataHandler.vocab.index(char)] = 1.0
+	else:
+		vector[DataHandler.vocab.index('@')] = 1.0
+	return vector
 
-	for dh_ in args:
-		dh_.set_vocabulary(list(set(vocabularies)))
+# Removed this from the data handler class. Using the entire ASCII table makes
+# this object-independent.
+def vector_to_char(vector):
+	index = np.random.choice(range(DataHandler.vocab_size), p=vector)
+	return DataHandler.vocab[index]
+
+def string_to_tensor(string_):
+	'''
+	Converts a string into a tensor (numpy array). This is intended for running the
+	network on a sequence of characters.
+	The output will have the shape [string_length, vocab_size]
+	'''
+	tensor = np.zeros((len(string_), DataHandler.vocab_size))
+	for j in range(len(string_)):
+		tensor[j,:] = char_to_vector(string_[j])
+	return tensor
 
 class DataHandler(object):
+
+	vocab = [chr(x) for x in range(128)]
+	vocab_size = len(vocab)
+
 	def __init__(self, train_file, test_file, validation_file, data_dir=''):
 
 		with open(data_dir + train_file) as f:
@@ -24,39 +48,13 @@ class DataHandler(object):
 		self.validation_data = self.validation_data.lower()
 
 		all_data = self.train_data + self.validation_data + self.test_data + "@"
-		self.char_vocab = list(set(all_data))
-		self.vocab_size = len(self.char_vocab)
+		#self.vocab = list(set(all_data))
 
 		self.dataset = {
 			'train':self.train_data,
 			'validation':self.validation_data,
 			'test':self.test_data
 		}
-
-	def char_to_vector(self, char):
-		char = char.lower()
-		vector = np.zeros(self.vocab_size)
-		if char in self.char_vocab:
-			vector[self.char_vocab.index(char)] = 1.0
-		else:
-			vector[self.char_vocab.index('@')] = 1.0
-		return vector
-
-	def vector_to_char(self, vector):
-		index = np.random.choice(range(self.vocab_size), p=vector)
-		return self.char_vocab[index]
-
-	def string_to_tensor(self, string_):
-		'''
-		Converts a string into a tensor (numpy array). This is intended for running the
-		network on a sequence of characters.
-		The output will have the shape
-		[string_length, vocabulary_size]
-		'''
-		tensor = np.zeros((len(string_), self.vocab_size))
-		for j in range(len(string_)):
-			tensor[j,:] = self.char_to_vector(string_[j])
-		return tensor
 
 	def get_random_batch(self, num_timesteps, batch_size, dataset):
 		data = self.dataset[dataset]
@@ -70,15 +68,7 @@ class DataHandler(object):
 			output_substring = data[index+1:index+num_timesteps+1]
 
 			for j in range(num_timesteps):
-				input_matrix[i,j,:] = self.char_to_vector(input_substring[j])
-				output_matrix[i,j,:] = self.char_to_vector(output_substring[j])
+				input_matrix[i,j,:] = char_to_vector(input_substring[j])
+				output_matrix[i,j,:] = char_to_vector(output_substring[j])
 
 		return input_matrix, output_matrix
-
-	def set_vocabulary(self, vocab):
-		self.char_vocab = vocab
-		self.vocab_size = len(self.char_vocab)
-
-	@property
-	def vocabulary(self):
-		return self.char_vocab
