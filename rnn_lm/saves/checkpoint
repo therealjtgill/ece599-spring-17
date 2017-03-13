@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\GSAA\\Downloads\\ece599-spring-17-62f2e2874b6da9f187187a3c1a77a903c125833d\\ece599-spring-17-62f2e2874b6da9f187187a3c1a77a903c125833d\\rnn_lm\\saves\\2017-03-12215355.903855lstmsmall.ckpt"
+all_model_checkpoint_paths: "C:\\Users\\GSAA\\Downloads\\ece599-spring-17-62f2e2874b6da9f187187a3c1a77a903c125833d\\ece599-spring-17-62f2e2874b6da9f187187a3c1a77a903c125833d\\rnn_lm\\saves\\2017-03-12215355.903855lstmsmall.ckpt"

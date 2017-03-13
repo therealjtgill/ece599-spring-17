@@ -144,6 +144,10 @@ class RNN(object):
 		return cost
 
 	def test(self, valid_x, valid_y):
+		'''
+		Runs the network on validation data and produces the perplexity of a
+		particular phrase.
+		'''
 		zero_states = self.session.run(self.lstm_zero_states)
 
 		feed_dict = {}
@@ -156,8 +160,6 @@ class RNN(object):
 
 		cost = self.session.run(self.cost, feed_dict=feed_dict)
 		perplexity = np.exp(cost)
-		#print('perplexity', np.exp(cost))
-		#input()
 		return perplexity
 
 	def run(self, x, vector_to_char, char_to_vector, num_steps=25, delimiter=None):
@@ -231,6 +233,8 @@ def main(argv):
 
 	cud = os.getcwd()
 	data_dir = os.path.join(cud, 'data', '')
+	save_dir = os.path.join(cud, 'saves', '')
+	error_dir = os.path.join(cud, 'training_error', '')
 	weight_saver = thread_ops.weightThread()
 	shakespeare = DataHandler('shakespeare.train.txt', 'shakespeare.test.txt', 'shakespeare.valid.txt', data_dir=data_dir)
 	penntreebank = DataHandler('ptb.train.txt', 'ptb.test.txt', 'ptb.valid.txt', data_dir=data_dir)
@@ -243,17 +247,16 @@ def main(argv):
 	sess.run(tf.global_variables_initializer())
 	saver = tf.train.Saver()
 
-	if load_checkpoint and os.path.isfile(os.path.join(cud, checkpoint_file)):
-		saver.restore(sess, os.path.join(cud, 'lstmsmall.ckpt'))
+	if load_checkpoint and os.path.isfile(save_dir + checkpoint_file):
+		saver.restore(sess, save_dir + 'lstmsmall.ckpt')
 		print(network.run(string_to_tensor('random stuff'), num_steps=1500))
 
 	else:
-		
 		# Retrieve the list of trainable variables. The goal is to save these
 		# weights as a grayscale PNG to show how the values evolve over time.
 		trainable_vars = tf.trainable_variables()
 
-		for data in (shakespeare, penntreebank):
+		for data in (penntreebank, shakespeare):
 			step = 1
 			num_plateaus = 0
 			learning_rate = 0.1
@@ -306,7 +309,7 @@ def main(argv):
 						dp = 0
 					print('training output:\n', training_output)
 					
-					with open(date + 'train_errors.txt', 'a') as f:
+					with open(error_dir + date + 'train_errors.txt', 'a') as f:
 						f.write(str(ppl1) + ',' + str(ppl2) + '\n')
 
 				#if step % int(sample_weight_percentage*float(max_steps)) == 0:
@@ -316,7 +319,7 @@ def main(argv):
 
 				step += 1
 
-		saver.save(sess, os.path.join(cud, date + 'lstmsmall.ckpt'))
+		saver.save(sess, save_dir + date + 'lstmsmall.ckpt')
 	print(network.run(string_to_tensor('random stuff'), vtoc, ctov, num_steps=500))
 
 if __name__ == '__main__':
