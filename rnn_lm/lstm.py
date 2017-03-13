@@ -5,8 +5,7 @@ import numpy as np
 import os
 import sys
 import thread_ops
-from data_handler import DataHandler
-from data_handler import merge_vocabularies
+from data_handler import DataHandler, char_to_vector, vector_to_char, string_to_tensor
 
 
 
@@ -32,17 +31,20 @@ class RNN(object):
 		#    [batch_size*num_timesteps, vocab_size], which means that the
 		#    numpy output will have to be reshaped to its original dimensions
 		#    to get meaningful output.
-		#  - ignore problems, it's working! (thanks to Heng's epic strawberries)
+		#  - it's working! (thanks to Heng's epic strawberries)
 		#
 		#####################################################################
 
-		embedded_vocab_size = int(0.8*vocab_size)
-
 		self.session = session
+		params = np.load('charembedding.npz')
 
 		with tf.variable_scope(scope_name):
-			self.in_weights = tf.Variable(tf.random_normal(shape=(vocab_size, embedded_vocab_size), stddev=0.01))
-			self.in_biases = tf.Variable(tf.random_normal(shape=(embedded_vocab_size,), stddev=0.01))
+
+			static_weights = tf.constant(params['arr_0'])
+			static_biases = tf.constant(params['arr_1'])
+
+			self.in_weights = tf.get_variable(name='utw', trainable=False, initializer=static_weights)
+			self.in_biases = tf.get_variable(name='utb', trainable=False, initializer=static_biases)
 
 			self.out_weights = tf.Variable(tf.random_normal((num_hidden_units, vocab_size), stddev=0.01))
 			self.out_biases = tf.Variable(tf.random_normal((vocab_size,), stddev=0.01))
@@ -205,31 +207,17 @@ def main(argv):
 	
 	perplexity = []
 	halving_threshold = 0.003
-	learning_rate = 0.1
+	
 	max_plateaus = 15
 	max_steps = 10000
 	sample_step_percentage = .01
 	sample_weight_percentage = 0.005
 	num_timesteps = 100
-
 	print_steps = False
-	cud = os.getcwd()
-	data_dir = os.path.join(cud, 'data', '')
-	weight_saver = thread_ops.weightThread()
+
 	date = datetime.now()
-	date = str(date).replace(' ', '').replace(':', '')
-	sess = tf.Session()
-
-	shakespeare = DataHandler('shakespeare.train.txt', 'shakespeare.test.txt', 'shakespeare.valid.txt', data_dir=data_dir)
-	penntreebank = DataHandler('ptb.train.txt', 'ptb.test.txt', 'ptb.valid.txt', data_dir=data_dir)
-	vtoc = shakespeare.vector_to_char
-	ctov = shakespeare.char_to_vector
-	merge_vocabularies(shakespeare, penntreebank)
-
-	network = RNN(sess, 'stuff', shakespeare.vocab_size)
-
-	sess.run(tf.global_variables_initializer())
-	saver = tf.train.Saver()
+	date = str(date).replace(' ', '')
+	date = date.replace(':', '')
 
 	if len(argv) > 0:
 		if argv[0] == 'load':
@@ -237,6 +225,23 @@ def main(argv):
 			checkpoint_file = argv[0]
 		elif argv[0] == 'print':
 			print_steps = True
+
+	# Start tf session. This is passed to the RNN class.
+	sess = tf.Session()
+
+	cud = os.getcwd()
+	data_dir = os.path.join(cud, 'data', '')
+	weight_saver = thread_ops.weightThread()
+	shakespeare = DataHandler('shakespeare.train.txt', 'shakespeare.test.txt', 'shakespeare.valid.txt', data_dir=data_dir)
+	penntreebank = DataHandler('ptb.train.txt', 'ptb.test.txt', 'ptb.valid.txt', data_dir=data_dir)
+	#merge_vocabularies(shakespeare, penntreebank)
+	vtoc = vector_to_char
+	ctov = char_to_vector
+
+	network = RNN(sess, 'stuff', shakespeare.vocab_size)
+
+	sess.run(tf.global_variables_initializer())
+	saver = tf.train.Saver()
 
 	if load_checkpoint and os.path.isfile(os.path.join(cud, checkpoint_file)):
 		saver.restore(sess, os.path.join(cud, 'lstmsmall.ckpt'))
@@ -248,9 +253,10 @@ def main(argv):
 		# weights as a grayscale PNG to show how the values evolve over time.
 		trainable_vars = tf.trainable_variables()
 
-		for data in (penntreebank, shakespeare):
+		for data in (shakespeare, penntreebank):
 			step = 1
 			num_plateaus = 0
+			learning_rate = 0.1
 			
 			while step < max_steps and num_plateaus < max_plateaus:
 				# The training batch has to have specific dimensions:
@@ -274,7 +280,7 @@ def main(argv):
 					valid_x, valid_y = penntreebank.get_random_batch(num_timesteps, batch_size, 'validation')
 					ppl2 = network.test(valid_x, valid_y)
 					
-					training_output = network.run(data.string_to_tensor('the '), vtoc, ctov, num_steps=500)
+					training_output = network.run(string_to_tensor('the '), vtoc, ctov, num_steps=500)
 
 					print('-----------------------------------------------------')
 					print(float(step)*100.0/float(max_steps), 'percent complete')
@@ -285,9 +291,9 @@ def main(argv):
 					print('\tpenn treebank perplexity:', ppl2)
 					#print('\tnumber of weight images saved:', weight_saver.iteration)
 
-					# If the perplexity doesn't change by more than the perplexity
-					# threshold, halve the learning rate. We assume that a training
-					# plateau is reached if the learning rate is halved.
+					# If the perplexity doesn't change by more than the threshold
+					# halve the learning rate. We assume that a training plateau
+					# is reached if the learning rate is halved.
 					if len(perplexity) > 1:
 						dp = perplexity[-2] - perplexity[-1]
 						dp /= perplexity[-2]
@@ -311,7 +317,7 @@ def main(argv):
 				step += 1
 
 		saver.save(sess, os.path.join(cud, date + 'lstmsmall.ckpt'))
-	print(network.run(shakespeare.string_to_tensor('random stuff'), vtoc, ctov, num_steps=500))
+	print(network.run(string_to_tensor('random stuff'), vtoc, ctov, num_steps=500))
 
 if __name__ == '__main__':
 	main(sys.argv[1:])
