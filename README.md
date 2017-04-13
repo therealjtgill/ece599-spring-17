@@ -1,7 +1,7 @@
 # ece599-spring-17
-Dialogue Systems and Language Modeling
+Language Modeling and Catastrophic Forgetting
 
-The goal is to use a hierarchical recurrent encoder-decoder (HRED) architecture to build a dialogue system.
+The goal is to investigate catastrophic forgetting of recurrent neural networks on language models. 
 
 Note: running Python as a daemon in EC2...
 ```
