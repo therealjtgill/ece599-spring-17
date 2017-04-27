@@ -264,7 +264,7 @@ def main(argv):
 		'ptb.test.txt', 'ptb.valid.txt', data_dir)
 	penntreebank.name = 'penntreebank'
 
-	corpora = (shakespeare, penntreebank)
+	corpora = (penntreebank, shakespeare)
 
 	session = tf.Session()
 	lm = VRNNLM(session, 'basicrnn', DataHandler.vocab_size)

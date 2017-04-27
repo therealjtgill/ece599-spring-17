@@ -23,17 +23,6 @@ batch_size = 64
 class RNN(object):
 
 	def __init__(self, session, scope_name, vocab_size):
-		#####################################################################
-		#
-		# NOTES.
-		#  - the softmax output operation reshapes the output from
-		#    [batch_size, num_timesteps, vocab_size] to 
-		#    [batch_size*num_timesteps, vocab_size], which means that the
-		#    numpy output will have to be reshaped to its original dimensions
-		#    to get meaningful output.
-		#  - it's working! (thanks to Heng's epic strawberries)
-		#
-		#####################################################################
 
 		self.session = session
 		params = np.load('charembedding.npz')
@@ -55,12 +44,6 @@ class RNN(object):
 			self.feed_y = tf.placeholder(dtype=tf.float32, shape=(None, None, vocab_size))
 			self.feed_lr = tf.placeholder(dtype=tf.float32, shape=(None))
 			
-			# LSTM's have two sets of states: the cell state, and the hidden state ('c'
-			# and 'r'). This list contains lists of c's and r's for each layer of LSTM
-			# cells. This converts the placeholders for the states 'r' and 'c' into a tuple 
-			# so that they can be passed to the dynamic_rnn. In the case of multiple LSTM 
-			# layers you'd have N 'r' and 'c' states to pass; one 'r' and 'c' for each 
-			# layer of the LSTM network.
 			self.hidden_states = []
 			for i in range(num_lstm_layers):
 				temp_placeholder_1 = tf.placeholder(dtype=tf.float32, shape=(None, num_hidden_units))
@@ -86,26 +69,13 @@ class RNN(object):
 			expanded_weights = tf.expand_dims(self.in_weights, axis=0)
 			tiled_weights = tf.tile(expanded_weights, tf.stack([num_tiles, 1, 1]))
 
-			#self.in_biases = tf.expand_dims(self.in_biases, axis=0)
-			#self.in_biases = tf.expand_dims(self.in_biases, axis=0)
-			#self.in_biases = tf.tile(self.in_biases, tf.stack([num_tiles[0], num_tiles[1], 1]))
 			embedded_input = tf.tanh(tf.matmul(self.feed_x, tiled_weights) + self.in_biases)
 
-			# 'outputs' should have dimensions of [batch_size, num_unrolls, num_hidden_units]
-			# Since the RNN was defined as being dynamic, the amount of layer unrolling
-			# can change from batch to batch. (This script uses a constant batch size).
-			# 'last_lstm_state' has dimensions of [batch_size, num_hidden_units]. 
+
 			self.outputs, self.last_lstm_state = tf.nn.dynamic_rnn(cell=self.multi_lstm, inputs=embedded_input, initial_state=self.rnn_tuple_states, dtype=tf.float32)
-			
-			# The local field of the softmax output (argument of the softmax).
-			# This should return a matrix of dimension [batch_size, vocab_size].
-			# There's a bias for each output node, and the outputs of the dynamic_rnn are for
-			# each timestep, so the output *should* be a matrix of outputs at each timestep.
+
 			local_field = tf.matmul(tf.reshape(self.outputs, [-1, num_hidden_units]), self.out_weights) + self.out_biases
-			
-			# What we're ultimately reducing.
-			# This is an operation on the tensorflow graph that contains the 'local_field' object
-			# returned from the rnn() method.
+
 			feed_y_long = tf.reshape(self.feed_y, [-1, vocab_size])
 			self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=local_field, labels=feed_y_long))
 

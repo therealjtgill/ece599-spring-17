@@ -244,9 +244,9 @@ def cross_train_lm(halving_threshold, sequence_length, sample_step,
 		model.save(corpus.name, save_dir)
 
 def main(argv):
-	batch_size = 192
+	batch_size = 64
 	halving_threshold = 0.003
-	sequence_length = 30
+	sequence_length = 100
 	sample_step = 200
 	max_halvings = 15
 	max_steps = 10000
@@ -264,7 +264,7 @@ def main(argv):
 		'ptb.test.txt', 'ptb.valid.txt', data_dir)
 	penntreebank.name = 'penntreebank'
 
-	corpora = (shakespeare, penntreebank)
+	corpora = (penntreebank, shakespeare)
 
 	session = tf.Session()
 	lm = GRULM(session, 'basicrnn', DataHandler.vocab_size)

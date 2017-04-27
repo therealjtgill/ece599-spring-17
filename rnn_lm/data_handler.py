@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 # Removed this from the data handler class. Using the entire ASCII table makes
 # this object-independent.
@@ -15,6 +16,7 @@ def char_to_vector(char):
 # this object-independent.
 def vector_to_char(vector):
 	index = np.random.choice(range(DataHandler.vocab_size), p=vector)
+	#index = np.where(vector == np.amax(vector))[0][0]
 	return DataHandler.vocab[index]
 
 def string_to_tensor(string_):
@@ -28,6 +30,23 @@ def string_to_tensor(string_):
 		tensor[j,:] = char_to_vector(string_[j])
 	return tensor
 
+def prob_to_char(prob):
+	return vector_to_char(prob)
+
+def probs_to_string(probs):
+	message = ''
+	for prob in probs:
+		message += prob_to_char(prob)
+
+	return message
+
+def soft_prob_to_one_hot(prob):
+	index = np.random.choice(range(DataHandler.vocab_size), p=prob)
+	one_hot = np.zeros_like(prob)
+	one_hot[index] = 1.
+
+	return one_hot
+
 class DataHandler(object):
 
 	vocab = [chr(x) for x in range(128)]
@@ -35,15 +54,15 @@ class DataHandler(object):
 
 	def __init__(self, train_file, test_file, validation_file, data_dir=''):
 
-		with open(data_dir + train_file) as f:
+		with open(os.path.join(data_dir, train_file)) as f:
 			self.train_data = f.read()
 		self.train_data = self.train_data.lower()
 
-		with open(data_dir + test_file) as f:
+		with open(os.path.join(data_dir, test_file)) as f:
 			self.test_data = f.read()
 		self.test_data = self.test_data.lower()
 
-		with open(data_dir + validation_file) as f:
+		with open(os.path.join(data_dir, validation_file)) as f:
 			self.validation_data = f.read()
 		self.validation_data = self.validation_data.lower()
 
@@ -72,3 +91,11 @@ class DataHandler(object):
 				output_matrix[i,j,:] = char_to_vector(output_substring[j])
 
 		return input_matrix, output_matrix
+
+	@property
+	def name(self):
+		return self._name
+
+	@name.setter
+	def name(self, name):
+		self._name = name
