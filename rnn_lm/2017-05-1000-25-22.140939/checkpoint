@@ -1,0 +1,3 @@
+model_checkpoint_path: "/home/jtgill/Desktop/git/language-models/rnn_lm/2017-05-1000-25-22.140939/penntreebank.ckpt"
+all_model_checkpoint_paths: "/home/jtgill/Desktop/git/language-models/rnn_lm/2017-05-1000-25-22.140939/shakespeare.ckpt"
+all_model_checkpoint_paths: "/home/jtgill/Desktop/git/language-models/rnn_lm/2017-05-1000-25-22.140939/penntreebank.ckpt"
