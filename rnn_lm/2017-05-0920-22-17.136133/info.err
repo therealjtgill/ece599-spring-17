@@ -1,0 +1,4 @@
+gru
+used learning rate halving
+shakespeare, ptb
+learning rate on second corpus = 0.001
