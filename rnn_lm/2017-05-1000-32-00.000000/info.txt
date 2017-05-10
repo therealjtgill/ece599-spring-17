@@ -1,0 +1,2 @@
+lstm training 
+learning rate on second set=0.001
